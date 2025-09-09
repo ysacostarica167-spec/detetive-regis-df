@@ -2,7 +2,33 @@ import { MessageCircle, Phone, MapPin, Shield, Clock } from "lucide-react";
 
 const Footer = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5561982844543", "_blank");
+    const message = "Olá! Gostaria de falar com o Detetive Regis.";
+    const phoneNumber = "5561982844543";
+    
+    // Try multiple WhatsApp URL formats for better compatibility
+    const urls = [
+      `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`,
+      `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`,
+      `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`,
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    ];
+    
+    // Try to open WhatsApp, fallback to web version if app is not available
+    let opened = false;
+    for (const url of urls) {
+      try {
+        window.open(url, '_blank');
+        opened = true;
+        break;
+      } catch (error) {
+        continue;
+      }
+    }
+    
+    // Final fallback - open direct tel link
+    if (!opened) {
+      window.open("tel:+5561982844543", "_blank");
+    }
   };
 
   const currentYear = new Date().getFullYear();
