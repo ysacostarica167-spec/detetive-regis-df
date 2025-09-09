@@ -33,6 +33,10 @@ const HeroSection = () => {
     }
   };
 
+  const handlePhoneClick = () => {
+    window.open("tel:+5561982844543", "_blank");
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -97,6 +101,7 @@ const HeroSection = () => {
               WhatsApp (61) 98284-4543
             </Button>
             <Button 
+              onClick={handlePhoneClick}
               variant="outline-light" 
               size="lg"
             >
