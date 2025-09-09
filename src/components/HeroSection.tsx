@@ -36,11 +36,12 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto leading-relaxed">
-            Investigação Profissional com Discrição e Eficiência
+            Detetive Particular DF • Investigação Profissional com Discrição e Eficiência
           </p>
           
           <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-            Atendimento em todo o Distrito Federal com mais de 10 anos de experiência em investigações particulares e corporativas
+            Detetive em Brasília DF com mais de 10 anos de experiência. Atendimento em todo o Distrito Federal 
+            com preços justos e consulta gratuita.
           </p>
 
           {/* Service Highlights */}
