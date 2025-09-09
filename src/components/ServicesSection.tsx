@@ -1,0 +1,111 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Search, Camera, UserCheck, Building2, Heart, Scale, Phone } from "lucide-react";
+import investigationIcon from "@/assets/investigation-icon.jpg";
+import surveillanceIcon from "@/assets/surveillance-icon.jpg";
+
+const ServicesSection = () => {
+  const services = [
+    {
+      icon: <Search className="w-8 h-8 text-detective-gold" />,
+      title: "Investigação Conjugal",
+      description: "Investigação discreta de infidelidade e comportamento conjugal com relatórios detalhados e evidências.",
+      image: investigationIcon,
+    },
+    {
+      icon: <Camera className="w-8 h-8 text-detective-gold" />,
+      title: "Vigilância e Monitoramento",
+      description: "Serviços de vigilância profissional para pessoas físicas e jurídicas com equipamentos modernos.",
+      image: surveillanceIcon,
+    },
+    {
+      icon: <UserCheck className="w-8 h-8 text-detective-gold" />,
+      title: "Investigação de Antecedentes",
+      description: "Verificação completa de histórico pessoal, profissional e financeiro de pessoas e empresas.",
+    },
+    {
+      icon: <Building2 className="w-8 h-8 text-detective-gold" />,
+      title: "Investigação Corporativa",
+      description: "Investigações empresariais, fraudes internas, concorrência desleal e due diligence.",
+    },
+    {
+      icon: <Heart className="w-8 h-8 text-detective-gold" />,
+      title: "Localização de Pessoas",
+      description: "Busca e localização de pessoas desaparecidas, parentes distantes e devedores.",
+    },
+    {
+      icon: <Scale className="w-8 h-8 text-detective-gold" />,
+      title: "Perícia e Consultoria",
+      description: "Laudos técnicos, perícias particulares e consultoria especializada em investigação.",
+    },
+  ];
+
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/5561982844543", "_blank");
+  };
+
+  return (
+    <section className="py-20 bg-gradient-to-b from-background to-muted/30">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="heading-section text-detective-navy mb-6">
+            Serviços Profissionais
+          </h2>
+          <p className="text-professional max-w-3xl mx-auto">
+            Oferecemos uma ampla gama de serviços de investigação particular com total discrição, 
+            profissionalismo e uso de tecnologia de ponta para garantir os melhores resultados.
+          </p>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {services.map((service, index) => (
+            <Card key={index} className="card-professional hover:shadow-[var(--shadow-accent)] transition-all duration-300 group">
+              <CardHeader className="text-center">
+                {service.image && (
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-br from-detective-gold/20 to-detective-navy/20 flex items-center justify-center">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-12 h-12 object-cover rounded-full"
+                    />
+                  </div>
+                )}
+                {!service.image && (
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-detective-gold/20 to-detective-navy/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    {service.icon}
+                  </div>
+                )}
+                <CardTitle className="heading-card text-detective-navy">{service.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-professional-grey text-center">
+                  {service.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-detective-navy to-detective-navy-light rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-semibold mb-4">Precisa de uma Investigação?</h3>
+            <p className="text-lg mb-6 text-white/90">
+              Entre em contato para uma consulta gratuita e confidencial
+            </p>
+            <button 
+              onClick={handleWhatsAppClick}
+              className="btn-accent"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Falar com Especialista
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSection;

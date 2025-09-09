@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -46,6 +49,16 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        detective: {
+          navy: "hsl(var(--detective-navy))",
+          "navy-light": "hsl(var(--detective-navy-light))",
+          gold: "hsl(var(--detective-gold))",
+          "gold-light": "hsl(var(--detective-gold-light))",
+        },
+        professional: {
+          grey: "hsl(var(--professional-grey))",
+          "grey-light": "hsl(var(--professional-grey-light))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

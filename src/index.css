@@ -2,41 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Professional Detective Website Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Colors - Professional Detective Theme */
+    --background: 0 0% 98%;
+    --foreground: 210 40% 12%;
+    
+    /* Detective Brand Colors */
+    --detective-navy: 210 45% 15%;
+    --detective-navy-light: 210 35% 25%;
+    --detective-gold: 43 74% 49%;
+    --detective-gold-light: 43 84% 65%;
+    
+    /* Professional Greys */
+    --professional-grey: 210 15% 35%;
+    --professional-grey-light: 210 10% 55%;
 
+    
+    /* Main UI Colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--detective-navy);
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: var(--detective-navy);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 10% 96%;
+    --muted-foreground: var(--professional-grey);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--detective-gold);
+    --accent-foreground: 0 0% 12%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 20% 88%;
+    --input: 210 20% 90%;
+    --ring: var(--detective-gold);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+    
+    /* Professional Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--detective-navy)), hsl(var(--detective-navy-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--detective-gold)), hsl(var(--detective-gold-light)));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 98%), hsl(210 15% 95%));
+    
+    /* Professional Shadows */
+    --shadow-professional: 0 4px 20px -2px hsl(var(--detective-navy) / 0.1);
+    --shadow-card: 0 2px 10px -2px hsl(var(--detective-navy) / 0.08);
+    --shadow-accent: 0 4px 20px -4px hsl(var(--detective-gold) / 0.3);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +122,38 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer components {
+  /* Professional Typography */
+  .heading-hero {
+    @apply text-4xl md:text-6xl font-bold tracking-tight;
+  }
+  
+  .heading-section {
+    @apply text-3xl md:text-4xl font-semibold tracking-tight;
+  }
+  
+  .heading-card {
+    @apply text-xl font-semibold;
+  }
+  
+  .text-professional {
+    @apply text-lg leading-relaxed text-muted-foreground;
+  }
+  
+  /* Professional Components */
+  .card-professional {
+    @apply bg-card border border-border rounded-lg p-6 shadow-[var(--shadow-card)];
+  }
+  
+  .btn-professional {
+    @apply bg-gradient-to-r from-[hsl(var(--detective-navy))] to-[hsl(var(--detective-navy-light))] text-primary-foreground px-8 py-3 rounded-lg font-medium shadow-[var(--shadow-professional)] hover:shadow-[var(--shadow-accent)] transition-all duration-300;
+  }
+  
+  .btn-accent {
+    @apply bg-gradient-to-r from-[hsl(var(--detective-gold))] to-[hsl(var(--detective-gold-light))] text-accent-foreground px-8 py-3 rounded-lg font-medium shadow-[var(--shadow-accent)] hover:scale-105 transition-all duration-300;
   }
 }
