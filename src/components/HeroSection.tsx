@@ -40,7 +40,7 @@ const HeroSection = () => {
           </p>
           
           <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-            Detetive em Brasília DF com mais de 10 anos de experiência. Atendimento em todo o Distrito Federal 
+            Detetive em Brasília DF com mais de 15 anos de experiência. Atendimento em todo o Distrito Federal 
             com preços justos e consulta gratuita.
           </p>
 

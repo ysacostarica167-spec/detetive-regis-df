@@ -10,8 +10,8 @@ const AboutSection = () => {
     },
     {
       icon: <Shield className="w-6 h-6 text-detective-gold" />,
-      title: "10+ Anos de Experiência",
-      description: "Mais de uma década atuando em investigações particulares"
+      title: "15+ Anos de Experiência",
+      description: "Mais de década e meia atuando em investigações particulares"
     },
     {
       icon: <Users className="w-6 h-6 text-detective-gold" />,
@@ -56,7 +56,7 @@ const AboutSection = () => {
             </h3>
             <div className="space-y-4 text-professional-grey">
               <p>
-                Com formação acadêmica completa em investigação profissional e mais de 10 anos de experiência 
+                Com formação acadêmica completa em investigação profissional e mais de 15 anos de experiência 
                 no mercado, o Detetive Regis especializou-se em oferecer soluções investigativas precisas e 
                 discretas para pessoas físicas e jurídicas.
               </p>
