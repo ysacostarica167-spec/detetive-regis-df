@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Menu, X, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,6 +45,12 @@ const Header = () => {
             >
               Serviços
             </button>
+            <Link 
+              to="/servicos-ciberneticos"
+              className="text-professional-grey hover:text-detective-navy transition-colors"
+            >
+              Serviços Cibernéticos
+            </Link>
             <button 
               onClick={() => scrollToSection('sobre')}
               className="text-professional-grey hover:text-detective-navy transition-colors"
@@ -98,6 +105,13 @@ const Header = () => {
               >
                 Serviços
               </button>
+              <Link 
+                to="/servicos-ciberneticos"
+                className="text-left text-professional-grey hover:text-detective-navy transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Serviços Cibernéticos
+              </Link>
               <button 
                 onClick={() => scrollToSection('sobre')}
                 className="text-left text-professional-grey hover:text-detective-navy transition-colors"
