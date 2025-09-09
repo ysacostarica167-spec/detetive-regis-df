@@ -49,28 +49,28 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <Shield className="w-8 h-8 text-detective-gold" />
             <div>
               <div className="font-bold text-detective-navy text-lg">Detetive Regis</div>
               <div className="text-xs text-professional-grey">Investigação Profissional</div>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('inicio')}
+          <nav className="hidden md:flex items-center space-x-6">
+            <Link 
+              to="/"
               className="text-professional-grey hover:text-detective-navy transition-colors"
             >
               Início
-            </button>
-            <button 
-              onClick={() => scrollToSection('servicos')}
+            </Link>
+            <Link 
+              to="/#servicos"
               className="text-professional-grey hover:text-detective-navy transition-colors"
             >
               Serviços
-            </button>
+            </Link>
             <Link 
               to="/servicos-ciberneticos"
               className="text-professional-grey hover:text-detective-navy transition-colors"
@@ -83,18 +83,18 @@ const Header = () => {
             >
               Investigação Jurídica
             </Link>
-            <button 
-              onClick={() => scrollToSection('sobre')}
+            <Link 
+              to="/#sobre"
               className="text-professional-grey hover:text-detective-navy transition-colors"
             >
               Sobre
-            </button>
-            <button 
-              onClick={() => scrollToSection('contato')}
+            </Link>
+            <Link 
+              to="/#contato"
               className="text-professional-grey hover:text-detective-navy transition-colors"
             >
               Contato
-            </button>
+            </Link>
           </nav>
 
           {/* CTA Button */}
@@ -125,18 +125,20 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
-              <button 
-                onClick={() => scrollToSection('inicio')}
+              <Link 
+                to="/"
                 className="text-left text-professional-grey hover:text-detective-navy transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Início
-              </button>
-              <button 
-                onClick={() => scrollToSection('servicos')}
+              </Link>
+              <Link 
+                to="/#servicos"
                 className="text-left text-professional-grey hover:text-detective-navy transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Serviços
-              </button>
+              </Link>
               <Link 
                 to="/servicos-ciberneticos"
                 className="text-left text-professional-grey hover:text-detective-navy transition-colors"
@@ -151,18 +153,20 @@ const Header = () => {
               >
                 Investigação Jurídica
               </Link>
-              <button 
-                onClick={() => scrollToSection('sobre')}
+              <Link 
+                to="/#sobre"
                 className="text-left text-professional-grey hover:text-detective-navy transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Sobre
-              </button>
-              <button 
-                onClick={() => scrollToSection('contato')}
+              </Link>
+              <Link 
+                to="/#contato"
                 className="text-left text-professional-grey hover:text-detective-navy transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Contato
-              </button>
+              </Link>
               <Button 
                 onClick={handleWhatsAppClick}
                 className="btn-professional w-full mt-4"
