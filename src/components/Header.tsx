@@ -37,9 +37,15 @@ const Header = () => {
   };
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // Check if we're on the home page
+    if (window.location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to home page with hash
+      window.location.href = `/#${sectionId}`;
     }
     setIsMenuOpen(false);
   };
@@ -65,12 +71,12 @@ const Header = () => {
             >
               Início
             </Link>
-            <Link 
-              to="/#servicos"
+            <button 
+              onClick={() => scrollToSection('servicos')}
               className="text-professional-grey hover:text-detective-navy transition-colors"
             >
               Serviços
-            </Link>
+            </button>
             <Link 
               to="/servicos-ciberneticos"
               className="text-professional-grey hover:text-detective-navy transition-colors"
@@ -83,18 +89,18 @@ const Header = () => {
             >
               Investigação Jurídica
             </Link>
-            <Link 
-              to="/#sobre"
+            <button 
+              onClick={() => scrollToSection('sobre')}
               className="text-professional-grey hover:text-detective-navy transition-colors"
             >
               Sobre
-            </Link>
-            <Link 
-              to="/#contato"
+            </button>
+            <button 
+              onClick={() => scrollToSection('contato')}
               className="text-professional-grey hover:text-detective-navy transition-colors"
             >
               Contato
-            </Link>
+            </button>
           </nav>
 
           {/* CTA Button */}
@@ -132,13 +138,12 @@ const Header = () => {
               >
                 Início
               </Link>
-              <Link 
-                to="/#servicos"
+              <button 
+                onClick={() => scrollToSection('servicos')}
                 className="text-left text-professional-grey hover:text-detective-navy transition-colors"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Serviços
-              </Link>
+              </button>
               <Link 
                 to="/servicos-ciberneticos"
                 className="text-left text-professional-grey hover:text-detective-navy transition-colors"
@@ -153,20 +158,18 @@ const Header = () => {
               >
                 Investigação Jurídica
               </Link>
-              <Link 
-                to="/#sobre"
+              <button 
+                onClick={() => scrollToSection('sobre')}
                 className="text-left text-professional-grey hover:text-detective-navy transition-colors"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Sobre
-              </Link>
-              <Link 
-                to="/#contato"
+              </button>
+              <button 
+                onClick={() => scrollToSection('contato')}
                 className="text-left text-professional-grey hover:text-detective-navy transition-colors"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Contato
-              </Link>
+              </button>
               <Button 
                 onClick={handleWhatsAppClick}
                 className="btn-professional w-full mt-4"
