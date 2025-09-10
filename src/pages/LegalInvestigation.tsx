@@ -3,6 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { serviceSchema, breadcrumbSchema } from "@/data/structuredData";
 import { 
   Scale, 
   MessageCircle, 
@@ -21,6 +24,17 @@ import {
 } from "lucide-react";
 
 const LegalInvestigation = () => {
+  const structuredData = [
+    serviceSchema(
+      "Investigação Jurídica e Perícia Judicial",
+      "Investigação jurídica profissional, perícia judicial, coleta de provas e suporte legal especializado para advogados em Brasília DF"
+    ),
+    breadcrumbSchema([
+      { name: "Início", url: "/" },
+      { name: "Investigação Jurídica", url: "/investigacao-juridica" }
+    ])
+  ];
+
   const handleWhatsAppClick = () => {
     const message = "Olá! Preciso de investigação jurídica para um caso.";
     const phoneNumber = "5561982844543";
@@ -112,7 +126,15 @@ const LegalInvestigation = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Investigação Jurídica - Detetive Particular DF | Perícia Judicial Brasília"
+        description="Investigação jurídica e perícia judicial em Brasília DF. Suporte para advogados, coleta de provas, laudos periciais com validade legal. Detetive especializado em casos jurídicos."
+        keywords="investigação jurídica df, perícia judicial brasília, detetive para advogados df, coleta provas brasília, laudo pericial df, investigação legal brasília, suporte jurídico investigativo"
+        canonical="/investigacao-juridica"
+        structuredData={structuredData}
+      />
       <Header />
+      <Breadcrumbs />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-detective-navy via-detective-navy/95 to-detective-navy/90">

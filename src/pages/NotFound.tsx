@@ -2,6 +2,7 @@ import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Home, ArrowLeft } from "lucide-react";
 
@@ -14,6 +15,11 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Página Não Encontrada - Detetive Particular Regis DF"
+        description="Página não encontrada. Acesse nossa página inicial para conhecer os serviços de investigação particular em Brasília DF. Detetive Regis - WhatsApp (61) 98284-4543"
+        keywords="detetive particular df, detetive brasília, investigação profissional df"
+      />
       <Header />
       
       {/* 404 Content */}

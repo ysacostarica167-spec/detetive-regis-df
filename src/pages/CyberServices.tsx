@@ -3,6 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { serviceSchema, breadcrumbSchema } from "@/data/structuredData";
 import { 
   Shield, 
   MessageCircle, 
@@ -19,6 +22,17 @@ import {
 } from "lucide-react";
 
 const CyberServices = () => {
+  const structuredData = [
+    serviceSchema(
+      "Serviços Cibernéticos de Investigação",
+      "Investigação digital profissional, perícia forense, análise de dispositivos móveis e segurança cibernética em Brasília DF"
+    ),
+    breadcrumbSchema([
+      { name: "Início", url: "/" },
+      { name: "Serviços Cibernéticos", url: "/servicos-ciberneticos" }
+    ])
+  ];
+
   const handleWhatsAppClick = () => {
     const message = "Olá! Tenho interesse nos serviços cibernéticos de investigação.";
     const phoneNumber = "5561982844543";
@@ -101,7 +115,15 @@ const CyberServices = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Serviços Cibernéticos - Detetive Particular DF | Investigação Digital Brasília"
+        description="Detetive especializado em investigação digital, perícia forense, análise de celulares e computadores em Brasília DF. Crimes cibernéticos, recuperação de dados, evidências digitais."
+        keywords="investigação digital df, detetive cibernético brasília, perícia forense digital, investigação celular df, crimes digitais brasília, recuperação dados df, evidências digitais"
+        canonical="/servicos-ciberneticos"
+        structuredData={structuredData}
+      />
       <Header />
+      <Breadcrumbs />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-detective-navy via-detective-navy/95 to-detective-navy/90">

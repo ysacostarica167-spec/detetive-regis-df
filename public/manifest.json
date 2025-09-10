@@ -1,0 +1,19 @@
+{
+  "name": "Detetive Particular Regis - Investigação Profissional DF",
+  "short_name": "Detetive Regis DF",
+  "description": "Detetive particular em Brasília DF com mais de 15 anos de experiência. Investigação conjugal, corporativa, cibernética e jurídica.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a2844",
+  "theme_color": "#d4af37",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "lang": "pt-BR",
+  "categories": ["business", "professional", "investigation"]
+}
