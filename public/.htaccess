@@ -30,3 +30,14 @@
     Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
+
+# SPA configuration - rewrite all routes to index.html
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Handle client-side routing (React Router)
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+</IfModule>
