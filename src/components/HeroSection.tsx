@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Shield, Award } from "lucide-react";
-import heroImage from "@/assets/detective-hero.jpg";
+import heroImage from "@/assets/detective-hero-hq.jpg";
+import LazyImage from "@/components/LazyImage";
 
 const HeroSection = () => {
   const handleWhatsAppClick = () => {
@@ -41,20 +42,20 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img 
+        <LazyImage
           src={heroImage} 
-          alt="Detetive Particular Profissional" 
-          className="w-full h-full object-cover"
+          alt="Detetive Particular Profissional - Investigação DF" 
+          className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-[3000ms]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-detective-navy/95 to-detective-navy/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-detective-navy/95 via-detective-navy/85 to-detective-navy/70"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 container mx-auto px-4 py-20 animate-fade-in">
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Professional Badge */}
-          <div className="inline-flex items-center gap-2 bg-detective-gold/20 backdrop-blur-sm border border-detective-gold/30 rounded-full px-6 py-2 mb-6">
-            <Award className="w-5 h-5 text-detective-gold" />
+          <div className="inline-flex items-center gap-2 bg-detective-gold/20 backdrop-blur-sm border border-detective-gold/30 rounded-full px-6 py-2 mb-6 hover:bg-detective-gold/30 hover:scale-105 transition-all duration-300">
+            <Award className="w-5 h-5 text-detective-gold animate-pulse" />
             <span className="text-detective-gold font-medium">Graduado em Investigação Profissional</span>
           </div>
 

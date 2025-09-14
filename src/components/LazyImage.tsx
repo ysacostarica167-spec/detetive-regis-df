@@ -32,24 +32,27 @@ const LazyImage = ({ src, alt, className, placeholder }: LazyImageProps) => {
 
   return (
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
-      {/* Placeholder */}
+      {/* Sophisticated placeholder with gradient */}
       <div 
-        className={`absolute inset-0 bg-muted animate-pulse transition-opacity duration-300 ${
-          isLoaded ? 'opacity-0' : 'opacity-100'
+        className={`absolute inset-0 bg-gradient-to-br from-detective-navy/20 via-detective-gold/10 to-detective-navy/20 transition-all duration-500 ${
+          isLoaded ? 'opacity-0 scale-105' : 'opacity-100 scale-100'
         }`}
-      />
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-detective-gold/20 to-transparent animate-pulse" />
+      </div>
       
-      {/* Actual image */}
+      {/* High-quality image with smooth loading */}
       {isInView && (
         <img
           src={src}
           alt={alt}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
+          className={`w-full h-full object-cover transition-all duration-700 ease-out ${
+            isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           } ${className}`}
           onLoad={() => setIsLoaded(true)}
           loading="lazy"
           decoding="async"
+          fetchPriority="high"
         />
       )}
     </div>
