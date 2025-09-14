@@ -37,6 +37,10 @@ const ContactSection = () => {
     window.open("tel:+5561982844543", "_blank");
   };
 
+  const handleEmailClick = () => {
+    window.open("mailto:contato@regis.com.br", "_blank");
+  };
+
   const contactInfo = [
     {
       icon: <MessageCircle className="w-6 h-6 text-detective-gold" />,
@@ -51,6 +55,13 @@ const ContactSection = () => {
       value: "(61) 98284-4543",
       description: "Ligação direta",
       action: handlePhoneClick
+    },
+    {
+      icon: <Mail className="w-6 h-6 text-detective-gold" />,
+      title: "E-mail",
+      value: "contato@regis.com.br",
+      description: "Contato por e-mail",
+      action: handleEmailClick
     },
     {
       icon: <MapPin className="w-6 h-6 text-detective-gold" />,
