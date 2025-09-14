@@ -83,6 +83,15 @@ const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-detective-gold transition-all duration-300 group-hover:w-full"></span>
               </span>
             </button>
+            <button 
+              onClick={() => scrollToSection('conteudo')}
+              className="text-professional-grey hover:text-detective-navy transition-all duration-300 relative group"
+            >
+              <span className="relative">
+                Conteúdo
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-detective-gold transition-all duration-300 group-hover:w-full"></span>
+              </span>
+            </button>
             <Link 
               to="/servicos-ciberneticos"
               className="text-professional-grey hover:text-detective-navy transition-all duration-300 relative group"
@@ -161,6 +170,12 @@ const Header = () => {
                 className="text-left text-professional-grey hover:text-detective-navy hover:bg-detective-gold/10 rounded-lg px-3 py-2 transition-all duration-300"
               >
                 Serviços
+              </button>
+              <button 
+                onClick={() => scrollToSection('conteudo')}
+                className="text-left text-professional-grey hover:text-detective-navy hover:bg-detective-gold/10 rounded-lg px-3 py-2 transition-all duration-300"
+              >
+                Conteúdo
               </button>
               <Link 
                 to="/servicos-ciberneticos"

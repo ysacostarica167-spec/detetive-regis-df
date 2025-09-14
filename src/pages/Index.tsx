@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import Header from "@/components/Header";
 import ServicesSection from "@/components/ServicesSection";
+import ContentSection from "@/components/ContentSection";
 import AboutSection from "@/components/AboutSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
@@ -14,9 +15,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Detetive Particular Regis - Investigação Profissional DF | WhatsApp (61) 98284-4543"
-        description="Detetive Particular DF - Regis, graduado em investigação profissional. Detetive em Brasília DF com preços justos. Investigação conjugal, corporativa, localização. WhatsApp (61) 98284-4543"
-        keywords="detetive particular df, detetive particular brasília, detetive df, detetive particular em brasília, detetive particular df barato, detetive em brasília df, detetive brasília df, detetive particular brasilia preço, investigação profissional, investigação conjugal, investigação corporativa, localização de pessoas"
+        title="Detetive Particular Regis - Investigação Profissional DF | Conteúdo Especializado | WhatsApp (61) 98284-4543"
+        description="Detetive Particular DF - Regis, graduado em investigação profissional. Blog com artigos especializados, guias práticos e conteúdo de autoridade. Detetive em Brasília DF com preços justos. WhatsApp (61) 98284-4543"
+        keywords="detetive particular df, detetive particular brasília, detetive df, blog investigação, artigos detetive particular, guias investigação, conteúdo especializado, detetive em brasília df, investigação profissional, investigação conjugal, investigação corporativa"
         canonical="/"
         structuredData={structuredData}
       />
@@ -27,6 +28,9 @@ const Index = () => {
         </section>
         <section id="servicos">
           <ServicesSection />
+        </section>
+        <section id="conteudo">
+          <ContentSection />
         </section>
         <section id="sobre">
           <AboutSection />
