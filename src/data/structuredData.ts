@@ -8,7 +8,7 @@ export const localBusinessSchema = {
   "url": "https://detetive-regis.lovable.app",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Brasília",
+    "streetAddress": "Asa Sul",
     "addressLocality": "Brasília", 
     "addressRegion": "DF",
     "addressCountry": "BR"
@@ -133,6 +133,7 @@ export const serviceSchema = (serviceName: string, description: string) => ({
     "telephone": "+5561982844543",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Asa Sul",
       "addressLocality": "Brasília",
       "addressRegion": "DF", 
       "addressCountry": "BR"

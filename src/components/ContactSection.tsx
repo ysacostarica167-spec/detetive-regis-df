@@ -65,9 +65,9 @@ const ContactSection = () => {
     },
     {
       icon: <MapPin className="w-6 h-6 text-detective-gold" />,
-      title: "Área de Atendimento",
-      value: "Todo o Distrito Federal",
-      description: "Brasília e região metropolitana"
+      title: "Escritório",
+      value: "Asa Sul, Brasília DF",
+      description: "Atendimento em todo o Distrito Federal"
     },
     {
       icon: <Clock className="w-6 h-6 text-detective-gold" />,
