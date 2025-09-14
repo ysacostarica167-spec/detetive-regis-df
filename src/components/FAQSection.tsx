@@ -7,28 +7,13 @@ const FAQSection = () => {
     const message = "Olá! Tenho algumas dúvidas sobre investigação particular.";
     const phoneNumber = "5561982844543";
     
-    // Try multiple WhatsApp URL formats for better compatibility
-    const urls = [
-      `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`,
-      `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`,
-      `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`,
-      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-    ];
+    // Use wa.me as primary method (more reliable)
+    const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
-    // Try to open WhatsApp, fallback to web version if app is not available
-    let opened = false;
-    for (const url of urls) {
-      try {
-        window.open(url, '_blank');
-        opened = true;
-        break;
-      } catch (error) {
-        continue;
-      }
-    }
-    
-    // Final fallback - open direct tel link
-    if (!opened) {
+    try {
+      window.open(waUrl, '_blank');
+    } catch (error) {
+      // Fallback to direct phone call
       window.open("tel:+5561982844543", "_blank");
     }
   };
