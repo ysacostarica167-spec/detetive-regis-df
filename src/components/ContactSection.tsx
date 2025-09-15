@@ -23,7 +23,7 @@ const ContactSection = () => {
   };
 
   const handleEmailClick = () => {
-    window.open("mailto:contato@regis.com.br", "_blank");
+    window.open("mailto:contatoregis.com.br", "_blank");
   };
 
   const contactInfo = [
@@ -44,7 +44,7 @@ const ContactSection = () => {
     {
       icon: <Mail className="w-6 h-6 text-detective-gold" />,
       title: "E-mail",
-      value: "contato@regis.com.br",
+      value: "contatoregis.com.br",
       description: "Contato por e-mail",
       action: handleEmailClick
     },

@@ -53,11 +53,11 @@ const Footer = () => {
                 <span>(61) 98284-4543</span>
               </button>
               <a 
-                href="mailto:contato@regis.com.br"
+                href="mailto:contatoregis.com.br"
                 className="flex items-center gap-3 text-white/80 hover:text-detective-gold transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>contato@regis.com.br</span>
+                <span>contatoregis.com.br</span>
               </a>
               <div className="flex items-center gap-3 text-white/80">
                 <MapPin className="w-5 h-5" />

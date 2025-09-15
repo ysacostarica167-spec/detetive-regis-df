@@ -29,8 +29,8 @@ const Header = () => {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // Navigate to home page with hash
-      window.location.href = `/#${sectionId}`;
+      // Navigate to home page first, then scroll after navigation
+      window.location.assign('/#' + sectionId);
     }
     setIsMenuOpen(false);
   };
