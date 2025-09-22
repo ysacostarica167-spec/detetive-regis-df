@@ -17,7 +17,7 @@ const Index = () => {
       <SEO 
         title="Detetive Particular Regis - Investigação Profissional DF | Conteúdo Especializado | WhatsApp (61) 98284-4543"
         description="Detetive Particular DF - Regis, graduado em investigação profissional. Blog com artigos especializados, guias práticos e conteúdo de autoridade. Detetive em Brasília DF com preços justos. WhatsApp (61) 98284-4543"
-        keywords="detetive particular df, detetive particular brasília, detetive df, blog investigação, artigos detetive particular, guias investigação, conteúdo especializado, detetive em brasília df, investigação profissional, investigação conjugal, investigação corporativa"
+        keywords="detetive particular df, detetive particular brasília, agência de detetives df, investigador particular df, melhor detetive brasília, investigação conjugal df, como descobrir traição em brasília, detetive para infidelidade df, investigação empresarial df, detetive para funcionários brasília, localização de pessoas desaparecidas df, encontrar devedor de pensão df, investigação familiar em brasília, detetive para filhos em brasília, detetive particular para celular"
         canonical="/"
         structuredData={structuredData}
       />

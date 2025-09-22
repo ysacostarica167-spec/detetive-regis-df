@@ -103,7 +103,7 @@ const CyberServices = () => {
       <SEO 
         title="Serviços Cibernéticos - Detetive Particular DF | Investigação Digital Brasília"
         description="Detetive especializado em investigação digital, perícia forense, análise de celulares e computadores em Brasília DF. Crimes cibernéticos, recuperação de dados, evidências digitais."
-        keywords="investigação digital df, detetive cibernético brasília, perícia forense digital, investigação celular df, crimes digitais brasília, recuperação dados df, evidências digitais"
+        keywords="detetive particular df, investigação digital df, detetive particular brasília, agência de detetives df, melhor detetive brasília, detetive particular para celular, investigação conjugal df, como descobrir traição em brasília, detetive para infidelidade df, perícia forense digital, crimes digitais brasília, recuperação dados df"
         canonical="/servicos-ciberneticos"
         structuredData={structuredData}
       />

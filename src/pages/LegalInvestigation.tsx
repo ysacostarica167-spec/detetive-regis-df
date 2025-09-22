@@ -114,7 +114,7 @@ const LegalInvestigation = () => {
       <SEO 
         title="Investigação Jurídica - Detetive Particular DF | Perícia Judicial Brasília"
         description="Investigação jurídica e perícia judicial em Brasília DF. Suporte para advogados, coleta de provas, laudos periciais com validade legal. Detetive especializado em casos jurídicos."
-        keywords="investigação jurídica df, perícia judicial brasília, detetive para advogados df, coleta provas brasília, laudo pericial df, investigação legal brasília, suporte jurídico investigativo"
+        keywords="investigação jurídica df, perícia judicial brasília, detetive particular df, investigador particular df, agência de detetives df, melhor detetive brasília, detetive para advogados df, coleta provas brasília, laudo pericial df, investigação legal brasília, investigação empresarial df, localização de pessoas desaparecidas df"
         canonical="/investigacao-juridica"
         structuredData={structuredData}
       />
