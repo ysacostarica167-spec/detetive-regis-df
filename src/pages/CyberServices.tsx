@@ -271,6 +271,7 @@ const CyberServices = () => {
               WhatsApp (61) 98284-4543
             </Button>
             <Button 
+              onClick={handleWhatsAppClick}
               variant="outline-light" 
               size="lg"
             >

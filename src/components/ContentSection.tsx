@@ -118,9 +118,17 @@ const ContentSection = () => {
                       ))}
                     </div>
                   </div>
-                  <Button className="btn-professional">
+                  <Button 
+                    onClick={() => {
+                      const message = "Olá! Gostaria de ler o artigo sobre sinais de infidelidade.";
+                      const phoneNumber = "5561982844543";
+                      const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                      window.open(waUrl, '_blank');
+                    }}
+                    className="btn-professional"
+                  >
                     <BookOpen className="w-4 h-4 mr-2" />
-                    Ler Artigo Completo
+                    Solicitar Artigo Completo
                   </Button>
                 </div>
                 <div className="relative">
@@ -177,9 +185,18 @@ const ContentSection = () => {
                       </span>
                     ))}
                   </div>
-                  <Button variant="outline" className="w-full group-hover:bg-detective-gold group-hover:text-white transition-colors duration-300">
+                  <Button 
+                    onClick={() => {
+                      const message = `Olá! Gostaria de ler o artigo: ${article.title}`;
+                      const phoneNumber = "5561982844543";
+                      const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                      window.open(waUrl, '_blank');
+                    }}
+                    variant="outline" 
+                    className="w-full group-hover:bg-detective-gold group-hover:text-white transition-colors duration-300"
+                  >
                     <BookOpen className="w-4 h-4 mr-2" />
-                    Continuar Lendo
+                    Solicitar Artigo
                   </Button>
                 </CardContent>
               </Card>
@@ -210,11 +227,20 @@ const ContentSection = () => {
                   <div className="text-sm text-detective-gold font-medium mb-4">
                     {resource.duration || resource.pages}
                   </div>
-                  <Button variant="outline" className="w-full">
+                  <Button 
+                    onClick={() => {
+                      const message = `Olá! Gostaria de acessar: ${resource.title}`;
+                      const phoneNumber = "5561982844543";
+                      const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                      window.open(waUrl, '_blank');
+                    }}
+                    variant="outline" 
+                    className="w-full"
+                  >
                     {resource.type === 'video' && <Video className="w-4 h-4 mr-2" />}
                     {resource.type === 'download' && <Download className="w-4 h-4 mr-2" />}
                     {resource.type === 'guide' && <BookOpen className="w-4 h-4 mr-2" />}
-                    Acessar {resource.type === 'video' ? 'Vídeo' : resource.type === 'download' ? 'Download' : 'Guia'}
+                    Solicitar {resource.type === 'video' ? 'Vídeo' : resource.type === 'download' ? 'Download' : 'Guia'}
                   </Button>
                 </CardContent>
               </Card>
@@ -235,7 +261,18 @@ const ContentSection = () => {
                 placeholder="Seu melhor e-mail"
                 className="flex-1 px-4 py-3 rounded-lg text-detective-navy placeholder:text-detective-navy/60 focus:outline-none focus:ring-2 focus:ring-detective-gold"
               />
-              <Button className="btn-accent">
+              <Button 
+                onClick={() => {
+                  const email = (document.querySelector('input[type="email"]') as HTMLInputElement)?.value;
+                  const message = email ? 
+                    `Olá! Gostaria de me inscrever na newsletter com o email: ${email}` :
+                    "Olá! Gostaria de me inscrever na newsletter.";
+                  const phoneNumber = "5561982844543";
+                  const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                  window.open(waUrl, '_blank');
+                }}
+                className="btn-accent"
+              >
                 <BookOpen className="w-4 h-4 mr-2" />
                 Inscrever-se
               </Button>
