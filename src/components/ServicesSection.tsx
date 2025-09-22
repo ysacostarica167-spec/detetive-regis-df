@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Search, Camera, UserCheck, Building2, Heart, Scale, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import investigationIcon from "@/assets/investigation-icon-hq.jpg";
 import surveillanceIcon from "@/assets/surveillance-icon-hq.jpg";
 import LazyImage from "@/components/LazyImage";
@@ -11,32 +12,38 @@ const ServicesSection = () => {
       title: "Investigação Conjugal",
       description: "Investigação discreta de infidelidade e comportamento conjugal com relatórios detalhados e evidências.",
       image: investigationIcon,
+      link: "/investigacao-conjugal"
     },
     {
       icon: <Camera className="w-8 h-8 text-detective-gold" />,
       title: "Vigilância e Monitoramento",
       description: "Serviços de vigilância profissional para pessoas físicas e jurídicas com equipamentos modernos.",
       image: surveillanceIcon,
+      link: "/servicos-ciberneticos"
     },
     {
       icon: <UserCheck className="w-8 h-8 text-detective-gold" />,
       title: "Investigação de Antecedentes",
       description: "Verificação completa de histórico pessoal, profissional e financeiro de pessoas e empresas.",
+      link: "/investigacao-juridica"
     },
     {
       icon: <Building2 className="w-8 h-8 text-detective-gold" />,
       title: "Investigação Corporativa",
       description: "Investigações empresariais, fraudes internas, concorrência desleal e due diligence.",
+      link: "/investigacao-empresarial"
     },
     {
       icon: <Heart className="w-8 h-8 text-detective-gold" />,
       title: "Localização de Pessoas",
       description: "Busca e localização de pessoas desaparecidas, parentes distantes e devedores.",
+      link: "/localizacao-pessoas"
     },
     {
       icon: <Scale className="w-8 h-8 text-detective-gold" />,
       title: "Perícia e Consultoria",
       description: "Laudos técnicos, perícias particulares e consultoria especializada em investigação.",
+      link: "/investigacao-juridica"
     },
   ];
 
@@ -72,30 +79,36 @@ const ServicesSection = () => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => (
-            <Card key={index} className="card-professional hover:shadow-[var(--shadow-accent)] hover:-translate-y-2 transition-all duration-300 group animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-              <CardHeader className="text-center">
-                {service.image && (
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-br from-detective-gold/20 to-detective-navy/20 flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-detective-gold/20">
-                    <LazyImage
-                      src={service.image} 
-                      alt={`${service.title} - Detetive Particular DF`}
-                      className="w-16 h-16 object-cover rounded-full group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                )}
-                {!service.image && (
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-detective-gold/20 to-detective-navy/20 flex items-center justify-center group-hover:scale-110 transition-transform group-hover:shadow-lg group-hover:shadow-detective-gold/20">
-                    {service.icon}
-                  </div>
-                )}
-                <CardTitle className="heading-card text-detective-navy group-hover:text-detective-gold transition-colors duration-300">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-professional-grey text-center">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <Link 
+              key={index} 
+              to={service.link}
+              className="group block"
+            >
+              <Card className="card-professional hover:shadow-[var(--shadow-accent)] hover:-translate-y-2 transition-all duration-300 group-hover:border-detective-gold/30 animate-fade-in h-full" style={{ animationDelay: `${index * 100}ms` }}>
+                <CardHeader className="text-center">
+                  {service.image && (
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-br from-detective-gold/20 to-detective-navy/20 flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-detective-gold/20">
+                      <LazyImage
+                        src={service.image} 
+                        alt={`${service.title} - Detetive Particular DF`}
+                        className="w-16 h-16 object-cover rounded-full group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
+                  {!service.image && (
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-detective-gold/20 to-detective-navy/20 flex items-center justify-center group-hover:scale-110 transition-transform group-hover:shadow-lg group-hover:shadow-detective-gold/20">
+                      {service.icon}
+                    </div>
+                  )}
+                  <CardTitle className="heading-card text-detective-navy group-hover:text-detective-gold transition-colors duration-300">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-professional-grey text-center">
+                    {service.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
 
