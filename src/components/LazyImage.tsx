@@ -52,7 +52,6 @@ const LazyImage = ({ src, alt, className, placeholder }: LazyImageProps) => {
           onLoad={() => setIsLoaded(true)}
           loading="lazy"
           decoding="async"
-          fetchPriority="high"
         />
       )}
     </div>
