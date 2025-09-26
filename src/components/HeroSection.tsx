@@ -30,13 +30,13 @@ const HeroSection = () => {
         <LazyImage
           src={heroImage} 
           alt="Detetive Particular Profissional - Investigação DF" 
-          className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-[3000ms]"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-detective-navy/95 via-detective-navy/85 to-detective-navy/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-detective-navy/90 via-detective-navy/80 to-detective-navy/60"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20 animate-fade-in">
+      <div className="relative z-10 container mx-auto px-4 py-16 md:py-20 animate-fade-in">
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Professional Badge */}
           <div className="inline-flex items-center gap-2 bg-detective-gold/20 backdrop-blur-sm border border-detective-gold/30 rounded-full px-6 py-2 mb-6 hover:bg-detective-gold/30 hover:scale-105 transition-all duration-300">
@@ -45,9 +45,9 @@ const HeroSection = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="heading-hero mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="block text-white">Detetive Particular</span>
-            <span className="block text-detective-gold">Regis</span>
+            <span className="block text-detective-gold bg-gradient-to-r from-detective-gold to-detective-gold/80 bg-clip-text text-transparent">Regis</span>
           </h1>
 
           {/* Subtitle */}
@@ -77,10 +77,10 @@ const HeroSection = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={handleWhatsAppClick}
-              className="btn-accent group"
+              className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group w-full sm:w-auto"
               size="lg"
             >
               <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
@@ -88,7 +88,7 @@ const HeroSection = () => {
             </Button>
             <Button 
               onClick={handlePhoneClick}
-              variant="outline-light" 
+              className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-semibold px-8 py-4 rounded-lg backdrop-blur-sm transition-all duration-300 w-full sm:w-auto"
               size="lg"
             >
               <Phone className="w-5 h-5 mr-2" />
