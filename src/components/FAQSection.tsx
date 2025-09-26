@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { HelpCircle, CheckCircle, MessageCircle } from "lucide-react";
+import { faqSchema } from "@/data/structuredData";
+import { Helmet } from "react-helmet-async";
 
 const FAQSection = () => {
   const handleWhatsAppClick = () => {
@@ -20,41 +22,55 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "Quanto custa um detetive particular em Brasília DF?",
-      answer: "O valor do detetive particular DF varia conforme o tipo de investigação. Oferecemos preços justos e competitivos no mercado de Brasília. Entre em contato para um orçamento personalizado e gratuito via WhatsApp."
+      question: "Qual o preço de um detetive particular em Brasília DF?",
+      answer: "O valor do detetive particular DF varia conforme o tipo de investigação e complexidade do caso. Oferecemos preços justos e competitivos no mercado de Brasília, com consulta inicial gratuita. Valores a partir de R$ 1.500 para casos simples. Entre em contato para um orçamento personalizado via WhatsApp (61) 98284-4543."
     },
     {
-      question: "Onde encontrar detetive particular barato no DF?",
-      answer: "Como detetive particular DF com preços acessíveis, oferecemos consultas gratuitas e orçamentos transparentes. Nossos valores são justos para investigações profissionais em todo o Distrito Federal."
+      question: "Como encontrar detetive particular confiável no DF?",
+      answer: "Para encontrar um detetive particular confiável em Brasília DF, verifique: formação profissional graduada, experiência comprovada (15+ anos), sigilo absoluto garantido, preços transparentes, atendimento 24h e avaliações positivas de clientes. Somos detetives graduados com registro profissional."
     },
     {
-      question: "Como funciona a investigação de um detetive em Brasília DF?",
-      answer: "O detetive em Brasília DF segue metodologias profissionais: análise inicial do caso, planejamento estratégico, coleta de evidências, relatório detalhado. Tudo com sigilo absoluto e dentro da legalidade."
+      question: "Como funciona a investigação conjugal em Brasília DF?",
+      answer: "A investigação conjugal em Brasília DF segue processo profissional: consulta sigilosa inicial, análise do caso, planejamento estratégico da investigação, coleta discreta de evidências, documentação fotográfica quando necessário, relatório detalhado com provas. Tudo dentro da legalidade e com sigilo total."
     },
     {
-      question: "Qual a área de atuação do detetive particular no DF?",
-      answer: "Atendemos como detetive particular no DF em todas as regiões administrativas: Plano Piloto, Taguatinga, Ceilândia, Sobradinho, Gama, Águas Claras, Samambaia, Santa Maria e demais cidades do Distrito Federal."
+      question: "Detetive particular atende em quais cidades do DF?",
+      answer: "Atendemos como detetive particular em todo o Distrito Federal: Brasília (Plano Piloto), Taguatinga, Ceilândia, Sobradinho, Gama, Águas Claras, Samambaia, Santa Maria, São Sebastião, Paranoá, Planaltina, Brazlândia, Núcleo Bandeirante, Riacho Fundo, Guará, Candangolândia, Cruzeiro, Lago Sul, Lago Norte, Park Way, SCIA, Vicente Pires e região do Entorno."
     },
     {
-      question: "O detetive particular Brasília oferece que tipos de investigação?",
-      answer: "Como detetive particular Brasília, oferecemos: investigação conjugal, investigação corporativa, localização de pessoas, verificação de antecedentes, vigilância e monitoramento, perícias particulares."
+      question: "Que tipos de investigação um detetive particular DF realiza?",
+      answer: "Como detetive particular especializado em Brasília DF, realizamos: investigação conjugal (descobrir traição), investigação empresarial (funcionários e fraudes), investigação digital (celulares e computadores), localização de pessoas desaparecidas, encontrar devedor de pensão alimentícia, investigação familiar, perícia particular, verificação de antecedentes e investigação jurídica para advogados."
     },
     {
-      question: "É legal contratar detetive particular em Brasília DF?",
-      answer: "Sim, contratar detetive particular Brasília DF é totalmente legal. Somos profissionais regulamentados que atuam dentro da lei, com formação específica em investigação profissional."
+      question: "É legal contratar detetive particular em Brasília?",
+      answer: "Sim, é totalmente legal contratar detetive particular em Brasília DF. Somos profissionais graduados e regulamentados que atuam dentro da lei brasileira. A investigação particular é uma profissão reconhecida no Brasil, desde que respeitados os limites legais e éticos. Nossos relatórios têm validade jurídica."
     },
     {
-      question: "Como escolher o melhor detetive no DF?",
-      answer: "Escolha um detetive no DF com: formação profissional comprovada, experiência no mercado, sigilo garantido, preços transparentes, relatórios detalhados e atendimento personalizado 24h."
+      question: "Como descobrir traição do marido ou esposa em Brasília?",
+      answer: "Para descobrir traição em Brasília, um detetive particular especializado realiza: análise comportamental, investigação digital discreta, monitoramento de atividades, documentação de evidências, relatório completo com provas. Método 100% sigiloso e legal. Consulta inicial gratuita para avaliar seu caso específico."
     },
     {
-      question: "Quanto tempo leva uma investigação com detetive DF?",
-      answer: "O prazo varia conforme a complexidade do caso. Como detetive DF experiente, algumas investigações são resolvidas em dias, outras podem levar semanas. Fornecemos estimativas realistas na consulta inicial."
+      question: "Quanto tempo demora uma investigação particular no DF?",
+      answer: "O prazo da investigação particular no DF varia conforme a complexidade: casos simples de 7 a 15 dias, casos médios de 15 a 30 dias, casos complexos de 30 a 60 dias. Como detetive DF experiente, fornecemos estimativas realistas na consulta inicial. Alguns casos urgentes podem ser priorizados."
+    },
+    {
+      question: "Detetive particular garante sigilo absoluto?",
+      answer: "Sim, garantimos sigilo absoluto e confidencialidade total. É princípio fundamental da profissão de detetive particular. Todas as informações do cliente, detalhes da investigação e resultados são mantidos em absoluta discrição. Temos compromisso ético e legal com a privacidade dos nossos clientes em Brasília DF."
+    },
+    {
+      question: "Como funciona a localização de pessoas desaparecidas no DF?",
+      answer: "A localização de pessoas desaparecidas no DF envolve: coleta de dados pessoais e histórico, investigação em bases de dados oficiais, verificação em redes sociais e internet, investigação de campo em locais de interesse, contato com familiares e conhecidos, uso de técnicas avançadas de localização. Especialistas em encontrar devedores de pensão e pessoas desaparecidas em Brasília."
     }
   ];
 
   return (
     <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema(faqs))}
+        </script>
+      </Helmet>
+      
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -62,8 +78,8 @@ const FAQSection = () => {
             <HelpCircle className="w-5 h-5 text-detective-gold" />
             <span className="text-detective-gold font-medium">Perguntas Frequentes</span>
           </div>
-          <h2 className="heading-section text-detective-navy mb-6">
-            Dúvidas Sobre Detetive Particular DF
+          <h2 className="text-3xl md:text-4xl font-bold text-detective-navy mb-6">
+            Perguntas Frequentes - Detetive Particular DF
           </h2>
           <p className="text-professional max-w-3xl mx-auto">
             Respostas às principais dúvidas sobre serviços de detetive particular em Brasília DF, 
@@ -107,7 +123,7 @@ const FAQSection = () => {
               </p>
               <button 
                 onClick={handleWhatsAppClick}
-                className="btn-professional"
+                className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Tirar Dúvidas no WhatsApp
