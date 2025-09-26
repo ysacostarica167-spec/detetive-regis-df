@@ -123,9 +123,9 @@ const ConjugalInvestigation = () => {
               Especialista em Investigação Conjugal
             </Badge>
             
-            <h1 className="heading-hero mb-6">
-              <span className="block">Como Descobrir</span>
-              <span className="block text-detective-gold">Traição em Brasília</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <span className="block text-white">Como Descobrir</span>
+              <span className="block text-detective-gold bg-gradient-to-r from-detective-gold to-detective-gold/80 bg-clip-text text-transparent">Traição em Brasília</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto leading-relaxed">
@@ -137,14 +137,16 @@ const ConjugalInvestigation = () => {
               Descubra a verdade sobre infidelidade com sigilo absoluto e evidências legais.
             </p>
 
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={handleWhatsAppClick}
-              className="btn-accent group"
+              className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
               size="lg"
             >
-              <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              <MessageCircle className="w-5 h-5 mr-2" />
               Consulta Sigilosa
             </Button>
+          </div>
           </div>
         </div>
       </section>
@@ -153,7 +155,7 @@ const ConjugalInvestigation = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="heading-section text-detective-navy mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-detective-navy mb-6">
               Serviços de Investigação Conjugal
             </h2>
             <p className="text-professional max-w-3xl mx-auto">
@@ -188,7 +190,7 @@ const ConjugalInvestigation = () => {
 
           {/* Suspicion Signs */}
           <div className="bg-gradient-to-br from-muted/50 to-muted rounded-2xl p-8 mb-16">
-            <h3 className="heading-card text-detective-navy text-center mb-8">
+            <h3 className="text-xl md:text-2xl font-semibold text-detective-navy text-center mb-8">
               Sinais de Possível Infidelidade
             </h3>
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -207,7 +209,7 @@ const ConjugalInvestigation = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="heading-section text-detective-navy mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-detective-navy mb-6">
               Como Funciona a Investigação Conjugal
             </h2>
             <p className="text-professional max-w-3xl mx-auto">
@@ -237,25 +239,25 @@ const ConjugalInvestigation = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-detective-navy/95 to-detective-navy">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="heading-section text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Suspeita de Traição? Descubra a Verdade
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Entre em contato para uma consulta sigilosa sobre investigação conjugal em Brasília. 
             Atendimento discreto e confidencial 24 horas.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={handleWhatsAppClick}
-              className="btn-accent group"
+              className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
               size="lg"
             >
-              <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              <MessageCircle className="w-5 h-5 mr-2" />
               WhatsApp (61) 98284-4543
             </Button>
             <Button 
               onClick={handleWhatsAppClick}
-              variant="outline-light" 
+              className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-semibold px-8 py-4 rounded-lg backdrop-blur-sm transition-all duration-300 w-full sm:w-auto"
               size="lg"
             >
               <Shield className="w-5 h-5 mr-2" />

@@ -130,9 +130,9 @@ const LegalInvestigation = () => {
               Especialista em Investigação Jurídica
             </Badge>
             
-            <h1 className="heading-hero mb-6">
-              <span className="block">Investigação</span>
-              <span className="block text-detective-gold">Jurídica</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <span className="block text-white">Investigação</span>
+              <span className="block text-detective-gold bg-gradient-to-r from-detective-gold to-detective-gold/80 bg-clip-text text-transparent">Jurídica</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto leading-relaxed">
@@ -144,14 +144,16 @@ const LegalInvestigation = () => {
               Perícias, laudos técnicos e coleta de provas com validade legal.
             </p>
 
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={handleWhatsAppClick}
-              className="btn-accent group"
+              className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
               size="lg"
             >
-              <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              <MessageCircle className="w-5 h-5 mr-2" />
               Consulta Jurídica
             </Button>
+          </div>
           </div>
         </div>
       </section>
@@ -160,7 +162,7 @@ const LegalInvestigation = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="heading-section text-detective-navy mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-detective-navy mb-6">
               Serviços de Investigação Jurídica
             </h2>
             <p className="text-professional max-w-3xl mx-auto">
@@ -195,7 +197,7 @@ const LegalInvestigation = () => {
 
           {/* Legal Areas */}
           <div className="bg-gradient-to-br from-muted/50 to-muted rounded-2xl p-8 mb-16">
-            <h3 className="heading-card text-detective-navy text-center mb-8">
+            <h3 className="text-xl md:text-2xl font-semibold text-detective-navy text-center mb-8">
               Áreas do Direito Atendidas
             </h3>
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -210,7 +212,7 @@ const LegalInvestigation = () => {
 
           {/* Benefits */}
           <div className="text-center">
-            <h3 className="heading-card text-detective-navy mb-8">
+            <h3 className="text-xl md:text-2xl font-semibold text-detective-navy mb-8">
               Diferenciais da Nossa Investigação Jurídica
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -229,7 +231,7 @@ const LegalInvestigation = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="heading-section text-detective-navy mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-detective-navy mb-6">
               Processo de Investigação Jurídica
             </h2>
             <p className="text-professional max-w-3xl mx-auto">
@@ -292,25 +294,25 @@ const LegalInvestigation = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-detective-navy/95 to-detective-navy">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="heading-section text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Precisa de Suporte Investigativo Jurídico?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Entre em contato para uma consultoria especializada sobre seu caso jurídico. 
             Oferecemos suporte técnico para advogados e escritórios.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={handleWhatsAppClick}
-              className="btn-accent group"
+              className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
               size="lg"
             >
-              <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              <MessageCircle className="w-5 h-5 mr-2" />
               WhatsApp (61) 98284-4543
             </Button>
             <Button 
               onClick={handleWhatsAppClick}
-              variant="outline-light" 
+              className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-semibold px-8 py-4 rounded-lg backdrop-blur-sm transition-all duration-300 w-full sm:w-auto"
               size="lg"
             >
               <Scale className="w-5 h-5 mr-2" />
