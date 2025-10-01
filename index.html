@@ -65,6 +65,22 @@
 
       gtag('config', 'GT-NGWQRDLZ');
     </script>
+    
+    <!-- Event snippet for BOTÃO DE WHATSAPP conversion -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17483763038/VHYbCLS7q5QbEN6a9JBB',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
   </head>
 
   <body>

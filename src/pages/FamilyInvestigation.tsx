@@ -36,13 +36,17 @@ const FamilyInvestigation = () => {
   const handleWhatsAppClick = () => {
     const message = "Olá! Preciso de investigação familiar. Detetive para filhos em Brasília.";
     const phoneNumber = "5561982844543";
-    
     const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
-    try {
-      window.open(waUrl, '_blank');
-    } catch (error) {
-      window.open("tel:+5561982844543", "_blank");
+    // Track conversion
+    if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+      (window as any).gtag_report_conversion(waUrl);
+    } else {
+      try {
+        window.open(waUrl, '_blank');
+      } catch (error) {
+        window.open("tel:+5561982844543", "_blank");
+      }
     }
   };
 

@@ -123,7 +123,13 @@ const ContentSection = () => {
                       const message = "Olá! Gostaria de ler o artigo sobre sinais de infidelidade.";
                       const phoneNumber = "5561982844543";
                       const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                      window.open(waUrl, '_blank');
+                      
+                      // Track conversion
+                      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                        (window as any).gtag_report_conversion(waUrl);
+                      } else {
+                        window.open(waUrl, '_blank');
+                      }
                     }}
                     className="btn-professional"
                   >
@@ -190,7 +196,13 @@ const ContentSection = () => {
                       const message = `Olá! Gostaria de ler o artigo: ${article.title}`;
                       const phoneNumber = "5561982844543";
                       const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                      window.open(waUrl, '_blank');
+                      
+                      // Track conversion
+                      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                        (window as any).gtag_report_conversion(waUrl);
+                      } else {
+                        window.open(waUrl, '_blank');
+                      }
                     }}
                     variant="outline" 
                     className="w-full group-hover:bg-detective-gold group-hover:text-white transition-colors duration-300"
@@ -232,7 +244,13 @@ const ContentSection = () => {
                       const message = `Olá! Gostaria de acessar: ${resource.title}`;
                       const phoneNumber = "5561982844543";
                       const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                      window.open(waUrl, '_blank');
+                      
+                      // Track conversion
+                      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                        (window as any).gtag_report_conversion(waUrl);
+                      } else {
+                        window.open(waUrl, '_blank');
+                      }
                     }}
                     variant="outline" 
                     className="w-full"
@@ -269,7 +287,13 @@ const ContentSection = () => {
                     "Olá! Gostaria de me inscrever na newsletter.";
                   const phoneNumber = "5561982844543";
                   const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                  window.open(waUrl, '_blank');
+                  
+                  // Track conversion
+                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                    (window as any).gtag_report_conversion(waUrl);
+                  } else {
+                    window.open(waUrl, '_blank');
+                  }
                 }}
                 className="btn-accent"
               >

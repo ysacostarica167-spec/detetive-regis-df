@@ -464,7 +464,13 @@ const BlogSection = () => {
     const message = `Olá! Gostaria de ler o artigo completo: "${postTitle}"`;
     const phoneNumber = "5561982844543";
     const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(waUrl, '_blank');
+    
+    // Track conversion
+    if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+      (window as any).gtag_report_conversion(waUrl);
+    } else {
+      window.open(waUrl, '_blank');
+    }
   };
 
   return (
