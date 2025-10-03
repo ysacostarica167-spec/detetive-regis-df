@@ -5,6 +5,9 @@ import { Calendar, Clock, User, ArrowRight, TrendingUp, Star } from "lucide-reac
 import LazyImage from "@/components/LazyImage";
 import { articleSchema } from "@/data/structuredData";
 import { Helmet } from "react-helmet-async";
+import conjugalInvestigationImage from "@/assets/conjugal-investigation-signs.jpg";
+import corporateInvestigationImage from "@/assets/corporate-fraud.jpg";
+import peopleLocationImage from "@/assets/digital-investigation.jpg";
 
 // Blog posts data with rich SEO content
 const blogPosts = [
@@ -148,7 +151,7 @@ Como detetive particular especializado em Brasília DF, estou disponível 24 hor
     datePublished: "2024-01-15",
     readTime: "12 min",
     tags: ["investigação conjugal", "traição", "infidelidade", "sinais", "comportamento"],
-    image: "/assets/conjugal-investigation-signs.jpg",
+    image: conjugalInvestigationImage,
     featured: true,
     seoKeywords: [
       "como descobrir traição",
@@ -274,7 +277,7 @@ Como detetive especializado em investigação empresarial em Brasília DF, ofere
     datePublished: "2024-01-10",
     readTime: "15 min",
     tags: ["investigação empresarial", "fraude interna", "segurança corporativa", "auditoria"],
-    image: "/assets/corporate-investigation.jpg",
+    image: corporateInvestigationImage,
     featured: false,
     seoKeywords: [
       "investigação empresarial df",
@@ -445,7 +448,7 @@ Como detetive especializado em localização de pessoas em Brasília DF, utiliza
     datePublished: "2024-01-05",
     readTime: "18 min",
     tags: ["localização pessoas", "pessoas desaparecidas", "investigação", "métodos"],
-    image: "/assets/people-location.jpg",
+    image: peopleLocationImage,
     featured: false,
     seoKeywords: [
       "localização de pessoas desaparecidas df",
