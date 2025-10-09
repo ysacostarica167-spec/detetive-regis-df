@@ -12,10 +12,10 @@ export const localBusinessSchema = {
   "logo": "https://detetive-regis.lovable.app/detective-logo.png",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Asa Sul",
+    "streetAddress": "CRS 505 Bl A EN 64A AP 305 - Asa Sul",
     "addressLocality": "Brasília", 
     "addressRegion": "DF",
-    "postalCode": "70000-000",
+    "postalCode": "70350-510",
     "addressCountry": "BR"
   },
   "geo": {
@@ -306,9 +306,10 @@ export const serviceSchema = (serviceName: string, description: string) => ({
     "telephone": "+5561982844543",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Asa Sul",
+      "streetAddress": "CRS 505 Bl A EN 64A AP 305 - Asa Sul",
       "addressLocality": "Brasília",
-      "addressRegion": "DF", 
+      "addressRegion": "DF",
+      "postalCode": "70350-510",
       "addressCountry": "BR"
     },
     "hasCredential": {

@@ -53,8 +53,8 @@ const ContactSection = () => {
     {
       icon: <MapPin className="w-6 h-6 text-detective-gold" />,
       title: "Escritório",
-      value: "Asa Sul, Brasília DF",
-      description: "Atendimento em todo o Distrito Federal"
+      value: "CRS 505 Bl A EN 64A AP 305",
+      description: "Asa Sul, Brasília - DF, 70350-510"
     },
     {
       icon: <Clock className="w-6 h-6 text-detective-gold" />,
