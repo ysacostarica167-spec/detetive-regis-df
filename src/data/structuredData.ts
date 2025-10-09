@@ -26,23 +26,73 @@ export const localBusinessSchema = {
   "areaServed": [
     {
       "@type": "City",
-      "name": "Brasília"
+      "name": "Brasília",
+      "containedInPlace": { "@type": "State", "name": "Distrito Federal" }
     },
     {
       "@type": "City", 
-      "name": "Águas Claras"
+      "name": "Águas Claras",
+      "containedInPlace": { "@type": "State", "name": "Distrito Federal" }
     },
     {
       "@type": "City",
-      "name": "Taguatinga"
+      "name": "Taguatinga",
+      "containedInPlace": { "@type": "State", "name": "Distrito Federal" }
     },
     {
       "@type": "City",
-      "name": "Ceilândia"
+      "name": "Ceilândia",
+      "containedInPlace": { "@type": "State", "name": "Distrito Federal" }
     },
     {
       "@type": "City",
-      "name": "Guará"
+      "name": "Guará",
+      "containedInPlace": { "@type": "State", "name": "Distrito Federal" }
+    },
+    {
+      "@type": "City",
+      "name": "Samambaia",
+      "containedInPlace": { "@type": "State", "name": "Distrito Federal" }
+    },
+    {
+      "@type": "City",
+      "name": "Gama",
+      "containedInPlace": { "@type": "State", "name": "Distrito Federal" }
+    },
+    {
+      "@type": "City",
+      "name": "Sobradinho",
+      "containedInPlace": { "@type": "State", "name": "Distrito Federal" }
+    },
+    {
+      "@type": "City",
+      "name": "Planaltina",
+      "containedInPlace": { "@type": "State", "name": "Distrito Federal" }
+    },
+    {
+      "@type": "City",
+      "name": "Santa Maria",
+      "containedInPlace": { "@type": "State", "name": "Distrito Federal" }
+    },
+    {
+      "@type": "City",
+      "name": "Luziânia",
+      "containedInPlace": { "@type": "State", "name": "Goiás" }
+    },
+    {
+      "@type": "City",
+      "name": "Valparaíso de Goiás",
+      "containedInPlace": { "@type": "State", "name": "Goiás" }
+    },
+    {
+      "@type": "City",
+      "name": "Novo Gama",
+      "containedInPlace": { "@type": "State", "name": "Goiás" }
+    },
+    {
+      "@type": "City",
+      "name": "Águas Lindas de Goiás",
+      "containedInPlace": { "@type": "State", "name": "Goiás" }
     }
   ],
   "serviceArea": {

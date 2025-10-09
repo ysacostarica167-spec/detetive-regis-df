@@ -8,6 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import InternalLinks from "@/components/InternalLinks";
 import LongTailKeywords from "@/components/LongTailKeywords";
+import GeographicCoverage from "@/components/GeographicCoverage";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { localBusinessSchema, websiteSchema, breadcrumbSchema } from "@/data/structuredData";
@@ -52,6 +53,7 @@ const Index = () => {
           <FAQSection />
         </section>
         <LongTailKeywords />
+        <GeographicCoverage />
         <section id="contato">
           <ContactSection />
         </section>
