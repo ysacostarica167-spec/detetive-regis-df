@@ -37,19 +37,39 @@ const SEO = ({
       <meta property="og:type" content="website" />
       <meta property="og:url" content={fullCanonical} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Detetive Particular Regis - Investigação Profissional DF" />
       <meta property="og:locale" content="pt_BR" />
       <meta property="og:site_name" content="Detetive Particular Regis" />
+      <meta property="article:author" content="Regis" />
+      <meta property="article:publisher" content="https://detetive-regis.lovable.app" />
       
       {/* Twitter Cards */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image:alt" content="Detetive Particular Regis - Investigação DF" />
+      <meta name="twitter:site" content="@detetiveregis" />
+      <meta name="twitter:creator" content="@detetiveregis" />
       
       {/* Local Business */}
       <meta name="geo.region" content="BR-DF" />
       <meta name="geo.placename" content="Brasília" />
       <meta name="ICBM" content="-15.7942,-47.8822" />
+      
+      {/* Additional SEO meta tags */}
+      <meta name="rating" content="general" />
+      <meta name="distribution" content="global" />
+      <meta name="revisit-after" content="7 days" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      
+      {/* Mobile optimization */}
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="format-detection" content="telephone=yes" />
       
       {/* Structured Data */}
       {structuredData && (

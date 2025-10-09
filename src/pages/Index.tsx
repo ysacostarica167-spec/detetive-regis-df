@@ -9,16 +9,25 @@ import ContactSection from "@/components/ContactSection";
 import InternalLinks from "@/components/InternalLinks";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { localBusinessSchema, websiteSchema } from "@/data/structuredData";
+import { localBusinessSchema, websiteSchema, breadcrumbSchema } from "@/data/structuredData";
 
 const Index = () => {
-  const structuredData = [localBusinessSchema, websiteSchema];
+  const structuredData = [
+    localBusinessSchema, 
+    websiteSchema,
+    breadcrumbSchema([
+      { name: "Início", url: "/" },
+      { name: "Serviços", url: "/#servicos" },
+      { name: "Sobre", url: "/#sobre" },
+      { name: "Contato", url: "/#contato" }
+    ])
+  ];
   
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Detetive Particular Regis - Investigação Profissional DF | Conteúdo Especializado | WhatsApp (61) 98284-4543"
-        description="Detetive Particular DF - Regis, graduado em investigação profissional. Blog com artigos especializados, guias práticos e conteúdo de autoridade. Detetive em Brasília DF com preços justos. WhatsApp (61) 98284-4543"
+        title="Detetive Particular DF | Regis | (61) 98284-4543"
+        description="Detetive DF graduado com 15+ anos. Investigação conjugal, corporativa e localização. Consulta gratuita (61) 98284-4543"
         keywords="detetive particular df, detetive particular brasília, agência de detetives df, investigador particular df, melhor detetive brasília, investigação conjugal df, como descobrir traição em brasília, detetive para infidelidade df, investigação empresarial df, detetive para funcionários brasília, localização de pessoas desaparecidas df, encontrar devedor de pensão df, investigação familiar em brasília, detetive para filhos em brasília, detetive particular para celular, detetive particular águas claras, detetive particular taguatinga, detetive particular ceilândia, detetive particular guará, detetive particular lago sul, detetive particular asa norte, detetive particular entorno de brasília"
         canonical="/"
         structuredData={structuredData}

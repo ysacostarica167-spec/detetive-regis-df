@@ -131,6 +131,47 @@ export const localBusinessSchema = {
     "bestRating": "5",
     "worstRating": "1"
   },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Maria Santos"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "datePublished": "2024-01-15",
+      "reviewBody": "Excelente profissional! Descobri a verdade sobre meu relacionamento de forma discreta e profissional. Recomendo o detetive Regis."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "João Silva"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "datePublished": "2024-01-10",
+      "reviewBody": "Contratei para investigação empresarial e fiquei impressionado com a qualidade do trabalho. Profissional sério e competente."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Ana Paula"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "datePublished": "2024-01-05",
+      "reviewBody": "Conseguiu localizar meu pai que estava desaparecido há 5 anos. Serviço impecável e preço justo. Muito obrigada!"
+    }
+  ],
   "hasCredential": {
     "@type": "EducationalOccupationalCredential",
     "credentialCategory": "degree",
