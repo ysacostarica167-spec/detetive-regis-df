@@ -1,4 +1,5 @@
 import { MessageCircle, Phone, MapPin, Shield, Clock, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const handleWhatsAppClick = () => {
@@ -77,34 +78,34 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Principais Serviços</h3>
             <ul className="space-y-2 text-white/80">
               <li>
-                <a href="/investigacao-conjugal" className="hover:text-detective-gold transition-colors">
+                <Link to="/investigacao-conjugal" className="hover:text-detective-gold transition-colors">
                   • Investigação Conjugal no DF
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/servicos-ciberneticos" className="hover:text-detective-gold transition-colors">
+                <Link to="/servicos-ciberneticos" className="hover:text-detective-gold transition-colors">
                   • Serviços Cibernéticos e Digitais
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/investigacao-juridica" className="hover:text-detective-gold transition-colors">
+                <Link to="/investigacao-juridica" className="hover:text-detective-gold transition-colors">
                   • Investigação de Antecedentes
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/investigacao-empresarial" className="hover:text-detective-gold transition-colors">
+                <Link to="/investigacao-empresarial" className="hover:text-detective-gold transition-colors">
                   • Investigação Corporativa
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/localizacao-pessoas" className="hover:text-detective-gold transition-colors">
+                <Link to="/localizacao-pessoas" className="hover:text-detective-gold transition-colors">
                   • Localização de Pessoas
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/investigacao-familiar" className="hover:text-detective-gold transition-colors">
+                <Link to="/investigacao-familiar" className="hover:text-detective-gold transition-colors">
                   • Investigação Familiar
-                </a>
+                </Link>
               </li>
             </ul>
             
