@@ -7,6 +7,7 @@ import AboutSection from "@/components/AboutSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import InternalLinks from "@/components/InternalLinks";
+import LongTailKeywords from "@/components/LongTailKeywords";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { localBusinessSchema, websiteSchema, breadcrumbSchema } from "@/data/structuredData";
@@ -26,9 +27,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Detetive Particular DF | Regis | (61) 98284-4543"
-        description="Detetive DF graduado com 15+ anos. Investigação conjugal, corporativa e localização. Consulta gratuita (61) 98284-4543"
-        keywords="detetive particular df, detetive particular brasília, agência de detetives df, investigador particular df, melhor detetive brasília, investigação conjugal df, como descobrir traição em brasília, detetive para infidelidade df, investigação empresarial df, detetive para funcionários brasília, localização de pessoas desaparecidas df, encontrar devedor de pensão df, investigação familiar em brasília, detetive para filhos em brasília, detetive particular para celular, detetive particular águas claras, detetive particular taguatinga, detetive particular ceilândia, detetive particular guará, detetive particular lago sul, detetive particular asa norte, detetive particular entorno de brasília"
+        title="Detetive Particular Brasília DF | Investigação Conjugal | (61) 98284-4543"
+        description="Investigação conjugal Brasília e investigação de traição DF. Detetive particular Brasília DF graduado. Detetive para casal, preço justo. Consulta grátis"
+        keywords="detetive particular brasília df, investigação conjugal brasília, investigação de traição df, detetive para casal brasília, detetive particular preço df, investigação de suspeita de infidelidade brasília, detetive conjugal df, investigação de infidelidade brasília, detetive particular brasília 24 horas, investigação discreta brasília"
         canonical="/"
         structuredData={structuredData}
       />
@@ -50,6 +51,7 @@ const Index = () => {
         <section id="faq">
           <FAQSection />
         </section>
+        <LongTailKeywords />
         <section id="contato">
           <ContactSection />
         </section>
