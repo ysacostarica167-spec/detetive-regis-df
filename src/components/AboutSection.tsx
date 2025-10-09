@@ -58,17 +58,30 @@ const AboutSection = () => {
               <p>
                 Com formação acadêmica completa em investigação profissional e mais de 15 anos de experiência 
                 no mercado, o Detetive Regis especializou-se em oferecer soluções investigativas precisas e 
-                discretas para pessoas físicas e jurídicas.
+                discretas para pessoas físicas e jurídicas em todo o Distrito Federal e região.
               </p>
               <p>
                 Durante sua carreira, desenvolveu expertise em investigações conjugais, corporativas, 
                 localização de pessoas e verificação de antecedentes, sempre mantendo os mais altos 
-                padrões de ética e confidencialidade.
+                padrões de ética e confidencialidade. Atua em Brasília, Águas Claras, Taguatinga, 
+                Ceilândia, Guará, Lago Sul, Asa Norte e todo o entorno do DF.
               </p>
               <p>
-                Utiliza métodos modernos de investigação combinados com técnicas tradicionais comprovadas, 
-                garantindo resultados eficazes e relatórios detalhados que podem ser utilizados 
-                legalmente quando necessário.
+                Nossa metodologia combina técnicas modernas de investigação digital com métodos tradicionais 
+                comprovados de vigilância e análise comportamental. Utilizamos equipamentos de última geração 
+                para garantir evidências claras e precisas que podem ser utilizadas legalmente quando necessário.
+              </p>
+              <p>
+                Cada caso é tratado com máxima seriedade e confidencialidade. Oferecemos relatórios detalhados, 
+                documentação fotográfica e videográfica profissional, além de orientação jurídica sobre como 
+                utilizar as evidências coletadas. Todo trabalho é realizado dentro dos limites legais estabelecidos 
+                pela legislação brasileira.
+              </p>
+              <p>
+                O compromisso com a verdade e a ética profissional são os pilares do nosso trabalho. Entendemos 
+                que cada cliente passa por um momento delicado e oferecemos não apenas serviços de investigação, 
+                mas também suporte e orientação durante todo o processo. A consulta inicial é sempre gratuita e 
+                confidencial, permitindo que você conheça nossa metodologia antes de contratar os serviços.
               </p>
             </div>
           </div>

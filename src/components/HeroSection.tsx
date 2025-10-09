@@ -49,8 +49,7 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="block text-white">Detetive Particular</span>
-            <span className="block text-detective-gold bg-gradient-to-r from-detective-gold to-detective-gold/80 bg-clip-text text-transparent">Regis</span>
+            Detetive Particular DF - Regis
           </h1>
 
           {/* Subtitle */}
