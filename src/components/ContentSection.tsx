@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Video, Download, Award, Clock, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 import LazyImage from "@/components/LazyImage";
 import articleHero from "@/assets/article-hero.jpg";
 import digitalInvestigation from "@/assets/digital-investigation.jpg";
@@ -81,11 +82,14 @@ const ContentSection = () => {
             <span className="text-detective-gold font-medium">Conteúdo Especializado</span>
           </div>
           <h2 className="heading-section text-detective-navy mb-6">
-            Conhecimento e Autoridade
+            Conhecimento Especializado em Investigação
           </h2>
           <p className="text-professional max-w-3xl mx-auto">
-            Compartilhamos conhecimento especializado e insights do mercado de investigação particular, 
-            baseados em anos de experiência e casos reais.
+            Compartilhamos <strong>conhecimento especializado sobre investigação particular</strong>, 
+            técnicas de investigação conjugal, corporativa e digital. Conteúdo baseado em 15+ anos de 
+            experiência prática em <Link to="/investigacao-conjugal" className="text-detective-gold hover:underline">investigação conjugal</Link>, 
+            <Link to="/investigacao-empresarial" className="text-detective-gold hover:underline"> investigação empresarial</Link> e 
+            <Link to="/localizacao-pessoas" className="text-detective-gold hover:underline"> localização de pessoas</Link>.
           </p>
         </div>
 

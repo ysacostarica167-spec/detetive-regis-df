@@ -72,16 +72,51 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Services with Internal Links */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Principais Serviços</h3>
             <ul className="space-y-2 text-white/80">
-              <li>• Investigação Conjugal</li>
-              <li>• Vigilância e Monitoramento</li>
-              <li>• Investigação de Antecedentes</li>
-              <li>• Investigação Corporativa</li>
-              <li>• Localização de Pessoas</li>
-              <li>• Perícia e Consultoria</li>
+              <li>
+                <a href="/investigacao-conjugal" className="hover:text-detective-gold transition-colors">
+                  • Investigação Conjugal no DF
+                </a>
+              </li>
+              <li>
+                <a href="/servicos-ciberneticos" className="hover:text-detective-gold transition-colors">
+                  • Serviços Cibernéticos e Digitais
+                </a>
+              </li>
+              <li>
+                <a href="/investigacao-juridica" className="hover:text-detective-gold transition-colors">
+                  • Investigação de Antecedentes
+                </a>
+              </li>
+              <li>
+                <a href="/investigacao-empresarial" className="hover:text-detective-gold transition-colors">
+                  • Investigação Corporativa
+                </a>
+              </li>
+              <li>
+                <a href="/localizacao-pessoas" className="hover:text-detective-gold transition-colors">
+                  • Localização de Pessoas
+                </a>
+              </li>
+              <li>
+                <a href="/investigacao-familiar" className="hover:text-detective-gold transition-colors">
+                  • Investigação Familiar
+                </a>
+              </li>
+            </ul>
+            
+            {/* Service Areas */}
+            <h3 className="font-semibold text-lg mb-4 mt-6">Áreas de Atendimento</h3>
+            <ul className="space-y-2 text-white/80 text-sm">
+              <li>• Detetive Asa Norte Brasília</li>
+              <li>• Detetive Asa Sul Brasília</li>
+              <li>• Detetive Águas Claras</li>
+              <li>• Detetive Taguatinga</li>
+              <li>• Detetive Ceilândia</li>
+              <li>• Detetive Lago Sul e Norte</li>
             </ul>
           </div>
         </div>

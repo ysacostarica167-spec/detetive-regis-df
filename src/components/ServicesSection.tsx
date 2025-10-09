@@ -70,11 +70,12 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-section text-detective-navy mb-6">
-            Serviços Profissionais
+            Serviços de Investigação Particular em Brasília DF
           </h2>
           <p className="text-professional max-w-3xl mx-auto">
-            Oferecemos uma ampla gama de serviços de investigação particular com total discrição, 
-            profissionalismo e uso de tecnologia de ponta para garantir os melhores resultados.
+            Oferecemos <strong>serviços completos de investigação particular no DF</strong> com total discrição, 
+            profissionalismo e uso de tecnologia de ponta. Atendemos Brasília, Águas Claras, Taguatinga, 
+            Ceilândia e todo o Distrito Federal com os melhores preços e consulta gratuita.
           </p>
         </div>
 

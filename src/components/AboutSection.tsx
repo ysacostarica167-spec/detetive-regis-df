@@ -40,11 +40,13 @@ const AboutSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-section text-detective-navy mb-6">
-            Sobre o Detetive Regis
+            Detetive Particular em Brasília: Experiência e Credibilidade
           </h2>
           <p className="text-professional max-w-3xl mx-auto">
-            Profissional graduado em investigação com vasta experiência em casos particulares e corporativos, 
-            atuando com ética, discrição e eficiência em todo o Distrito Federal.
+            <strong>Detetive particular graduado</strong> com vasta experiência em investigações conjugais, 
+            corporativas e localização de pessoas. Atuando há mais de 15 anos com ética, discrição e 
+            eficiência em Brasília e todo o Distrito Federal. Atendemos todas as regiões do DF incluindo 
+            Asa Norte, Asa Sul, Lago Sul, Águas Claras, Taguatinga e Ceilândia.
           </p>
         </div>
 

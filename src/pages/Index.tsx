@@ -6,6 +6,7 @@ import BlogSection from "@/components/BlogSection";
 import AboutSection from "@/components/AboutSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
+import InternalLinks from "@/components/InternalLinks";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { localBusinessSchema, websiteSchema } from "@/data/structuredData";
@@ -43,6 +44,7 @@ const Index = () => {
         <section id="contato">
           <ContactSection />
         </section>
+        <InternalLinks />
       </main>
       <Footer />
     </div>
