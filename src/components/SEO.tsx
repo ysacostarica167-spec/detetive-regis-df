@@ -72,13 +72,13 @@ const SEO = ({
       <meta name="format-detection" content="telephone=yes" />
       
       {/* Google tag (gtag.js) */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=GT-NGJVRKZF"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=GT-KVHVXKNX"></script>
       <script>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'GT-NGJVRKZF');
+          gtag('config', 'GT-KVHVXKNX');
         `}
       </script>
       
