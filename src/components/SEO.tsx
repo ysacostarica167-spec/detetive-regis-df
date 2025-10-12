@@ -71,14 +71,14 @@ const SEO = ({
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="format-detection" content="telephone=yes" />
       
-      {/* Google Tag Manager (gtag.js) */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17502367249"></script>
+      {/* Google tag (gtag.js) */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=GT-NGJVRKZF"></script>
       <script>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'AW-17502367249');
+          gtag('config', 'GT-NGJVRKZF');
         `}
       </script>
       
