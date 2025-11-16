@@ -14,7 +14,7 @@ const SEO = ({
   description, 
   keywords, 
   canonical, 
-  ogImage = "https://lovable.dev/opengraph-image-p98pqg.png",
+  ogImage = "https://detetive-regis.lovable.app/src/assets/detective-hero-hq.jpg",
   structuredData 
 }: SEOProps) => {
   const baseUrl = "https://detetive-regis.lovable.app";
