@@ -118,6 +118,7 @@ const PeopleLocation = () => {
         description="Localização de pessoas desaparecidas DF. Encontrar devedor de pensão DF. Investigação familiar em Brasília com detetive particular especializado em localização de pessoas em Brasília DF."
         keywords="localização de pessoas desaparecidas df, encontrar devedor de pensão df, investigação familiar em brasília, detetive particular df, localização pessoas brasília, busca familiares df, encontrar pessoa desaparecida brasília, detetive particular águas claras, detetive particular taguatinga, detetive particular ceilândia, detetive particular guará, detetive particular lago sul, detetive particular asa norte, detetive particular entorno de brasília"
         canonical="/localizacao-pessoas"
+        ogImage="https://detetive-regis.lovable.app/assets/detective-hero-hq.jpg"
         structuredData={structuredData}
       />
       <Header />

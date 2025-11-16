@@ -119,6 +119,7 @@ const LegalInvestigation = () => {
         description="Investigação jurídica e perícia judicial em Brasília DF. Suporte para advogados, coleta de provas, laudos periciais com validade legal. Detetive especializado em casos jurídicos."
         keywords="investigação jurídica df, perícia judicial brasília, detetive particular df, investigador particular df, agência de detetives df, melhor detetive brasília, detetive para advogados df, coleta provas brasília, laudo pericial df, investigação legal brasília, investigação empresarial df, localização de pessoas desaparecidas df, detetive particular águas claras, detetive particular taguatinga, detetive particular ceilândia, detetive particular guará, detetive particular lago sul, detetive particular asa norte, detetive particular entorno de brasília"
         canonical="/investigacao-juridica"
+        ogImage="https://detetive-regis.lovable.app/assets/legal-investigation.jpg"
         structuredData={structuredData}
       />
       <Header />
