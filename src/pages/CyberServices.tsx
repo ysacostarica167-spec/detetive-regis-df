@@ -107,6 +107,7 @@ const CyberServices = () => {
         description="Detetive especializado em investigação digital, perícia forense, análise de celulares e computadores em Brasília DF. Crimes cibernéticos, recuperação de dados, evidências digitais."
         keywords="detetive particular df, investigação digital df, detetive particular brasília, agência de detetives df, melhor detetive brasília, detetive particular para celular, investigação conjugal df, como descobrir traição em brasília, detetive para infidelidade df, perícia forense digital, crimes digitais brasília, recuperação dados df, detetive particular águas claras, detetive particular taguatinga, detetive particular ceilândia, detetive particular guará, detetive particular lago sul, detetive particular asa norte, detetive particular entorno de brasília"
         canonical="/servicos-ciberneticos"
+        ogImage="https://detetive-regis.lovable.app/assets/digital-investigation.jpg"
         structuredData={structuredData}
       />
       <Header />

@@ -104,6 +104,7 @@ const CorporateInvestigation = () => {
         description="Investigação empresarial DF. Detetive para funcionários Brasília especializado em fraudes internas, concorrência desleal e segurança corporativa. Investigação corporativa profissional em Brasília DF."
         keywords="investigação empresarial df, detetive para funcionários brasília, investigação corporativa df, fraudes internas brasília, segurança empresarial df, concorrência desleal brasília, detetive particular df, investigação de funcionários df, detetive particular águas claras, detetive particular taguatinga, detetive particular ceilândia, detetive particular guará, detetive particular lago sul, detetive particular asa norte, detetive particular entorno de brasília"
         canonical="/investigacao-empresarial"
+        ogImage="https://detetive-regis.lovable.app/assets/corporate-fraud.jpg"
         structuredData={structuredData}
       />
       <Header />

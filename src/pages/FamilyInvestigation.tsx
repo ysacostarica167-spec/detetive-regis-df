@@ -127,6 +127,7 @@ const FamilyInvestigation = () => {
         description="Investigação familiar em Brasília. Detetive para filhos em Brasília especializado em proteção de menores, segurança familiar e investigação de questões familiares no DF."
         keywords="investigação familiar em brasília, detetive para filhos em brasília, detetive particular df, proteção de menores df, segurança familiar brasília, investigação de paternidade df, guarda de filhos brasília, detetive particular águas claras, detetive particular taguatinga, detetive particular ceilândia, detetive particular guará, detetive particular lago sul, detetive particular asa norte, detetive particular entorno de brasília"
         canonical="/investigacao-familiar"
+        ogImage="https://detetive-regis.lovable.app/assets/detective-hero-hq.jpg"
         structuredData={structuredData}
       />
       <Header />

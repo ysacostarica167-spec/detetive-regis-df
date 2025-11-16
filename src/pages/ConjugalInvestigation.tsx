@@ -113,6 +113,7 @@ const ConjugalInvestigation = () => {
         description="Como descobrir traição em Brasília? Detetive para infidelidade DF com investigação conjugal profissional e sigilosa. Investigação de relacionamentos, suspeitas conjugais e infidelidade em Brasília DF."
         keywords="investigação conjugal df, como descobrir traição em brasília, detetive para infidelidade df, detetive particular df, investigação de traição brasília, infidelidade conjugal df, suspeitas conjugais brasília, investigação relacionamento df, detetive particular águas claras, detetive particular taguatinga, detetive particular ceilândia, detetive particular guará, detetive particular lago sul, detetive particular asa norte, detetive particular entorno de brasília"
         canonical="/investigacao-conjugal"
+        ogImage="https://detetive-regis.lovable.app/assets/conjugal-investigation-signs.jpg"
         structuredData={structuredData}
       />
       <Header />
