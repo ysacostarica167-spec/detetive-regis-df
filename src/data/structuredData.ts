@@ -227,6 +227,48 @@ export const localBusinessSchema = {
     "credentialCategory": "degree",
     "educationalLevel": "Graduate",
     "name": "Graduação em Investigação Profissional"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Regis",
+    "jobTitle": "Detetive Particular Graduado",
+    "description": "Investigador profissional com mais de 15 anos de experiência em investigações conjugais, corporativas e forenses"
+  },
+  "foundingDate": "2008",
+  "slogan": "Investigação Profissional com Sigilo Absoluto em Brasília DF",
+  "knowsAbout": [
+    "Investigação Conjugal",
+    "Investigação de Infidelidade",
+    "Investigação Corporativa",
+    "Investigação Digital",
+    "Perícia Forense",
+    "Localização de Pessoas",
+    "Investigação Jurídica",
+    "Contra-espionagem",
+    "Segurança Corporativa",
+    "Análise de Dispositivos Móveis"
+  ],
+  "sameAs": [
+    "https://wa.me/5561982844543",
+    "https://www.instagram.com/detetiveregis",
+    "https://www.facebook.com/detetiveregisdf",
+    "https://www.linkedin.com/in/detetive-regis"
+  ],
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://wa.me/5561982844543?text={message}",
+      "inLanguage": "pt-BR",
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform"
+      ]
+    },
+    "result": {
+      "@type": "Reservation",
+      "name": "Consulta de Investigação"
+    }
   }
 };
 
