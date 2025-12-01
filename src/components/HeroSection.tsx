@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Shield, Award } from "lucide-react";
 import heroImage from "@/assets/detective-hero-hq.jpg";
 import LazyImage from "@/components/LazyImage";
+import { trackWhatsAppClick, trackPhoneCall, trackCTAClick } from "@/utils/analytics";
 
 const HeroSection = () => {
   const handleWhatsAppClick = () => {
@@ -9,20 +10,23 @@ const HeroSection = () => {
     const phoneNumber = "5561982844543";
     const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
-    // Track conversion
-    if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-      (window as any).gtag_report_conversion(waUrl);
-    } else {
-      // Fallback if gtag is not loaded
-      try {
-        window.open(waUrl, '_blank');
-      } catch (error) {
-        window.open("tel:+5561982844543", "_blank");
-      }
+    // Track WhatsApp conversion (principal conversão para CPC)
+    trackWhatsAppClick('Hero Section - Home');
+    trackCTAClick('WhatsApp (61) 98284-4543', 'hero_section');
+    
+    // Open WhatsApp
+    try {
+      window.open(waUrl, '_blank');
+    } catch (error) {
+      window.open("tel:+5561982844543", "_blank");
     }
   };
 
   const handlePhoneClick = () => {
+    // Track phone call conversion
+    trackPhoneCall('Hero Section - Home');
+    trackCTAClick('Consulta Gratuita', 'hero_section');
+    
     window.open("tel:+5561982844543", "_blank");
   };
 

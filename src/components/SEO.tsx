@@ -71,16 +71,68 @@ const SEO = ({
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="format-detection" content="telephone=yes" />
       
-      {/* Google tag (gtag.js) */}
+      {/* Google tag (gtag.js) - Analytics */}
       <script async src="https://www.googletagmanager.com/gtag/js?id=GT-KVHVXKNX"></script>
       <script>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'GT-KVHVXKNX');
+          
+          // Google Analytics 4
+          gtag('config', 'GT-KVHVXKNX', {
+            'send_page_view': true,
+            'anonymize_ip': true
+          });
+          
+          // Google Ads Configuration (Substitua AW-XXXXXXXXX pelo seu ID)
+          gtag('config', 'AW-XXXXXXXXX', {
+            'phone_conversion_number': '+5561982844543',
+            'allow_enhanced_conversions': true
+          });
+          
+          // Enhanced Conversions
+          gtag('set', 'user_data', {
+            'phone_number': '+5561982844543',
+            'address': {
+              'city': 'Brasília',
+              'region': 'DF',
+              'country': 'BR'
+            }
+          });
         `}
       </script>
+      
+      {/* Google Ads Remarketing Tag */}
+      <script>
+        {`
+          // Global site tag remarketing
+          gtag('event', 'page_view', {
+            'send_to': 'AW-XXXXXXXXX',
+            'user_id': 'visitor_' + Date.now()
+          });
+        `}
+      </script>
+      
+      {/* Meta Pixel (Facebook Ads) - Opcional */}
+      <script>
+        {`
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', 'YOUR_PIXEL_ID');
+          fbq('track', 'PageView');
+        `}
+      </script>
+      <noscript>
+        {`<img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>`}
+      </noscript>
       
       {/* Structured Data */}
       {structuredData && (
