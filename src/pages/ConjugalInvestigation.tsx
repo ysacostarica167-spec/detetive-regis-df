@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { serviceSchema, breadcrumbSchema } from "@/data/structuredData";
+import { usePageTracking } from "@/hooks/usePageTracking";
+import { trackWhatsAppClick, trackCTAClick, trackServiceInterest } from "@/utils/analytics";
 import { 
   Heart, 
   MessageCircle, 
@@ -22,6 +24,9 @@ import {
 } from "lucide-react";
 
 const ConjugalInvestigation = () => {
+  // Track page for Google Ads Quality Score and remarketing
+  usePageTracking('Investigação Conjugal DF', 'Investigação Conjugal');
+  
   const structuredData = [
     serviceSchema(
       "Investigação Conjugal DF - Como Descobrir Traição em Brasília",
@@ -38,15 +43,16 @@ const ConjugalInvestigation = () => {
     const phoneNumber = "5561982844543";
     const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
-    // Track conversion
-    if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-      (window as any).gtag_report_conversion(waUrl);
-    } else {
-      try {
-        window.open(waUrl, '_blank');
-      } catch (error) {
-        window.open("tel:+5561982844543", "_blank");
-      }
+    // Track conversion for Google Ads
+    trackWhatsAppClick('Investigação Conjugal');
+    trackCTAClick('WhatsApp - Investigação Conjugal', 'conjugal_page');
+    trackServiceInterest('Investigação Conjugal DF', 500); // Estimated service value
+    
+    // Open WhatsApp
+    try {
+      window.open(waUrl, '_blank');
+    } catch (error) {
+      window.open("tel:+5561982844543", "_blank");
     }
   };
 

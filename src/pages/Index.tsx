@@ -12,8 +12,12 @@ import GeographicCoverage from "@/components/GeographicCoverage";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { localBusinessSchema, websiteSchema, breadcrumbSchema } from "@/data/structuredData";
+import { usePageTracking } from "@/hooks/usePageTracking";
 
 const Index = () => {
+  // Track page engagement for Quality Score
+  usePageTracking('Home Page', 'Investigação Geral');
+  
   const structuredData = [
     localBusinessSchema, 
     websiteSchema,
