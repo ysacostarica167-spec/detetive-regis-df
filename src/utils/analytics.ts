@@ -8,7 +8,7 @@ declare global {
 }
 
 // Google Ads Conversion IDs (substitua pelos seus IDs reais)
-const GOOGLE_ADS_ID = 'AW-XXXXXXXXX'; // Substitua pelo seu ID do Google Ads
+const GOOGLE_ADS_ID = 'AW-3974282482';
 const CONVERSION_LABELS = {
   whatsapp: 'whatsapp_click',
   phone: 'phone_call',

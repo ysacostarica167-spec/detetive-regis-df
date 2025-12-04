@@ -85,8 +85,8 @@ const SEO = ({
             'anonymize_ip': true
           });
           
-          // Google Ads Configuration (Substitua AW-XXXXXXXXX pelo seu ID)
-          gtag('config', 'AW-XXXXXXXXX', {
+          // Google Ads Configuration
+          gtag('config', 'AW-3974282482', {
             'phone_conversion_number': '+5561982844543',
             'allow_enhanced_conversions': true
           });
