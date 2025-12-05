@@ -86,7 +86,7 @@ const SEO = ({
           });
           
           // Google Ads Configuration
-          gtag('config', 'AW-3974282482', {
+          gtag('config', 'AW-17485089453', {
             'phone_conversion_number': '+5561982844543',
             'allow_enhanced_conversions': true
           });
@@ -108,7 +108,7 @@ const SEO = ({
         {`
           // Global site tag remarketing
           gtag('event', 'page_view', {
-            'send_to': 'AW-3974282482',
+            'send_to': 'AW-17485089453',
             'user_id': 'visitor_' + Date.now()
           });
         `}
