@@ -45,26 +45,48 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="relative z-10 container mx-auto px-4 py-16 md:py-20 animate-fade-in">
         <div className="max-w-4xl mx-auto text-center text-white">
-          {/* Professional Badge */}
-          <div className="inline-flex items-center gap-2 bg-detective-gold/20 backdrop-blur-sm border border-detective-gold/30 rounded-full px-6 py-2 mb-6 hover:bg-detective-gold/30 hover:scale-105 transition-all duration-300">
-            <Award className="w-5 h-5 text-detective-gold animate-pulse" />
-            <span className="text-detective-gold font-medium">Graduado em Investigação Profissional</span>
+          {/* Urgency Badge */}
+          <div className="inline-flex items-center gap-2 bg-green-600/20 backdrop-blur-sm border border-green-500/30 rounded-full px-4 py-1.5 mb-4 animate-pulse">
+            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+            <span className="text-green-400 font-medium text-sm">Disponível Agora • Resposta em 5 Minutos</span>
           </div>
 
-          {/* Main Heading */}
+          {/* Professional Badge */}
+          <div className="inline-flex items-center gap-2 bg-detective-gold/20 backdrop-blur-sm border border-detective-gold/30 rounded-full px-6 py-2 mb-6 hover:bg-detective-gold/30 hover:scale-105 transition-all duration-300">
+            <Award className="w-5 h-5 text-detective-gold" />
+            <span className="text-detective-gold font-medium">Graduado em Investigação • 15+ Anos de Experiência</span>
+          </div>
+
+          {/* Main Heading - Keyword optimized */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Detetive Particular DF - Regis
+            <span className="block">Detetive Particular</span>
+            <span className="block text-detective-gold">Brasília DF</span>
           </h1>
 
-          {/* Subtitle */}
+          {/* Subtitle - CPC optimized with keywords */}
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto leading-relaxed">
-            Detetive Particular DF • Investigação Profissional com Discrição e Eficiência
+            Investigação Conjugal • Traição • Localização de Pessoas
           </p>
           
-          <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-            Detetive em Brasília DF com mais de 15 anos de experiência. Atendimento em todo o Distrito Federal 
-            com preços justos e consulta gratuita.
+          <p className="text-lg text-white/80 mb-6 max-w-2xl mx-auto">
+            <strong>Consulta Gratuita</strong> • Sigilo Absoluto • Provas com Validade Legal
           </p>
+
+          {/* Stats for social proof */}
+          <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+              <span className="text-detective-gold font-bold">500+</span>
+              <span className="text-white/80 ml-1">Casos Resolvidos</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+              <span className="text-detective-gold font-bold">4.9★</span>
+              <span className="text-white/80 ml-1">Avaliação Google</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+              <span className="text-detective-gold font-bold">24h</span>
+              <span className="text-white/80 ml-1">Atendimento</span>
+            </div>
+          </div>
 
           {/* Service Highlights */}
           <div className="flex flex-wrap justify-center gap-6 mb-10">

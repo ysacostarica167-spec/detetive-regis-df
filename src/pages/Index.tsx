@@ -11,6 +11,10 @@ import LongTailKeywords from "@/components/LongTailKeywords";
 import GeographicCoverage from "@/components/GeographicCoverage";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import TrustBadges from "@/components/TrustBadges";
+import Testimonials from "@/components/Testimonials";
+import FloatingCTA from "@/components/FloatingCTA";
+import UrgencyBanner from "@/components/UrgencyBanner";
 import { localBusinessSchema, websiteSchema, breadcrumbSchema } from "@/data/structuredData";
 import { usePageTracking } from "@/hooks/usePageTracking";
 
@@ -38,14 +42,26 @@ const Index = () => {
         canonical="/"
         structuredData={structuredData}
       />
+      
+      {/* Urgency Banner - Top of page for conversions */}
+      <UrgencyBanner />
+      
       <Header />
-      <main>
+      <main className="pt-10">
         <section id="inicio">
           <HeroSection />
         </section>
+        
+        {/* Trust Badges - Social proof immediately after hero */}
+        <TrustBadges />
+        
         <section id="servicos">
           <ServicesSection />
         </section>
+        
+        {/* Testimonials - Social proof for Quality Score */}
+        <Testimonials />
+        
         <section id="conteudo">
           <ContentSection />
           <BlogSection />
@@ -64,6 +80,9 @@ const Index = () => {
         <InternalLinks />
       </main>
       <Footer />
+      
+      {/* Floating CTA - Always visible for conversions */}
+      <FloatingCTA />
     </div>
   );
 };
