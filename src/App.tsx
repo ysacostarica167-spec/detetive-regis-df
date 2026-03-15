@@ -13,6 +13,8 @@ import CorporateInvestigation from "./pages/CorporateInvestigation";
 import PeopleLocation from "./pages/PeopleLocation";
 import FamilyInvestigation from "./pages/FamilyInvestigation";
 import VehicleInvestigation from "./pages/VehicleInvestigation";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +36,8 @@ const App = () => (
             <Route path="/localizacao-pessoas" element={<PeopleLocation />} />
             <Route path="/investigacao-familiar" element={<FamilyInvestigation />} />
             <Route path="/investigacao-veicular" element={<VehicleInvestigation />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
