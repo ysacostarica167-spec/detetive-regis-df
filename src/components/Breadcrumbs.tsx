@@ -36,6 +36,9 @@ const Breadcrumbs = () => {
       case "/investigacao-veicular":
         items.push({ name: "Investigação Veicular", url: "/investigacao-veicular" });
         break;
+      case "/blog":
+        items.push({ name: "Blog", url: "/blog" });
+        break;
       default:
         break;
     }
