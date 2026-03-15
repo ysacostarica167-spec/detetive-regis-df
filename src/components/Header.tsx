@@ -77,15 +77,15 @@ const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-detective-gold transition-all duration-300 group-hover:w-full"></span>
               </span>
             </button>
-            <button 
-              onClick={() => scrollToSection('conteudo')}
+            <Link 
+              to="/blog"
               className="text-professional-grey hover:text-detective-navy transition-all duration-300 relative group"
             >
               <span className="relative">
-                Conteúdo
+                Blog
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-detective-gold transition-all duration-300 group-hover:w-full"></span>
               </span>
-            </button>
+            </Link>
             <Link 
               to="/servicos-ciberneticos"
               className="text-professional-grey hover:text-detective-navy transition-all duration-300 relative group"
