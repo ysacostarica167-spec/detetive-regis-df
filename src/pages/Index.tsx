@@ -36,9 +36,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Detetive Particular Brasília DF | Investigação Conjugal | (61) 98284-4543"
-        description="Investigação conjugal Brasília e investigação de traição DF. Detetive particular Brasília DF graduado. Detetive para casal, preço justo. Consulta grátis"
-        keywords="detetive particular brasília df, investigação conjugal brasília, investigação de traição df, detetive para casal brasília, detetive particular preço df, investigação de suspeita de infidelidade brasília, detetive conjugal df, investigação de infidelidade brasília, detetive particular brasília 24 horas, investigação discreta brasília"
+        title="Detetive Particular Brasília DF | Investigador Particular | (61) 98284-4543"
+        description="Detetive particular Brasília DF profissional. Investigador particular Brasília especializado em investigação conjugal, localização de pessoas, investigação empresarial e veicular. Detetive em Brasília sigiloso e urgente."
+        keywords="detetive particular brasília, detetive particular df, detetive em brasília, investigador particular brasília, detetive profissional brasília, detetive sigiloso brasília, detetive particular urgente brasília, detetive especializado brasília, investigação particular df, investigação conjugal brasília, localizar pessoas brasília, investigação empresarial brasília, descobrir proprietário de veículo"
         canonical="/"
         structuredData={structuredData}
       />
