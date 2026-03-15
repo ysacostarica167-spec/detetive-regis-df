@@ -12,6 +12,7 @@ import ConjugalInvestigation from "./pages/ConjugalInvestigation";
 import CorporateInvestigation from "./pages/CorporateInvestigation";
 import PeopleLocation from "./pages/PeopleLocation";
 import FamilyInvestigation from "./pages/FamilyInvestigation";
+import VehicleInvestigation from "./pages/VehicleInvestigation";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
