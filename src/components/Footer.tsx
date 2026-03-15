@@ -111,6 +111,11 @@ const Footer = () => {
                   • Investigação Familiar
                 </Link>
               </li>
+              <li>
+                <Link to="/investigacao-veicular" className="hover:text-detective-gold transition-colors">
+                  • Investigação Veicular
+                </Link>
+              </li>
             </ul>
             
             {/* Service Areas */}

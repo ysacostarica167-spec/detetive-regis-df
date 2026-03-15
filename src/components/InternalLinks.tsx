@@ -54,6 +54,11 @@ const InternalLinks = () => {
           text: "Investigação Jurídica e Perícia Particular", 
           url: "/investigacao-juridica",
           description: "Laudos técnicos para processos judiciais"
+        },
+        { 
+          text: "Descobrir Proprietário de Veículo em Brasília", 
+          url: "/investigacao-veicular",
+          description: "Levantamento de endereço e proprietário de veículo"
         }
       ]
     }
