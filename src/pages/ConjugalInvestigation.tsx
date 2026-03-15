@@ -115,9 +115,9 @@ const ConjugalInvestigation = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Investigação Conjugal DF - Como Descobrir Traição em Brasília | Detetive para Infidelidade"
-        description="Como descobrir traição em Brasília? Detetive para infidelidade DF com investigação conjugal profissional e sigilosa. Investigação de relacionamentos, suspeitas conjugais e infidelidade em Brasília DF."
-        keywords="investigação conjugal df, como descobrir traição em brasília, detetive para infidelidade df, detetive particular df, investigação de traição brasília, infidelidade conjugal df, suspeitas conjugais brasília, investigação relacionamento df, detetive particular águas claras, detetive particular taguatinga, detetive particular ceilândia, detetive particular guará, detetive particular lago sul, detetive particular asa norte, detetive particular entorno de brasília"
+        title="Investigação Conjugal Brasília | Detetive para Traição DF | Prova de Infidelidade"
+        description="Investigação conjugal Brasília com detetive para traição. Prova de traição Brasília DF. Detetive para descobrir traição e investigação de infidelidade DF. Sigilo absoluto."
+        keywords="investigação conjugal brasília, detetive para traição brasília, prova de traição brasília, detetive para descobrir traição, investigação de infidelidade df, como descobrir traição em brasília, detetive para infidelidade df, detetive particular df, suspeitas conjugais brasília"
         canonical="/investigacao-conjugal"
         ogImage="https://detetive-regis.lovable.app/assets/conjugal-investigation-signs.jpg"
         structuredData={structuredData}
