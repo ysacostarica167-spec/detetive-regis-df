@@ -165,12 +165,13 @@ const Header = () => {
               >
                 Serviços
               </button>
-              <button 
-                onClick={() => scrollToSection('conteudo')}
+              <Link 
+                to="/blog"
                 className="text-left text-professional-grey hover:text-detective-navy hover:bg-detective-gold/10 rounded-lg px-3 py-2 transition-all duration-300"
+                onClick={() => setIsMenuOpen(false)}
               >
-                Conteúdo
-              </button>
+                Blog
+              </Link>
               <Link 
                 to="/servicos-ciberneticos"
                 className="text-left text-professional-grey hover:text-detective-navy hover:bg-detective-gold/10 rounded-lg px-3 py-2 transition-all duration-300"
