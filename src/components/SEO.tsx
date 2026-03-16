@@ -17,7 +17,7 @@ const SEO = ({
   ogImage = "https://detetive-regis.lovable.app/src/assets/detective-hero-hq.jpg",
   structuredData 
 }: SEOProps) => {
-  const baseUrl = "https://detetive-regis.lovable.app";
+  const baseUrl = "https://detetive-regis-df.lovable.app";
   const fullCanonical = canonical ? `${baseUrl}${canonical}` : baseUrl;
 
   return (
