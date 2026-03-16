@@ -13,6 +13,7 @@ import CorporateInvestigation from "./pages/CorporateInvestigation";
 import PeopleLocation from "./pages/PeopleLocation";
 import FamilyInvestigation from "./pages/FamilyInvestigation";
 import VehicleInvestigation from "./pages/VehicleInvestigation";
+import DetetiveBrasilia from "./pages/DetetiveBrasilia";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/localizacao-pessoas" element={<PeopleLocation />} />
             <Route path="/investigacao-familiar" element={<FamilyInvestigation />} />
             <Route path="/investigacao-veicular" element={<VehicleInvestigation />} />
+            <Route path="/detetive-particular-brasilia" element={<DetetiveBrasilia />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
