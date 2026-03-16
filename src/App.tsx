@@ -13,6 +13,7 @@ import CorporateInvestigation from "./pages/CorporateInvestigation";
 import PeopleLocation from "./pages/PeopleLocation";
 import FamilyInvestigation from "./pages/FamilyInvestigation";
 import VehicleInvestigation from "./pages/VehicleInvestigation";
+import DetetiveBrasilia from "./pages/DetetiveBrasilia";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
