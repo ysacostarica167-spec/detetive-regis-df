@@ -118,15 +118,17 @@ const Footer = () => {
               </li>
             </ul>
             
-            {/* Service Areas */}
+            {/* Service Areas with Links */}
             <h3 className="font-semibold text-lg mb-4 mt-6">Áreas de Atendimento</h3>
             <ul className="space-y-2 text-white/80 text-sm">
-              <li>• Detetive Asa Norte Brasília</li>
-              <li>• Detetive Asa Sul Brasília</li>
-              <li>• Detetive Águas Claras</li>
-              <li>• Detetive Taguatinga</li>
-              <li>• Detetive Ceilândia</li>
-              <li>• Detetive Lago Sul e Norte</li>
+              <li><Link to="/detetive-asa-norte" className="hover:text-detective-gold transition-colors">• Detetive Asa Norte</Link></li>
+              <li><Link to="/detetive-asa-sul" className="hover:text-detective-gold transition-colors">• Detetive Asa Sul</Link></li>
+              <li><Link to="/detetive-aguas-claras-df" className="hover:text-detective-gold transition-colors">• Detetive Águas Claras</Link></li>
+              <li><Link to="/detetive-taguatinga-df" className="hover:text-detective-gold transition-colors">• Detetive Taguatinga</Link></li>
+              <li><Link to="/detetive-lago-sul" className="hover:text-detective-gold transition-colors">• Detetive Lago Sul</Link></li>
+              <li><Link to="/detetive-lago-norte" className="hover:text-detective-gold transition-colors">• Detetive Lago Norte</Link></li>
+              <li><Link to="/detetive-sudoeste" className="hover:text-detective-gold transition-colors">• Detetive Sudoeste</Link></li>
+              <li><Link to="/detetive-cruzeiro" className="hover:text-detective-gold transition-colors">• Detetive Cruzeiro</Link></li>
             </ul>
           </div>
         </div>

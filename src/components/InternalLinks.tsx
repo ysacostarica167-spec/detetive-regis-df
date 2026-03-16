@@ -118,21 +118,21 @@ const InternalLinks = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "Detetive Particular Asa Norte",
-              "Detetive Particular Asa Sul", 
-              "Detetive Águas Claras",
-              "Detetive Taguatinga",
-              "Detetive Ceilândia",
-              "Detetive Lago Sul",
-              "Detetive Guará",
-              "Detetive Particular DF Barato"
-            ].map((keyword, index) => (
+              { text: "Detetive Águas Claras", url: "/detetive-aguas-claras-df" },
+              { text: "Detetive Taguatinga", url: "/detetive-taguatinga-df" },
+              { text: "Detetive Asa Norte", url: "/detetive-asa-norte" },
+              { text: "Detetive Asa Sul", url: "/detetive-asa-sul" },
+              { text: "Detetive Lago Sul", url: "/detetive-lago-sul" },
+              { text: "Detetive Lago Norte", url: "/detetive-lago-norte" },
+              { text: "Detetive Sudoeste", url: "/detetive-sudoeste" },
+              { text: "Detetive Cruzeiro", url: "/detetive-cruzeiro" }
+            ].map((item, index) => (
               <Link
                 key={index}
-                to="/#contato"
+                to={item.url}
                 className="px-4 py-2 bg-detective-gold/10 text-detective-navy rounded-full text-sm hover:bg-detective-gold hover:text-white transition-all duration-300"
               >
-                {keyword}
+                {item.text}
               </Link>
             ))}
           </div>
