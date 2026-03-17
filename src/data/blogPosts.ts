@@ -756,6 +756,7 @@ WhatsApp (61) 98284-4543 para consultar um veículo.
     title: "Como Reunir Provas de Infidelidade",
     slug: "como-reunir-provas-infidelidade",
     excerpt: "Guia profissional sobre como reunir provas de infidelidade com validade legal. O que é aceito pela justiça e o que pode anular suas evidências.",
+    image: blogImg8,
     content: `## Como Reunir Provas de Infidelidade
 
 Reunir **provas de infidelidade** de forma correta é fundamental para que elas tenham **validade legal** em processos de divórcio e partilha de bens. Neste artigo, explico o que funciona e o que não funciona.
