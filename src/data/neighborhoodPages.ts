@@ -77,6 +77,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular Asa Norte Brasília | Investigação Sigilosa | (61) 98284-4543",
     seoDescription: "Detetive particular na Asa Norte de Brasília. Investigação conjugal, empresarial e localização de pessoas com sigilo absoluto. Atendimento nas superquadras, CLN e SQN. Consulta gratuita.",
     seoKeywords: "detetive particular asa norte, detetive asa norte brasília, investigador particular asa norte, investigação conjugal asa norte, detetive superquadras brasília",
+    heroDescription: "Detetive particular na Asa Norte com atendimento rápido e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos nas superquadras e setores comerciais com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive na Asa Norte, fale agora e tenha atendimento imediato.",
     intro: [
       "A Asa Norte é uma das regiões mais nobres e tradicionais de Brasília, abrigando superquadras residenciais, a Universidade de Brasília (UnB), o Parque Olhos D'Água e uma vibrante vida comercial nos blocos CLN. Com um perfil populacional diversificado, a região apresenta demandas frequentes por serviços de investigação particular.",
       "O Detetive Regis atua na Asa Norte com total conhecimento da região — das superquadras SQN aos setores comerciais, passando por áreas como o Setor Noroeste e a W3 Norte. Nossa equipe opera com veículos descaracterizados e técnicas avançadas de vigilância adaptadas ao ambiente urbano da região.",
