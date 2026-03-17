@@ -105,6 +105,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular Asa Sul Brasília | Investigador Profissional | (61) 98284-4543",
     seoDescription: "Detetive particular na Asa Sul de Brasília. Investigação conjugal, empresarial e localização de pessoas. Atuação nas superquadras SQS, CLS e W3 Sul. Atendimento 24h sigiloso.",
     seoKeywords: "detetive particular asa sul, detetive asa sul brasília, investigador particular asa sul, investigação conjugal asa sul, detetive superquadras asa sul",
+    heroDescription: "Detetive particular na Asa Sul com atendimento rápido e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos nas superquadras SQS e CLS com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive na Asa Sul, fale agora e tenha atendimento imediato.",
     intro: [
       "A Asa Sul é um dos endereços mais tradicionais e valorizados de Brasília, com suas superquadras arborizadas, o Parque da Cidade, o Eixo Monumental e uma rica vida cultural e gastronômica nos blocos CLS. Moradores da Asa Sul frequentemente buscam serviços de investigação particular com alto nível de sigilo e profissionalismo.",
       "O Detetive Regis mantém escritório na Asa Sul e conhece intimamente a região. Atuamos nas superquadras SQS, nos setores comerciais CLS, no Setor de Diversões Sul e nas áreas residenciais adjacentes. Nossa proximidade geográfica permite atendimento rápido e operações ágeis.",
