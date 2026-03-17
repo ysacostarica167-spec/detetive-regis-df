@@ -5,6 +5,8 @@ export interface NeighborhoodPage {
   seoTitle: string;
   seoDescription: string;
   seoKeywords: string;
+  heroDescription: string;
+  heroCta: string;
   intro: string[];
   services: string[];
   localInfo: string[];
@@ -19,6 +21,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular em Águas Claras DF | Investigação Sigilosa | (61) 98284-4543",
     seoDescription: "Detetive particular em Águas Claras DF. Investigação conjugal, empresarial e localização de pessoas. Atendimento sigiloso 24h em Águas Claras Norte, Sul e Vertical. Ligue agora!",
     seoKeywords: "detetive particular águas claras, detetive águas claras df, investigador particular águas claras, investigação conjugal águas claras, detetive particular águas claras norte",
+    heroDescription: "Detetive particular em Águas Claras DF com atendimento rápido e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos na região com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive em Águas Claras, fale agora e tenha atendimento imediato.",
     intro: [
       "Águas Claras é uma das regiões administrativas mais modernas e populosas do Distrito Federal, com mais de 160 mil habitantes concentrados em edifícios residenciais de alto padrão. Essa característica urbana cria desafios únicos para serviços de investigação particular — e também oportunidades para quem conhece a região.",
       "O Detetive Regis atua há mais de 20 anos em Águas Claras, conhecendo profundamente as dinâmicas de Águas Claras Norte, Águas Claras Sul e Águas Claras Vertical. Nossa equipe domina os acessos, estacionamentos, áreas comerciais e rotinas locais, garantindo operações de monitoramento eficientes e totalmente discretas.",
@@ -45,6 +49,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular em Taguatinga DF | Investigador Profissional | (61) 98284-4543",
     seoDescription: "Detetive particular em Taguatinga DF. Investigação conjugal, localização de pessoas e investigação empresarial. Atuação em Taguatinga Norte, Sul e Centro. Sigilo total.",
     seoKeywords: "detetive particular taguatinga, detetive taguatinga df, investigador particular taguatinga, investigação conjugal taguatinga, detetive taguatinga norte",
+    heroDescription: "Detetive particular em Taguatinga DF com atendimento rápido e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos em Taguatinga Norte, Sul e Centro com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive em Taguatinga, fale agora e tenha atendimento imediato.",
     intro: [
       "Taguatinga é uma das maiores e mais importantes regiões administrativas do Distrito Federal, com uma população superior a 200 mil habitantes e uma economia local forte. Como um dos principais centros comerciais do DF, a cidade demanda serviços investigativos de alta qualidade.",
       "O Detetive Regis conhece Taguatinga como poucos. Atuamos em Taguatinga Norte, Taguatinga Sul, Taguatinga Centro e nas áreas limítrofes como QNL, QNG, QNJ e as proximidades do Taguatinga Shopping e Pistão Sul. Essa expertise local é fundamental para operações de vigilância bem-sucedidas.",
@@ -71,6 +77,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular Asa Norte Brasília | Investigação Sigilosa | (61) 98284-4543",
     seoDescription: "Detetive particular na Asa Norte de Brasília. Investigação conjugal, empresarial e localização de pessoas com sigilo absoluto. Atendimento nas superquadras, CLN e SQN. Consulta gratuita.",
     seoKeywords: "detetive particular asa norte, detetive asa norte brasília, investigador particular asa norte, investigação conjugal asa norte, detetive superquadras brasília",
+    heroDescription: "Detetive particular na Asa Norte com atendimento rápido e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos nas superquadras e setores comerciais com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive na Asa Norte, fale agora e tenha atendimento imediato.",
     intro: [
       "A Asa Norte é uma das regiões mais nobres e tradicionais de Brasília, abrigando superquadras residenciais, a Universidade de Brasília (UnB), o Parque Olhos D'Água e uma vibrante vida comercial nos blocos CLN. Com um perfil populacional diversificado, a região apresenta demandas frequentes por serviços de investigação particular.",
       "O Detetive Regis atua na Asa Norte com total conhecimento da região — das superquadras SQN aos setores comerciais, passando por áreas como o Setor Noroeste e a W3 Norte. Nossa equipe opera com veículos descaracterizados e técnicas avançadas de vigilância adaptadas ao ambiente urbano da região.",
@@ -97,6 +105,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular Asa Sul Brasília | Investigador Profissional | (61) 98284-4543",
     seoDescription: "Detetive particular na Asa Sul de Brasília. Investigação conjugal, empresarial e localização de pessoas. Atuação nas superquadras SQS, CLS e W3 Sul. Atendimento 24h sigiloso.",
     seoKeywords: "detetive particular asa sul, detetive asa sul brasília, investigador particular asa sul, investigação conjugal asa sul, detetive superquadras asa sul",
+    heroDescription: "Detetive particular na Asa Sul com atendimento rápido e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos nas superquadras SQS e CLS com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive na Asa Sul, fale agora e tenha atendimento imediato.",
     intro: [
       "A Asa Sul é um dos endereços mais tradicionais e valorizados de Brasília, com suas superquadras arborizadas, o Parque da Cidade, o Eixo Monumental e uma rica vida cultural e gastronômica nos blocos CLS. Moradores da Asa Sul frequentemente buscam serviços de investigação particular com alto nível de sigilo e profissionalismo.",
       "O Detetive Regis mantém escritório na Asa Sul e conhece intimamente a região. Atuamos nas superquadras SQS, nos setores comerciais CLS, no Setor de Diversões Sul e nas áreas residenciais adjacentes. Nossa proximidade geográfica permite atendimento rápido e operações ágeis.",
@@ -123,6 +133,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular Lago Sul Brasília | Investigação Discreta | (61) 98284-4543",
     seoDescription: "Detetive particular no Lago Sul de Brasília. Investigação conjugal, patrimonial e empresarial com máximo sigilo. Atendimento exclusivo para moradores do Lago Sul. Consulta gratuita.",
     seoKeywords: "detetive particular lago sul, detetive lago sul brasília, investigador particular lago sul, investigação conjugal lago sul, detetive particular brasília lago sul",
+    heroDescription: "Detetive particular no Lago Sul com atendimento exclusivo e sigiloso. Especialista em investigação conjugal, patrimonial e produção de provas. Atuamos nas quadras SHIS com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive no Lago Sul, fale agora e tenha atendimento imediato.",
     intro: [
       "O Lago Sul é a região mais nobre e exclusiva de Brasília, com mansões, embaixadas e residências de alto padrão às margens do Lago Paranoá. Moradores do Lago Sul exigem o mais alto nível de sigilo e profissionalismo quando buscam serviços de investigação particular.",
       "O Detetive Regis atende moradores do Lago Sul com total exclusividade e discrição. Conhecemos as quadras residenciais (SHIS QL), os acessos, os clubes, restaurantes e a dinâmica social da região. Essa intimidade com o ambiente local é essencial para operações investigativas que não podem falhar.",
@@ -149,6 +161,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular Lago Norte Brasília | Investigação Sigilosa | (61) 98284-4543",
     seoDescription: "Detetive particular no Lago Norte de Brasília. Investigação conjugal, localização de pessoas e investigação patrimonial. Sigilo absoluto para moradores do Lago Norte.",
     seoKeywords: "detetive particular lago norte, detetive lago norte brasília, investigador particular lago norte, investigação conjugal lago norte, detetive brasília lago norte",
+    heroDescription: "Detetive particular no Lago Norte com atendimento exclusivo e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos nas quadras SHIN e condomínios com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive no Lago Norte, fale agora e tenha atendimento imediato.",
     intro: [
       "O Lago Norte é uma das regiões residenciais mais valorizadas de Brasília, com um perfil de moradores formado por diplomatas, executivos, servidores públicos e profissionais de destaque. A tranquilidade e exclusividade da região demandam serviços de investigação com discrição absoluta.",
       "O Detetive Regis atua no Lago Norte com conhecimento detalhado das quadras SHIN, dos condomínios fechados, do Setor de Mansões e das áreas próximas ao Lago Paranoá. Essa familiaridade é fundamental para operações de vigilância que exigem sutileza e precisão.",
@@ -175,6 +189,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular Sudoeste Brasília | Investigador Particular | (61) 98284-4543",
     seoDescription: "Detetive particular no Sudoeste de Brasília. Investigação conjugal, empresarial e localização de pessoas. Atuação no Sudoeste e Octogonal com total sigilo. Consulta gratuita.",
     seoKeywords: "detetive particular sudoeste, detetive sudoeste brasília, investigador particular sudoeste, investigação conjugal sudoeste, detetive particular octogonal",
+    heroDescription: "Detetive particular no Sudoeste com atendimento rápido e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos no Sudoeste e Octogonal com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive no Sudoeste, fale agora e tenha atendimento imediato.",
     intro: [
       "O Sudoeste (SQSW) é um dos bairros mais modernos e valorizados de Brasília, com edifícios residenciais de alto padrão, áreas verdes preservadas e um comércio local sofisticado. Junto com a Octogonal (AOS), forma uma região que concentra profissionais bem-sucedidos e famílias que valorizam qualidade de vida.",
       "O Detetive Regis atua no Sudoeste e Octogonal com a discrição que os moradores da região esperam. Conhecemos os acessos, os blocos residenciais, os estacionamentos e as rotinas locais — informações essenciais para conduzir operações de investigação sem qualquer exposição.",
@@ -201,6 +217,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular Cruzeiro Brasília | Investigação Profissional | (61) 98284-4543",
     seoDescription: "Detetive particular no Cruzeiro em Brasília. Investigação conjugal, localização de pessoas e investigação empresarial. Atuação no Cruzeiro Velho e Cruzeiro Novo. Sigilo garantido.",
     seoKeywords: "detetive particular cruzeiro, detetive cruzeiro brasília, investigador particular cruzeiro, investigação conjugal cruzeiro, detetive cruzeiro velho cruzeiro novo",
+    heroDescription: "Detetive particular no Cruzeiro com atendimento rápido e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos no Cruzeiro Velho e Cruzeiro Novo com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive no Cruzeiro, fale agora e tenha atendimento imediato.",
     intro: [
       "O Cruzeiro é uma das regiões administrativas mais tradicionais de Brasília, dividida entre Cruzeiro Velho e Cruzeiro Novo. Com uma comunidade consolidada e forte senso de vizinhança, a região requer investigadores que saibam atuar com discrição em ambientes onde as pessoas se conhecem.",
       "O Detetive Regis atua no Cruzeiro há mais de duas décadas, conhecendo suas ruas, comércios, escolas e dinâmicas sociais. Essa experiência nos permite conduzir investigações conjugais, empresariais e de localização com a sutileza necessária para evitar qualquer exposição desnecessária.",
