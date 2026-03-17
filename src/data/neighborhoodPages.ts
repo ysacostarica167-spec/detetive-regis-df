@@ -161,6 +161,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular Lago Norte Brasília | Investigação Sigilosa | (61) 98284-4543",
     seoDescription: "Detetive particular no Lago Norte de Brasília. Investigação conjugal, localização de pessoas e investigação patrimonial. Sigilo absoluto para moradores do Lago Norte.",
     seoKeywords: "detetive particular lago norte, detetive lago norte brasília, investigador particular lago norte, investigação conjugal lago norte, detetive brasília lago norte",
+    heroDescription: "Detetive particular no Lago Norte com atendimento exclusivo e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos nas quadras SHIN e condomínios com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive no Lago Norte, fale agora e tenha atendimento imediato.",
     intro: [
       "O Lago Norte é uma das regiões residenciais mais valorizadas de Brasília, com um perfil de moradores formado por diplomatas, executivos, servidores públicos e profissionais de destaque. A tranquilidade e exclusividade da região demandam serviços de investigação com discrição absoluta.",
       "O Detetive Regis atua no Lago Norte com conhecimento detalhado das quadras SHIN, dos condomínios fechados, do Setor de Mansões e das áreas próximas ao Lago Paranoá. Essa familiaridade é fundamental para operações de vigilância que exigem sutileza e precisão.",
