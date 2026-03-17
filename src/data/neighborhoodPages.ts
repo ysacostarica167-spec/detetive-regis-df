@@ -5,6 +5,8 @@ export interface NeighborhoodPage {
   seoTitle: string;
   seoDescription: string;
   seoKeywords: string;
+  heroDescription: string;
+  heroCta: string;
   intro: string[];
   services: string[];
   localInfo: string[];
