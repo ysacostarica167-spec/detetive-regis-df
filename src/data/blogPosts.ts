@@ -33,6 +33,7 @@ export const blogPosts: BlogPost[] = [
     title: "Quanto Custa um Detetive Particular em Brasília?",
     slug: "quanto-custa-detetive-particular-brasilia",
     excerpt: "Descubra os valores reais de um detetive particular em Brasília DF. Fatores que influenciam o preço, tipos de investigação e como escolher o melhor custo-benefício.",
+    image: blogImg1,
     content: `## Quanto Custa um Detetive Particular em Brasília DF?
 
 Uma das perguntas mais frequentes que recebo é sobre o **custo de um detetive particular em Brasília**. A resposta depende de vários fatores que vou explicar neste artigo completo.
