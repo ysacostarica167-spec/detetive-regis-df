@@ -84,11 +84,8 @@ const Blog = () => {
               <div className="bg-gradient-to-r from-detective-navy to-detective-navy/90 rounded-2xl p-1 shadow-2xl group-hover:shadow-detective-gold/20 transition-shadow duration-300">
                 <div className="bg-white rounded-xl overflow-hidden">
                   <div className="grid lg:grid-cols-2 gap-0">
-                    <div className="bg-gradient-to-br from-detective-navy/10 to-detective-gold/10 p-8 lg:p-12 flex items-center justify-center">
-                      <div className="text-center">
-                        <Star className="w-16 h-16 text-detective-gold mx-auto mb-4" />
-                        <span className="text-detective-navy font-bold text-lg">Artigo em Destaque</span>
-                      </div>
+                    <div className="overflow-hidden aspect-video lg:aspect-auto">
+                      <img src={featuredPost.image} alt={featuredPost.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div className="p-8 lg:p-12 flex flex-col justify-center">
                       <Badge className="w-fit mb-4 bg-detective-gold/20 text-detective-gold">
