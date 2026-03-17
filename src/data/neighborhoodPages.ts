@@ -133,6 +133,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular Lago Sul Brasília | Investigação Discreta | (61) 98284-4543",
     seoDescription: "Detetive particular no Lago Sul de Brasília. Investigação conjugal, patrimonial e empresarial com máximo sigilo. Atendimento exclusivo para moradores do Lago Sul. Consulta gratuita.",
     seoKeywords: "detetive particular lago sul, detetive lago sul brasília, investigador particular lago sul, investigação conjugal lago sul, detetive particular brasília lago sul",
+    heroDescription: "Detetive particular no Lago Sul com atendimento exclusivo e sigiloso. Especialista em investigação conjugal, patrimonial e produção de provas. Atuamos nas quadras SHIS com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive no Lago Sul, fale agora e tenha atendimento imediato.",
     intro: [
       "O Lago Sul é a região mais nobre e exclusiva de Brasília, com mansões, embaixadas e residências de alto padrão às margens do Lago Paranoá. Moradores do Lago Sul exigem o mais alto nível de sigilo e profissionalismo quando buscam serviços de investigação particular.",
       "O Detetive Regis atende moradores do Lago Sul com total exclusividade e discrição. Conhecemos as quadras residenciais (SHIS QL), os acessos, os clubes, restaurantes e a dinâmica social da região. Essa intimidade com o ambiente local é essencial para operações investigativas que não podem falhar.",
