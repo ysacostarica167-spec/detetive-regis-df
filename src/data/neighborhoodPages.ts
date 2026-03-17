@@ -21,6 +21,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular em Águas Claras DF | Investigação Sigilosa | (61) 98284-4543",
     seoDescription: "Detetive particular em Águas Claras DF. Investigação conjugal, empresarial e localização de pessoas. Atendimento sigiloso 24h em Águas Claras Norte, Sul e Vertical. Ligue agora!",
     seoKeywords: "detetive particular águas claras, detetive águas claras df, investigador particular águas claras, investigação conjugal águas claras, detetive particular águas claras norte",
+    heroDescription: "Detetive particular em Águas Claras DF com atendimento rápido e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos na região com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive em Águas Claras, fale agora e tenha atendimento imediato.",
     intro: [
       "Águas Claras é uma das regiões administrativas mais modernas e populosas do Distrito Federal, com mais de 160 mil habitantes concentrados em edifícios residenciais de alto padrão. Essa característica urbana cria desafios únicos para serviços de investigação particular — e também oportunidades para quem conhece a região.",
       "O Detetive Regis atua há mais de 20 anos em Águas Claras, conhecendo profundamente as dinâmicas de Águas Claras Norte, Águas Claras Sul e Águas Claras Vertical. Nossa equipe domina os acessos, estacionamentos, áreas comerciais e rotinas locais, garantindo operações de monitoramento eficientes e totalmente discretas.",
