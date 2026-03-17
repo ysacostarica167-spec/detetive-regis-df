@@ -864,6 +864,7 @@ WhatsApp (61) 98284-4543 para reunir provas legais.
     title: "Como Investigar uma Pessoa",
     slug: "como-investigar-uma-pessoa",
     excerpt: "Métodos profissionais para investigar uma pessoa de forma legal e ética. Tipos de investigação, ferramentas e limites legais.",
+    image: blogImg9,
     content: `## Como Investigar uma Pessoa
 
 Existem diversas razões legítimas para **investigar uma pessoa**. Neste artigo, explico os métodos profissionais utilizados, os limites legais e quando buscar ajuda de um detetive particular.
