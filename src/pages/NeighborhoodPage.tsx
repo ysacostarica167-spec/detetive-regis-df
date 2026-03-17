@@ -73,8 +73,11 @@ const NeighborhoodPage = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6 leading-tight">
             {page.title}
           </h1>
-          <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Investigador particular profissional com atuação direta em {page.name}. Sigilo absoluto, equipamentos modernos e mais de 20 anos de experiência.
+          <p className="text-lg text-primary-foreground/80 mb-4 max-w-2xl mx-auto leading-relaxed">
+            {page.heroDescription}
+          </p>
+          <p className="text-lg text-detective-gold font-semibold mb-8 max-w-2xl mx-auto">
+            {page.heroCta}
           </p>
           <Button
             onClick={() => handleWhatsAppClick('Hero')}

@@ -217,6 +217,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular Cruzeiro Brasília | Investigação Profissional | (61) 98284-4543",
     seoDescription: "Detetive particular no Cruzeiro em Brasília. Investigação conjugal, localização de pessoas e investigação empresarial. Atuação no Cruzeiro Velho e Cruzeiro Novo. Sigilo garantido.",
     seoKeywords: "detetive particular cruzeiro, detetive cruzeiro brasília, investigador particular cruzeiro, investigação conjugal cruzeiro, detetive cruzeiro velho cruzeiro novo",
+    heroDescription: "Detetive particular no Cruzeiro com atendimento rápido e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos no Cruzeiro Velho e Cruzeiro Novo com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive no Cruzeiro, fale agora e tenha atendimento imediato.",
     intro: [
       "O Cruzeiro é uma das regiões administrativas mais tradicionais de Brasília, dividida entre Cruzeiro Velho e Cruzeiro Novo. Com uma comunidade consolidada e forte senso de vizinhança, a região requer investigadores que saibam atuar com discrição em ambientes onde as pessoas se conhecem.",
       "O Detetive Regis atua no Cruzeiro há mais de duas décadas, conhecendo suas ruas, comércios, escolas e dinâmicas sociais. Essa experiência nos permite conduzir investigações conjugais, empresariais e de localização com a sutileza necessária para evitar qualquer exposição desnecessária.",
