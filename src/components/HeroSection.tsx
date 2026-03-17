@@ -59,18 +59,20 @@ const HeroSection = () => {
 
           {/* Main Heading - Keyword optimized */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="block">Detetive Particular</span>
-            <span className="block text-detective-gold">Brasília DF</span>
+            <span className="block">Descubra a Verdade</span>
+            <span className="block text-detective-gold">Com Provas Reais</span>
           </h1>
 
-          {/* Subtitle - CPC optimized with keywords */}
+          {/* Subtitle - CPC optimized copy */}
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto leading-relaxed">
-            Investigação Conjugal • Traição • Localização de Pessoas
+            Detetive Particular em Brasília DF
           </p>
           
-          <p className="text-lg text-white/80 mb-6 max-w-2xl mx-auto">
-            <strong>Consulta Gratuita</strong> • Sigilo Absoluto • Provas com Validade Legal
-          </p>
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-x-6 gap-y-2 text-lg text-white/90 mb-6 max-w-2xl mx-auto">
+            <span className="flex items-center gap-2"><Shield className="w-4 h-4 text-detective-gold" /> Investigação 100% sigilosa</span>
+            <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-detective-gold" /> Atendimento imediato no DF</span>
+            <span className="flex items-center gap-2"><Camera className="w-4 h-4 text-detective-gold" /> Relatórios com fotos e vídeos</span>
+          </div>
 
           {/* Stats for social proof */}
           <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
