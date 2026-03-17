@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle, Shield, Award } from "lucide-react";
+import { Phone, MessageCircle, Shield, Award, Clock, Camera } from "lucide-react";
 import heroImage from "@/assets/detective-hero-hq.jpg";
 import LazyImage from "@/components/LazyImage";
 import { trackWhatsAppClick, trackPhoneCall, trackCTAClick } from "@/utils/analytics";
