@@ -49,6 +49,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular em Taguatinga DF | Investigador Profissional | (61) 98284-4543",
     seoDescription: "Detetive particular em Taguatinga DF. Investigação conjugal, localização de pessoas e investigação empresarial. Atuação em Taguatinga Norte, Sul e Centro. Sigilo total.",
     seoKeywords: "detetive particular taguatinga, detetive taguatinga df, investigador particular taguatinga, investigação conjugal taguatinga, detetive taguatinga norte",
+    heroDescription: "Detetive particular em Taguatinga DF com atendimento rápido e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos em Taguatinga Norte, Sul e Centro com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive em Taguatinga, fale agora e tenha atendimento imediato.",
     intro: [
       "Taguatinga é uma das maiores e mais importantes regiões administrativas do Distrito Federal, com uma população superior a 200 mil habitantes e uma economia local forte. Como um dos principais centros comerciais do DF, a cidade demanda serviços investigativos de alta qualidade.",
       "O Detetive Regis conhece Taguatinga como poucos. Atuamos em Taguatinga Norte, Taguatinga Sul, Taguatinga Centro e nas áreas limítrofes como QNL, QNG, QNJ e as proximidades do Taguatinga Shopping e Pistão Sul. Essa expertise local é fundamental para operações de vigilância bem-sucedidas.",
