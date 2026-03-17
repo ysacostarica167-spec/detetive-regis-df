@@ -437,6 +437,7 @@ WhatsApp (61) 98284-4543 - Consulta sigilosa e gratuita.
     title: "Como Funciona a Investigação Conjugal",
     slug: "como-funciona-investigacao-conjugal",
     excerpt: "Entenda passo a passo como funciona uma investigação conjugal profissional. Métodos utilizados, prazos, custos e o que esperar do processo.",
+    image: blogImg5,
     content: `## Como Funciona a Investigação Conjugal
 
 A **investigação conjugal** é o serviço mais procurado por detetives particulares em Brasília DF. Neste artigo, explico detalhadamente como funciona todo o processo.
