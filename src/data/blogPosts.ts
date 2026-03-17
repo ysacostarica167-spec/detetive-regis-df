@@ -552,6 +552,7 @@ WhatsApp (61) 98284-4543 para consulta sigilosa.
     title: "Detetive Particular é Legal no Brasil?",
     slug: "detetive-particular-legal-brasil",
     excerpt: "Entenda a legislação brasileira sobre detetives particulares. O que é permitido, o que é proibido e como garantir que sua investigação seja legal.",
+    image: blogImg6,
     content: `## Detetive Particular é Legal no Brasil?
 
 Uma dúvida muito comum é sobre a **legalidade da profissão de detetive particular no Brasil**. A resposta é: SIM, é totalmente legal e regulamentada por lei.
