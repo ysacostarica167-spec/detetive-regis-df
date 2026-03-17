@@ -335,6 +335,7 @@ Entre em contato pelo WhatsApp (61) 98284-4543 para localizar alguém.
     title: "Quando Contratar um Detetive Particular?",
     slug: "quando-contratar-detetive-particular",
     excerpt: "Descubra as situações em que contratar um detetive particular é a melhor decisão. Desde suspeita de traição até investigações empresariais.",
+    image: blogImg4,
     content: `## Quando Contratar um Detetive Particular?
 
 Muitas pessoas se perguntam se realmente precisam de um **detetive particular**. Neste artigo, explico as situações mais comuns em que a contratação de um investigador profissional é a melhor decisão.
