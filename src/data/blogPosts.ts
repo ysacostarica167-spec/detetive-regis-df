@@ -1,8 +1,20 @@
+import blogImg1 from '@/assets/blog/quanto-custa-detetive.jpg';
+import blogImg2 from '@/assets/blog/descobrir-traicao.jpg';
+import blogImg3 from '@/assets/blog/localizar-pessoa.jpg';
+import blogImg4 from '@/assets/blog/quando-contratar-detetive.jpg';
+import blogImg5 from '@/assets/blog/investigacao-conjugal.jpg';
+import blogImg6 from '@/assets/blog/detetive-legal-brasil.jpg';
+import blogImg7 from '@/assets/blog/descobrir-dono-veiculo.jpg';
+import blogImg8 from '@/assets/blog/provas-infidelidade.jpg';
+import blogImg9 from '@/assets/blog/investigar-pessoa.jpg';
+import blogImg10 from '@/assets/blog/tempo-investigacao.jpg';
+
 export interface BlogPost {
   id: number;
   title: string;
   slug: string;
   excerpt: string;
+  image: string;
   content: string;
   category: string;
   author: string;
