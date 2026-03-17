@@ -656,6 +656,7 @@ WhatsApp (61) 98284-4543 para uma consulta com detetive legalizado.
     title: "Como Descobrir Quem é o Dono de um Veículo",
     slug: "como-descobrir-dono-veiculo",
     excerpt: "Métodos profissionais para descobrir o proprietário de um veículo pela placa. Quando e por que fazer essa consulta e como um detetive pode ajudar.",
+    image: blogImg7,
     content: `## Como Descobrir Quem é o Dono de um Veículo
 
 Descobrir o **proprietário de um veículo** é uma necessidade comum em diversas situações. Neste artigo, explico os métodos profissionais utilizados e quando essa investigação é necessária.
