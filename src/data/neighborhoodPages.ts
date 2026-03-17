@@ -189,6 +189,8 @@ export const neighborhoodPages: NeighborhoodPage[] = [
     seoTitle: "Detetive Particular Sudoeste Brasília | Investigador Particular | (61) 98284-4543",
     seoDescription: "Detetive particular no Sudoeste de Brasília. Investigação conjugal, empresarial e localização de pessoas. Atuação no Sudoeste e Octogonal com total sigilo. Consulta gratuita.",
     seoKeywords: "detetive particular sudoeste, detetive sudoeste brasília, investigador particular sudoeste, investigação conjugal sudoeste, detetive particular octogonal",
+    heroDescription: "Detetive particular no Sudoeste com atendimento rápido e sigiloso. Especialista em investigação conjugal, acompanhamento e produção de provas. Atuamos no Sudoeste e Octogonal com total discrição, oferecendo relatórios completos com fotos e vídeos.",
+    heroCta: "Se você busca um detetive no Sudoeste, fale agora e tenha atendimento imediato.",
     intro: [
       "O Sudoeste (SQSW) é um dos bairros mais modernos e valorizados de Brasília, com edifícios residenciais de alto padrão, áreas verdes preservadas e um comércio local sofisticado. Junto com a Octogonal (AOS), forma uma região que concentra profissionais bem-sucedidos e famílias que valorizam qualidade de vida.",
       "O Detetive Regis atua no Sudoeste e Octogonal com a discrição que os moradores da região esperam. Conhecemos os acessos, os blocos residenciais, os estacionamentos e as rotinas locais — informações essenciais para conduzir operações de investigação sem qualquer exposição.",
