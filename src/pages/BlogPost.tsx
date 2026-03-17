@@ -132,6 +132,16 @@ const BlogPost = () => {
 
       <article className="py-12 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
+          {/* Hero Image */}
+          <div className="rounded-2xl overflow-hidden mb-10 aspect-video">
+            <img 
+              src={post.image} 
+              alt={post.title}
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+
           {/* Article Header */}
           <header className="mb-10">
             <Badge className="mb-4 bg-detective-gold/20 text-detective-gold">{post.category}</Badge>

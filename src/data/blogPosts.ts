@@ -1,8 +1,20 @@
+import blogImg1 from '@/assets/blog/quanto-custa-detetive.jpg';
+import blogImg2 from '@/assets/blog/descobrir-traicao.jpg';
+import blogImg3 from '@/assets/blog/localizar-pessoa.jpg';
+import blogImg4 from '@/assets/blog/quando-contratar-detetive.jpg';
+import blogImg5 from '@/assets/blog/investigacao-conjugal.jpg';
+import blogImg6 from '@/assets/blog/detetive-legal-brasil.jpg';
+import blogImg7 from '@/assets/blog/descobrir-dono-veiculo.jpg';
+import blogImg8 from '@/assets/blog/provas-infidelidade.jpg';
+import blogImg9 from '@/assets/blog/investigar-pessoa.jpg';
+import blogImg10 from '@/assets/blog/tempo-investigacao.jpg';
+
 export interface BlogPost {
   id: number;
   title: string;
   slug: string;
   excerpt: string;
+  image: string;
   content: string;
   category: string;
   author: string;
@@ -21,6 +33,7 @@ export const blogPosts: BlogPost[] = [
     title: "Quanto Custa um Detetive Particular em Brasília?",
     slug: "quanto-custa-detetive-particular-brasilia",
     excerpt: "Descubra os valores reais de um detetive particular em Brasília DF. Fatores que influenciam o preço, tipos de investigação e como escolher o melhor custo-benefício.",
+    image: blogImg1,
     content: `## Quanto Custa um Detetive Particular em Brasília DF?
 
 Uma das perguntas mais frequentes que recebo é sobre o **custo de um detetive particular em Brasília**. A resposta depende de vários fatores que vou explicar neste artigo completo.
@@ -117,6 +130,7 @@ Oferecemos **consulta inicial gratuita** para avaliar seu caso e apresentar um o
     title: "Como Descobrir Traição Sem Levantar Suspeita",
     slug: "como-descobrir-traicao-sem-levantar-suspeita",
     excerpt: "Guia completo sobre como investigar uma possível traição de forma discreta. Sinais de infidelidade, erros a evitar e quando buscar ajuda profissional.",
+    image: blogImg2,
     content: `## Como Descobrir Traição Sem Levantar Suspeita
 
 Descobrir uma traição é uma das situações mais delicadas que uma pessoa pode enfrentar. É fundamental agir com **discrição e inteligência** para não comprometer as evidências e o relacionamento.
@@ -211,6 +225,7 @@ Entre em contato pelo WhatsApp (61) 98284-4543 para uma consulta sigilosa e grat
     title: "Como Localizar uma Pessoa Pelo Nome",
     slug: "como-localizar-pessoa-pelo-nome",
     excerpt: "Métodos profissionais para localizar pessoas usando apenas o nome. Técnicas de investigação, bases de dados e quando contratar um detetive particular.",
+    image: blogImg3,
     content: `## Como Localizar uma Pessoa Pelo Nome
 
 Localizar uma pessoa tendo apenas o nome pode parecer impossível, mas com as **técnicas corretas de investigação**, é totalmente viável. Neste artigo, explico os métodos profissionais utilizados em Brasília DF.
@@ -320,6 +335,7 @@ Entre em contato pelo WhatsApp (61) 98284-4543 para localizar alguém.
     title: "Quando Contratar um Detetive Particular?",
     slug: "quando-contratar-detetive-particular",
     excerpt: "Descubra as situações em que contratar um detetive particular é a melhor decisão. Desde suspeita de traição até investigações empresariais.",
+    image: blogImg4,
     content: `## Quando Contratar um Detetive Particular?
 
 Muitas pessoas se perguntam se realmente precisam de um **detetive particular**. Neste artigo, explico as situações mais comuns em que a contratação de um investigador profissional é a melhor decisão.
@@ -421,6 +437,7 @@ WhatsApp (61) 98284-4543 - Consulta sigilosa e gratuita.
     title: "Como Funciona a Investigação Conjugal",
     slug: "como-funciona-investigacao-conjugal",
     excerpt: "Entenda passo a passo como funciona uma investigação conjugal profissional. Métodos utilizados, prazos, custos e o que esperar do processo.",
+    image: blogImg5,
     content: `## Como Funciona a Investigação Conjugal
 
 A **investigação conjugal** é o serviço mais procurado por detetives particulares em Brasília DF. Neste artigo, explico detalhadamente como funciona todo o processo.
@@ -535,6 +552,7 @@ WhatsApp (61) 98284-4543 para consulta sigilosa.
     title: "Detetive Particular é Legal no Brasil?",
     slug: "detetive-particular-legal-brasil",
     excerpt: "Entenda a legislação brasileira sobre detetives particulares. O que é permitido, o que é proibido e como garantir que sua investigação seja legal.",
+    image: blogImg6,
     content: `## Detetive Particular é Legal no Brasil?
 
 Uma dúvida muito comum é sobre a **legalidade da profissão de detetive particular no Brasil**. A resposta é: SIM, é totalmente legal e regulamentada por lei.
@@ -638,6 +656,7 @@ WhatsApp (61) 98284-4543 para uma consulta com detetive legalizado.
     title: "Como Descobrir Quem é o Dono de um Veículo",
     slug: "como-descobrir-dono-veiculo",
     excerpt: "Métodos profissionais para descobrir o proprietário de um veículo pela placa. Quando e por que fazer essa consulta e como um detetive pode ajudar.",
+    image: blogImg7,
     content: `## Como Descobrir Quem é o Dono de um Veículo
 
 Descobrir o **proprietário de um veículo** é uma necessidade comum em diversas situações. Neste artigo, explico os métodos profissionais utilizados e quando essa investigação é necessária.
@@ -737,6 +756,7 @@ WhatsApp (61) 98284-4543 para consultar um veículo.
     title: "Como Reunir Provas de Infidelidade",
     slug: "como-reunir-provas-infidelidade",
     excerpt: "Guia profissional sobre como reunir provas de infidelidade com validade legal. O que é aceito pela justiça e o que pode anular suas evidências.",
+    image: blogImg8,
     content: `## Como Reunir Provas de Infidelidade
 
 Reunir **provas de infidelidade** de forma correta é fundamental para que elas tenham **validade legal** em processos de divórcio e partilha de bens. Neste artigo, explico o que funciona e o que não funciona.
@@ -844,6 +864,7 @@ WhatsApp (61) 98284-4543 para reunir provas legais.
     title: "Como Investigar uma Pessoa",
     slug: "como-investigar-uma-pessoa",
     excerpt: "Métodos profissionais para investigar uma pessoa de forma legal e ética. Tipos de investigação, ferramentas e limites legais.",
+    image: blogImg9,
     content: `## Como Investigar uma Pessoa
 
 Existem diversas razões legítimas para **investigar uma pessoa**. Neste artigo, explico os métodos profissionais utilizados, os limites legais e quando buscar ajuda de um detetive particular.
@@ -953,6 +974,7 @@ WhatsApp (61) 98284-4543 para investigar com sigilo.
     title: "Quanto Tempo Leva uma Investigação Particular?",
     slug: "quanto-tempo-leva-investigacao",
     excerpt: "Prazos reais de uma investigação particular em Brasília DF. Fatores que influenciam a duração, tipos de caso e como acelerar os resultados.",
+    image: blogImg10,
     content: `## Quanto Tempo Leva uma Investigação Particular?
 
 Uma das primeiras perguntas de quem contrata um detetive particular é: **quanto tempo vai demorar?** Neste artigo, apresento prazos reais baseados em anos de experiência em Brasília DF.

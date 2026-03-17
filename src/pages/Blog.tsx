@@ -84,11 +84,8 @@ const Blog = () => {
               <div className="bg-gradient-to-r from-detective-navy to-detective-navy/90 rounded-2xl p-1 shadow-2xl group-hover:shadow-detective-gold/20 transition-shadow duration-300">
                 <div className="bg-white rounded-xl overflow-hidden">
                   <div className="grid lg:grid-cols-2 gap-0">
-                    <div className="bg-gradient-to-br from-detective-navy/10 to-detective-gold/10 p-8 lg:p-12 flex items-center justify-center">
-                      <div className="text-center">
-                        <Star className="w-16 h-16 text-detective-gold mx-auto mb-4" />
-                        <span className="text-detective-navy font-bold text-lg">Artigo em Destaque</span>
-                      </div>
+                    <div className="overflow-hidden aspect-video lg:aspect-auto">
+                      <img src={featuredPost.image} alt={featuredPost.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div className="p-8 lg:p-12 flex flex-col justify-center">
                       <Badge className="w-fit mb-4 bg-detective-gold/20 text-detective-gold">
@@ -132,8 +129,8 @@ const Blog = () => {
             {regularPosts.map((post) => (
               <Link key={post.id} to={`/blog/${post.slug}`} className="group">
                 <Card className="h-full overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                  <div className="bg-gradient-to-br from-detective-navy/5 to-detective-gold/10 p-6 flex items-center justify-center aspect-video">
-                    <BookOpen className="w-12 h-12 text-detective-gold/50 group-hover:text-detective-gold transition-colors" />
+                  <div className="overflow-hidden aspect-video">
+                    <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <CardHeader>
                     <Badge className="w-fit mb-2 bg-detective-gold/20 text-detective-gold text-xs">
