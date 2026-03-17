@@ -225,6 +225,7 @@ Entre em contato pelo WhatsApp (61) 98284-4543 para uma consulta sigilosa e grat
     title: "Como Localizar uma Pessoa Pelo Nome",
     slug: "como-localizar-pessoa-pelo-nome",
     excerpt: "Métodos profissionais para localizar pessoas usando apenas o nome. Técnicas de investigação, bases de dados e quando contratar um detetive particular.",
+    image: blogImg3,
     content: `## Como Localizar uma Pessoa Pelo Nome
 
 Localizar uma pessoa tendo apenas o nome pode parecer impossível, mas com as **técnicas corretas de investigação**, é totalmente viável. Neste artigo, explico os métodos profissionais utilizados em Brasília DF.
