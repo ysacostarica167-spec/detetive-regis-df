@@ -974,6 +974,7 @@ WhatsApp (61) 98284-4543 para investigar com sigilo.
     title: "Quanto Tempo Leva uma Investigação Particular?",
     slug: "quanto-tempo-leva-investigacao",
     excerpt: "Prazos reais de uma investigação particular em Brasília DF. Fatores que influenciam a duração, tipos de caso e como acelerar os resultados.",
+    image: blogImg10,
     content: `## Quanto Tempo Leva uma Investigação Particular?
 
 Uma das primeiras perguntas de quem contrata um detetive particular é: **quanto tempo vai demorar?** Neste artigo, apresento prazos reais baseados em anos de experiência em Brasília DF.
