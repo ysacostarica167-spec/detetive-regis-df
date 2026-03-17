@@ -130,6 +130,7 @@ Oferecemos **consulta inicial gratuita** para avaliar seu caso e apresentar um o
     title: "Como Descobrir Traição Sem Levantar Suspeita",
     slug: "como-descobrir-traicao-sem-levantar-suspeita",
     excerpt: "Guia completo sobre como investigar uma possível traição de forma discreta. Sinais de infidelidade, erros a evitar e quando buscar ajuda profissional.",
+    image: blogImg2,
     content: `## Como Descobrir Traição Sem Levantar Suspeita
 
 Descobrir uma traição é uma das situações mais delicadas que uma pessoa pode enfrentar. É fundamental agir com **discrição e inteligência** para não comprometer as evidências e o relacionamento.
