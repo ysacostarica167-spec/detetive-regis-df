@@ -105,12 +105,11 @@ const ContactSection = () => {
           <Card className="bg-white/10 backdrop-blur-sm border-white/20">
             <CardContent className="p-8 text-center">
               <Shield className="w-16 h-16 mx-auto mb-6 text-detective-gold" />
-              <h3 className="text-2xl font-semibold mb-4 text-white">
-                Precisa de uma Investigação Profissional?
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+                Fale agora com um detetive e descubra a verdade hoje mesmo.
               </h3>
               <p className="text-lg mb-8 text-white/90 max-w-2xl mx-auto">
-                Nossa primeira consulta é sempre gratuita e confidencial. 
-                Entre em contato agora e vamos discutir como podemos ajudar você a resolver sua situação.
+                Consulta inicial gratuita e 100% confidencial. Atendimento imediato no DF.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
