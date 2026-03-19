@@ -1,116 +1,116 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle, Shield, Award, Clock, Camera } from "lucide-react";
+import { Phone, MessageCircle, Shield, Clock, Camera } from "lucide-react";
 import heroImage from "@/assets/detective-hero-hq.jpg";
 import LazyImage from "@/components/LazyImage";
 import { trackWhatsAppClick, trackPhoneCall, trackCTAClick } from "@/utils/analytics";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const handleWhatsAppClick = () => {
     const message = "Olá! Tenho interesse nos serviços de investigação particular.";
     const phoneNumber = "5561982844543";
     const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
-    // Track WhatsApp conversion (principal conversão para CPC)
     trackWhatsAppClick('Hero Section - Home');
     trackCTAClick('WhatsApp (61) 98284-4543', 'hero_section');
-    
-    // Open WhatsApp
-    try {
-      window.open(waUrl, '_blank');
-    } catch (error) {
-      window.open("tel:+5561982844543", "_blank");
-    }
+    try { window.open(waUrl, '_blank'); } catch { window.open("tel:+5561982844543", "_blank"); }
   };
 
   const handlePhoneClick = () => {
-    // Track phone call conversion
     trackPhoneCall('Hero Section - Home');
     trackCTAClick('Consulta Gratuita', 'hero_section');
-    
     window.open("tel:+5561982844543", "_blank");
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Image */}
       <div className="absolute inset-0">
         <LazyImage
           src={heroImage} 
           alt="Detetive Particular Profissional - Investigação DF" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-detective-navy/90 via-detective-navy/80 to-detective-navy/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,45%,8%)/0.95] via-[hsl(220,45%,10%)/0.85] to-[hsl(220,45%,12%)/0.65]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,45%,8%)/0.6] via-transparent to-transparent" />
       </div>
 
-      {/* Hero Content */}
-      <div className="relative z-10 container mx-auto px-4 py-16 md:py-20 animate-fade-in">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          {/* Urgency Badge */}
-          <div className="inline-flex items-center gap-2 bg-green-600/20 backdrop-blur-sm border border-green-500/30 rounded-full px-4 py-1.5 mb-4 animate-pulse">
-            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-            <span className="text-green-400 font-medium text-sm">Disponível Agora • Resposta em 5 Minutos</span>
-          </div>
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
+        <div className="max-w-3xl">
+          {/* Availability Badge */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-5 py-2 mb-8"
+          >
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
+            </span>
+            <span className="text-white/80 text-sm font-medium">Disponível agora • Resposta imediata</span>
+          </motion.div>
 
-          {/* Professional Badge */}
-          <div className="inline-flex items-center gap-2 bg-detective-gold/20 backdrop-blur-sm border border-detective-gold/30 rounded-full px-6 py-2 mb-6 hover:bg-detective-gold/30 hover:scale-105 transition-all duration-300">
-            <Award className="w-5 h-5 text-detective-gold" />
-            <span className="text-detective-gold font-medium">Graduado em Investigação • 15+ Anos de Experiência</span>
-          </div>
+          {/* Main Heading */}
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="heading-hero text-white mb-6"
+          >
+            Descubra a Verdade
+            <br />
+            <span className="gradient-text-gold">Com Provas Reais</span>
+          </motion.h1>
 
-          {/* Main Heading - Keyword optimized */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="block">Descubra a Verdade</span>
-            <span className="block text-detective-gold">Com Provas Reais</span>
-          </h1>
+          {/* Subtitle */}
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-xl md:text-2xl text-white/70 mb-8 leading-relaxed max-w-2xl"
+          >
+            Detetive Particular em Brasília DF com 15+ anos de experiência. 
+            Investigação profissional, sigilosa e com resultados comprovados.
+          </motion.p>
 
-          {/* Subtitle - CPC optimized copy */}
-          <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto leading-relaxed">
-            Detetive Particular em Brasília DF
-          </p>
-          
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-x-6 gap-y-2 text-lg text-white/90 mb-6 max-w-2xl mx-auto">
-            <span className="flex items-center gap-2"><Shield className="w-4 h-4 text-detective-gold" /> Investigação 100% sigilosa</span>
-            <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-detective-gold" /> Atendimento imediato no DF</span>
-            <span className="flex items-center gap-2"><Camera className="w-4 h-4 text-detective-gold" /> Relatórios com fotos e vídeos</span>
-          </div>
-
-          {/* Stats for social proof */}
-          <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
-            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-              <span className="text-detective-gold font-bold">500+</span>
-              <span className="text-white/80 ml-1">Casos Resolvidos</span>
+          {/* Key Features */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-6 mb-10 text-white/80"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-detective-gold/10 border border-detective-gold/20 flex items-center justify-center">
+                <Shield className="w-5 h-5 text-detective-gold" />
+              </div>
+              <span className="text-sm font-medium">100% sigiloso</span>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-              <span className="text-detective-gold font-bold">4.9★</span>
-              <span className="text-white/80 ml-1">Avaliação Google</span>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-detective-gold/10 border border-detective-gold/20 flex items-center justify-center">
+                <Clock className="w-5 h-5 text-detective-gold" />
+              </div>
+              <span className="text-sm font-medium">Atendimento 24h</span>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-              <span className="text-detective-gold font-bold">24h</span>
-              <span className="text-white/80 ml-1">Atendimento</span>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-detective-gold/10 border border-detective-gold/20 flex items-center justify-center">
+                <Camera className="w-5 h-5 text-detective-gold" />
+              </div>
+              <span className="text-sm font-medium">Fotos e vídeos</span>
             </div>
-          </div>
-
-          {/* Service Highlights */}
-          <div className="flex flex-wrap justify-center gap-6 mb-10">
-            <div className="flex items-center gap-2 text-white/90">
-              <Shield className="w-5 h-5 text-detective-gold" />
-              <span>100% Confidencial</span>
-            </div>
-            <div className="flex items-center gap-2 text-white/90">
-              <Award className="w-5 h-5 text-detective-gold" />
-              <span>Profissional Certificado</span>
-            </div>
-            <div className="flex items-center gap-2 text-white/90">
-              <MessageCircle className="w-5 h-5 text-detective-gold" />
-              <span>Atendimento 24h</span>
-            </div>
-          </div>
+          </motion.div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="flex flex-col sm:flex-row gap-4"
+          >
             <Button 
               onClick={handleWhatsAppClick}
-              className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group w-full sm:w-auto"
+              className="bg-detective-gold hover:bg-detective-gold-dark text-detective-navy font-bold px-8 py-6 rounded-xl shadow-[var(--shadow-gold)] hover:shadow-[var(--shadow-xl)] hover:-translate-y-1 transition-all duration-300 text-base group"
               size="lg"
             >
               <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
@@ -118,18 +118,35 @@ const HeroSection = () => {
             </Button>
             <Button 
               onClick={handlePhoneClick}
-              className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-semibold px-8 py-4 rounded-lg backdrop-blur-sm transition-all duration-300 w-full sm:w-auto"
+              className="bg-white/5 hover:bg-white/10 text-white border border-white/20 hover:border-white/40 font-semibold px-8 py-6 rounded-xl backdrop-blur-sm transition-all duration-300 text-base"
               size="lg"
             >
               <Phone className="w-5 h-5 mr-2" />
               Consulta Gratuita
             </Button>
-          </div>
+          </motion.div>
+
+          {/* Stats Row */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="flex flex-wrap gap-8 mt-14 pt-8 border-t border-white/10"
+          >
+            {[
+              { value: "500+", label: "Casos Resolvidos" },
+              { value: "4.9★", label: "Avaliação Google" },
+              { value: "15+", label: "Anos de Experiência" },
+              { value: "24h", label: "Atendimento" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center sm:text-left">
+                <div className="text-2xl font-bold text-detective-gold font-display">{stat.value}</div>
+                <div className="text-xs text-white/50 uppercase tracking-wider mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background/20 to-transparent"></div>
     </section>
   );
 };

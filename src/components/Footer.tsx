@@ -6,143 +6,113 @@ const Footer = () => {
     const message = "Olá! Gostaria de falar com o Detetive Regis.";
     const phoneNumber = "5561982844543";
     const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
-    // Track conversion
     if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
       (window as any).gtag_report_conversion(waUrl);
     } else {
-      try {
-        window.open(waUrl, '_blank');
-      } catch (error) {
-        window.open("tel:+5561982844543", "_blank");
-      }
+      try { window.open(waUrl, '_blank'); } catch { window.open("tel:+5561982844543", "_blank"); }
     }
   };
 
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-detective-navy text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Company Info */}
+    <footer className="bg-[hsl(220,45%,8%)] text-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid md:grid-cols-3 gap-12">
+          {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Shield className="w-8 h-8 text-detective-gold" />
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-10 rounded-lg bg-detective-gold/10 flex items-center justify-center">
+                <Shield className="w-5 h-5 text-detective-gold" />
+              </div>
               <div>
-                <div className="font-bold text-xl">Detetive Regis</div>
-                <div className="text-sm text-white/80">Investigação Profissional</div>
+                <div className="font-display font-bold text-lg">Detetive Regis</div>
+                <div className="text-[10px] uppercase tracking-[0.2em] text-white/40">Investigação Profissional</div>
               </div>
             </div>
-            <p className="text-white/80 mb-4">
-              Graduado em investigação profissional, oferecendo serviços de investigação 
-              particular com total discrição e eficiência em todo o Distrito Federal.
+            <p className="text-white/50 text-sm leading-relaxed mb-5">
+              Graduado em investigação profissional, oferecendo serviços com total discrição 
+              e eficiência em todo o Distrito Federal.
             </p>
-            <div className="flex items-center gap-2 text-detective-gold">
-              <Shield className="w-4 h-4" />
-              <span className="text-sm">100% Confidencial e Profissional</span>
+            <div className="flex items-center gap-2 text-detective-gold text-xs">
+              <Shield className="w-3.5 h-3.5" />
+              <span>100% Confidencial e Profissional</span>
             </div>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contato</h3>
-            <div className="space-y-3">
-              <button 
-                onClick={handleWhatsAppClick}
-                className="flex items-center gap-3 text-white/80 hover:text-detective-gold transition-colors"
-              >
-                <MessageCircle className="w-5 h-5" />
+            <h3 className="font-semibold text-sm uppercase tracking-wider mb-5 text-white/60">Contato</h3>
+            <div className="space-y-4">
+              <button onClick={handleWhatsAppClick} className="flex items-center gap-3 text-white/60 hover:text-detective-gold transition-colors text-sm">
+                <MessageCircle className="w-4 h-4" />
                 <span>(61) 98284-4543</span>
               </button>
-              <a 
-                href="mailto:contato@regis.com.br"
-                className="flex items-center gap-3 text-white/80 hover:text-detective-gold transition-colors"
-              >
-                <Mail className="w-5 h-5" />
+              <a href="mailto:contato@regis.com.br" className="flex items-center gap-3 text-white/60 hover:text-detective-gold transition-colors text-sm">
+                <Mail className="w-4 h-4" />
                 <span>contato@regis.com.br</span>
               </a>
-              <div className="flex items-start gap-3 text-white/80">
-                <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
+              <div className="flex items-start gap-3 text-white/60 text-sm">
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="font-medium">Escritório:</p>
                   <p>CRS 505 Bl A EN 64A AP 305</p>
-                  <p>Asa Sul, Brasília - DF, 70350-510</p>
+                  <p>Asa Sul, Brasília - DF</p>
                 </div>
               </div>
-              <div className="flex items-center gap-3 text-white/80">
-                <Clock className="w-5 h-5" />
+              <div className="flex items-center gap-3 text-white/60 text-sm">
+                <Clock className="w-4 h-4" />
                 <span>Atendimento 24 horas</span>
               </div>
             </div>
           </div>
 
-          {/* Services with Internal Links */}
+          {/* Services & Areas */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Principais Serviços</h3>
-            <ul className="space-y-2 text-white/80">
-              <li>
-                <Link to="/investigacao-conjugal" className="hover:text-detective-gold transition-colors">
-                  • Investigação Conjugal no DF
-                </Link>
-              </li>
-              <li>
-                <Link to="/servicos-ciberneticos" className="hover:text-detective-gold transition-colors">
-                  • Serviços Cibernéticos e Digitais
-                </Link>
-              </li>
-              <li>
-                <Link to="/investigacao-juridica" className="hover:text-detective-gold transition-colors">
-                  • Investigação de Antecedentes
-                </Link>
-              </li>
-              <li>
-                <Link to="/investigacao-empresarial" className="hover:text-detective-gold transition-colors">
-                  • Investigação Corporativa
-                </Link>
-              </li>
-              <li>
-                <Link to="/localizacao-pessoas" className="hover:text-detective-gold transition-colors">
-                  • Localização de Pessoas
-                </Link>
-              </li>
-              <li>
-                <Link to="/investigacao-familiar" className="hover:text-detective-gold transition-colors">
-                  • Investigação Familiar
-                </Link>
-              </li>
-              <li>
-                <Link to="/investigacao-veicular" className="hover:text-detective-gold transition-colors">
-                  • Investigação Veicular
-                </Link>
-              </li>
+            <h3 className="font-semibold text-sm uppercase tracking-wider mb-5 text-white/60">Serviços</h3>
+            <ul className="space-y-2.5 text-sm">
+              {[
+                { to: "/investigacao-conjugal", label: "Investigação Conjugal" },
+                { to: "/servicos-ciberneticos", label: "Serviços Cibernéticos" },
+                { to: "/investigacao-juridica", label: "Investigação Jurídica" },
+                { to: "/investigacao-empresarial", label: "Investigação Corporativa" },
+                { to: "/localizacao-pessoas", label: "Localização de Pessoas" },
+                { to: "/investigacao-familiar", label: "Investigação Familiar" },
+                { to: "/investigacao-veicular", label: "Investigação Veicular" },
+              ].map(({ to, label }) => (
+                <li key={to}>
+                  <Link to={to} className="text-white/50 hover:text-detective-gold transition-colors">{label}</Link>
+                </li>
+              ))}
             </ul>
             
-            {/* Service Areas with Links */}
-            <h3 className="font-semibold text-lg mb-4 mt-6">Áreas de Atendimento</h3>
-            <ul className="space-y-2 text-white/80 text-sm">
-              <li><Link to="/detetive-asa-norte" className="hover:text-detective-gold transition-colors">• Detetive Asa Norte</Link></li>
-              <li><Link to="/detetive-asa-sul" className="hover:text-detective-gold transition-colors">• Detetive Asa Sul</Link></li>
-              <li><Link to="/detetive-aguas-claras-df" className="hover:text-detective-gold transition-colors">• Detetive Águas Claras</Link></li>
-              <li><Link to="/detetive-taguatinga-df" className="hover:text-detective-gold transition-colors">• Detetive Taguatinga</Link></li>
-              <li><Link to="/detetive-lago-sul" className="hover:text-detective-gold transition-colors">• Detetive Lago Sul</Link></li>
-              <li><Link to="/detetive-lago-norte" className="hover:text-detective-gold transition-colors">• Detetive Lago Norte</Link></li>
-              <li><Link to="/detetive-sudoeste" className="hover:text-detective-gold transition-colors">• Detetive Sudoeste</Link></li>
-              <li><Link to="/detetive-cruzeiro" className="hover:text-detective-gold transition-colors">• Detetive Cruzeiro</Link></li>
-            </ul>
+            <h3 className="font-semibold text-sm uppercase tracking-wider mb-4 mt-8 text-white/60">Áreas</h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                { to: "/detetive-asa-norte", label: "Asa Norte" },
+                { to: "/detetive-asa-sul", label: "Asa Sul" },
+                { to: "/detetive-aguas-claras-df", label: "Águas Claras" },
+                { to: "/detetive-taguatinga-df", label: "Taguatinga" },
+                { to: "/detetive-lago-sul", label: "Lago Sul" },
+                { to: "/detetive-lago-norte", label: "Lago Norte" },
+                { to: "/detetive-sudoeste", label: "Sudoeste" },
+                { to: "/detetive-cruzeiro", label: "Cruzeiro" },
+              ].map(({ to, label }) => (
+                <Link key={to} to={to} className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-white/50 hover:text-detective-gold hover:border-detective-gold/20 transition-all">
+                  {label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-white/20 mt-8 pt-6 text-center">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-white/60 text-sm">
-              © {currentYear} Detetive Particular Regis. Todos os direitos reservados.
-            </div>
-            <div className="flex items-center gap-2 text-white/60 text-sm">
-              <Shield className="w-4 h-4" />
-              <span>Sigilo profissional garantido por lei</span>
-            </div>
+        {/* Bottom */}
+        <div className="border-t border-white/[0.06] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-white/30 text-xs">
+            © {currentYear} Detetive Particular Regis. Todos os direitos reservados.
+          </div>
+          <div className="flex items-center gap-2 text-white/30 text-xs">
+            <Shield className="w-3.5 h-3.5" />
+            <span>Sigilo profissional garantido por lei</span>
           </div>
         </div>
       </div>

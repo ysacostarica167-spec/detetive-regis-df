@@ -1,213 +1,178 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Menu, X, Shield } from "lucide-react";
+import { MessageCircle, Menu, X, Shield, Phone } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleWhatsAppClick = () => {
     const message = "Olá! Gostaria de mais informações sobre investigação particular.";
     const phoneNumber = "5561982844543";
     const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
-    // Track conversion
     if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
       (window as any).gtag_report_conversion(waUrl);
     } else {
-      try {
-        window.open(waUrl, '_blank');
-      } catch (error) {
-        window.open("tel:+5561982844543", "_blank");
-      }
+      try { window.open(waUrl, '_blank'); } catch { window.open("tel:+5561982844543", "_blank"); }
     }
   };
 
   const scrollToSection = (sectionId: string) => {
-    // Check if we're on the home page
     if (window.location.pathname === '/') {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // Navigate to home page using React Router, then scroll
       navigate('/', { replace: true });
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
+      setTimeout(() => document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' }), 100);
     }
     setIsMenuOpen(false);
   };
 
+  const navLinks = [
+    { label: "Início", to: "/", type: "link" },
+    { label: "Serviços", action: () => scrollToSection('servicos'), type: "button" },
+    { label: "Blog", to: "/blog", type: "link" },
+    { label: "Sobre", action: () => scrollToSection('sobre'), type: "button" },
+    { label: "Contato", action: () => scrollToSection('contato'), type: "button" },
+  ];
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-b border-border shadow-[var(--shadow-card)] transition-all duration-300">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled 
+        ? "bg-white/95 backdrop-blur-xl shadow-[var(--shadow-md)] border-b border-border/50" 
+        : "bg-transparent"
+    }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group hover:scale-105 transition-transform duration-300">
-            <Shield className="w-8 h-8 text-detective-gold group-hover:rotate-12 transition-transform duration-300" />
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 ${
+              isScrolled ? "bg-detective-navy" : "bg-white/10 backdrop-blur-sm border border-white/20"
+            }`}>
+              <Shield className={`w-5 h-5 transition-colors ${isScrolled ? "text-detective-gold" : "text-detective-gold"}`} />
+            </div>
             <div>
-              <div className="font-bold text-detective-navy text-lg group-hover:text-detective-gold transition-colors duration-300">Detetive Regis</div>
-              <div className="text-xs text-professional-grey">Investigação Profissional</div>
+              <div className={`font-display font-bold text-lg tracking-tight transition-colors ${isScrolled ? "text-detective-navy" : "text-white"}`}>
+                Detetive Regis
+              </div>
+              <div className={`text-[10px] uppercase tracking-[0.2em] font-medium transition-colors ${isScrolled ? "text-professional-grey" : "text-white/60"}`}>
+                Investigação Profissional
+              </div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link 
-              to="/"
-              className="text-professional-grey hover:text-detective-navy transition-all duration-300 relative group"
-            >
-              <span className="relative">
-                Início
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-detective-gold transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </Link>
-            <button 
-              onClick={() => scrollToSection('servicos')}
-              className="text-professional-grey hover:text-detective-navy transition-all duration-300 relative group"
-            >
-              <span className="relative">
-                Serviços
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-detective-gold transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </button>
-            <Link 
-              to="/blog"
-              className="text-professional-grey hover:text-detective-navy transition-all duration-300 relative group"
-            >
-              <span className="relative">
-                Blog
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-detective-gold transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </Link>
-            <Link 
-              to="/servicos-ciberneticos"
-              className="text-professional-grey hover:text-detective-navy transition-all duration-300 relative group"
-            >
-              <span className="relative">
-                Serviços Cibernéticos
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-detective-gold transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </Link>
-            <Link 
-              to="/investigacao-juridica"
-              className="text-professional-grey hover:text-detective-navy transition-all duration-300 relative group"
-            >
-              <span className="relative">
-                Investigação Jurídica
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-detective-gold transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </Link>
-            <button 
-              onClick={() => scrollToSection('sobre')}
-              className="text-professional-grey hover:text-detective-navy transition-all duration-300 relative group"
-            >
-              <span className="relative">
-                Sobre
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-detective-gold transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </button>
-            <button 
-              onClick={() => scrollToSection('contato')}
-              className="text-professional-grey hover:text-detective-navy transition-all duration-300 relative group"
-            >
-              <span className="relative">
-                Contato
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-detective-gold transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </button>
+          <nav className="hidden lg:flex items-center gap-1">
+            {navLinks.map((link) => (
+              link.type === "link" ? (
+                <Link
+                  key={link.label}
+                  to={link.to!}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    isScrolled 
+                      ? "text-professional-grey hover:text-detective-navy hover:bg-muted" 
+                      : "text-white/80 hover:text-white hover:bg-white/10"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <button
+                  key={link.label}
+                  onClick={link.action}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    isScrolled 
+                      ? "text-professional-grey hover:text-detective-navy hover:bg-muted" 
+                      : "text-white/80 hover:text-white hover:bg-white/10"
+                  }`}
+                >
+                  {link.label}
+                </button>
+              )
+            ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center gap-3">
+            <a href="tel:+5561982844543" className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+              isScrolled ? "text-professional-grey hover:text-detective-navy" : "text-white/80 hover:text-white"
+            }`}>
+              <Phone className="w-4 h-4" />
+              (61) 98284-4543
+            </a>
             <Button 
               onClick={handleWhatsAppClick}
-              className="btn-professional group hover:scale-105 transition-all duration-300"
+              className="bg-detective-gold hover:bg-detective-gold-dark text-detective-navy font-bold rounded-xl px-6 shadow-[var(--shadow-gold)] hover:shadow-[var(--shadow-xl)] hover:-translate-y-0.5 transition-all duration-300"
             >
-              <MessageCircle className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+              <MessageCircle className="w-4 h-4 mr-2" />
               WhatsApp
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 hover:bg-detective-gold/10 rounded-lg transition-all duration-300"
+            className={`lg:hidden p-2 rounded-lg transition-all ${isScrolled ? "hover:bg-muted" : "hover:bg-white/10"}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="w-6 h-6 text-detective-navy transform rotate-90 transition-transform duration-300" />
+              <X className={`w-6 h-6 ${isScrolled ? "text-detective-navy" : "text-white"}`} />
             ) : (
-              <Menu className="w-6 h-6 text-detective-navy hover:scale-110 transition-transform duration-300" />
+              <Menu className={`w-6 h-6 ${isScrolled ? "text-detective-navy" : "text-white"}`} />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
-            <nav className="flex flex-col space-y-4">
-              <Link 
-                to="/"
-                className="text-left text-professional-grey hover:text-detective-navy hover:bg-detective-gold/10 rounded-lg px-3 py-2 transition-all duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Início
-              </Link>
-              <button 
-                onClick={() => scrollToSection('servicos')}
-                className="text-left text-professional-grey hover:text-detective-navy hover:bg-detective-gold/10 rounded-lg px-3 py-2 transition-all duration-300"
-              >
-                Serviços
-              </button>
-              <Link 
-                to="/blog"
-                className="text-left text-professional-grey hover:text-detective-navy hover:bg-detective-gold/10 rounded-lg px-3 py-2 transition-all duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Blog
-              </Link>
-              <Link 
-                to="/servicos-ciberneticos"
-                className="text-left text-professional-grey hover:text-detective-navy hover:bg-detective-gold/10 rounded-lg px-3 py-2 transition-all duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Serviços Cibernéticos
-              </Link>
-              <Link 
-                to="/investigacao-juridica"
-                className="text-left text-professional-grey hover:text-detective-navy hover:bg-detective-gold/10 rounded-lg px-3 py-2 transition-all duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Investigação Jurídica
-              </Link>
-              <button 
-                onClick={() => scrollToSection('sobre')}
-                className="text-left text-professional-grey hover:text-detective-navy hover:bg-detective-gold/10 rounded-lg px-3 py-2 transition-all duration-300"
-              >
-                Sobre
-              </button>
-              <button 
-                onClick={() => scrollToSection('contato')}
-                className="text-left text-professional-grey hover:text-detective-navy hover:bg-detective-gold/10 rounded-lg px-3 py-2 transition-all duration-300"
-              >
-                Contato
-              </button>
-              <Button 
-                onClick={handleWhatsAppClick}
-                className="btn-professional w-full mt-4 hover:scale-105 transition-all duration-300 group"
-              >
-                <MessageCircle className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-                WhatsApp
-              </Button>
-            </nav>
-          </div>
-        )}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden overflow-hidden"
+            >
+              <nav className="py-4 border-t border-border/50 flex flex-col gap-1 bg-white rounded-b-xl">
+                {navLinks.map((link) => (
+                  link.type === "link" ? (
+                    <Link
+                      key={link.label}
+                      to={link.to!}
+                      className="px-4 py-3 text-professional-grey hover:text-detective-navy hover:bg-muted rounded-lg font-medium transition-all"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <button
+                      key={link.label}
+                      onClick={link.action}
+                      className="text-left px-4 py-3 text-professional-grey hover:text-detective-navy hover:bg-muted rounded-lg font-medium transition-all"
+                    >
+                      {link.label}
+                    </button>
+                  )
+                ))}
+                <div className="px-4 pt-3 border-t border-border/50 mt-2">
+                  <Button 
+                    onClick={handleWhatsAppClick}
+                    className="w-full bg-detective-gold hover:bg-detective-gold-dark text-detective-navy font-bold rounded-xl shadow-[var(--shadow-gold)]"
+                  >
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    WhatsApp (61) 98284-4543
+                  </Button>
+                </div>
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
