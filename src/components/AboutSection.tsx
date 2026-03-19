@@ -1,28 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Shield, Clock, Users, MapPin, CheckCircle } from "lucide-react";
+import { Award, Shield, Users, MapPin, CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const achievements = [
-    {
-      icon: <Award className="w-6 h-6 text-detective-gold" />,
-      title: "Graduado em Investigação",
-      description: "Formação completa em técnicas de investigação profissional"
-    },
-    {
-      icon: <Shield className="w-6 h-6 text-detective-gold" />,
-      title: "15+ Anos de Experiência",
-      description: "Mais de década e meia atuando em investigações particulares"
-    },
-    {
-      icon: <Users className="w-6 h-6 text-detective-gold" />,
-      title: "500+ Casos Resolvidos",
-      description: "Centenas de investigações concluídas com sucesso"
-    },
-    {
-      icon: <MapPin className="w-6 h-6 text-detective-gold" />,
-      title: "Cobertura Total DF",
-      description: "Atendimento em todas as regiões do Distrito Federal"
-    }
+    { icon: <Award className="w-6 h-6 text-detective-gold" />, value: "15+", label: "Anos de Experiência" },
+    { icon: <Users className="w-6 h-6 text-detective-gold" />, value: "500+", label: "Casos Resolvidos" },
+    { icon: <Shield className="w-6 h-6 text-detective-gold" />, value: "100%", label: "Sigilo Garantido" },
+    { icon: <MapPin className="w-6 h-6 text-detective-gold" />, value: "DF", label: "Cobertura Total" },
   ];
 
   const differentials = [
@@ -31,92 +16,90 @@ const AboutSection = () => {
     "Equipamentos modernos de investigação",
     "Atendimento personalizado 24 horas",
     "Preços justos e transparentes",
-    "Metodologia profissional comprovada"
+    "Metodologia profissional comprovada",
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="heading-section text-detective-navy mb-6">
-            Detetive Particular em Brasília: Experiência e Credibilidade
-          </h2>
-          <p className="text-professional max-w-3xl mx-auto">
-            <strong>Detetive particular graduado</strong> com vasta experiência em investigações conjugais, 
-            corporativas e localização de pessoas. Atuando há mais de 15 anos com ética, discrição e 
-            eficiência em Brasília e todo o Distrito Federal. Atendemos todas as regiões do DF incluindo 
-            Asa Norte, Asa Sul, Lago Sul, Águas Claras, Taguatinga e Ceilândia.
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Professional Story */}
-          <div>
-            <h3 className="heading-card text-detective-navy mb-6">
-              Experiência e Profissionalismo
-            </h3>
-            <div className="space-y-4 text-professional-grey">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left - Story */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="gold-line mb-6" />
+            <h2 className="heading-section text-detective-navy mb-6">
+              Experiência e Credibilidade
+            </h2>
+            <div className="space-y-4 text-professional-grey leading-relaxed">
               <p>
                 Com formação acadêmica completa em investigação profissional e mais de 15 anos de experiência 
-                no mercado, o Detetive Regis especializou-se em oferecer soluções investigativas precisas e 
-                discretas para pessoas físicas e jurídicas em todo o Distrito Federal e região.
-              </p>
-              <p>
-                Durante sua carreira, desenvolveu expertise em investigações conjugais, corporativas, 
-                localização de pessoas e verificação de antecedentes, sempre mantendo os mais altos 
-                padrões de ética e confidencialidade. Atua em Brasília, Águas Claras, Taguatinga, 
-                Ceilândia, Guará, Lago Sul, Asa Norte e todo o entorno do DF.
+                no mercado, o <strong className="text-detective-navy">Detetive Regis</strong> especializou-se em oferecer soluções investigativas 
+                precisas e discretas para pessoas físicas e jurídicas em todo o Distrito Federal.
               </p>
               <p>
                 Nossa metodologia combina técnicas modernas de investigação digital com métodos tradicionais 
                 comprovados de vigilância e análise comportamental. Utilizamos equipamentos de última geração 
-                para garantir evidências claras e precisas que podem ser utilizadas legalmente quando necessário.
+                para garantir evidências claras que podem ser utilizadas legalmente.
               </p>
               <p>
                 Cada caso é tratado com máxima seriedade e confidencialidade. Oferecemos relatórios detalhados, 
                 documentação fotográfica e videográfica profissional, além de orientação jurídica sobre como 
-                utilizar as evidências coletadas. Todo trabalho é realizado dentro dos limites legais estabelecidos 
-                pela legislação brasileira.
-              </p>
-              <p>
-                O compromisso com a verdade e a ética profissional são os pilares do nosso trabalho. Entendemos 
-                que cada cliente passa por um momento delicado e oferecemos não apenas serviços de investigação, 
-                mas também suporte e orientação durante todo o processo. A consulta inicial é sempre gratuita e 
-                confidencial, permitindo que você conheça nossa metodologia antes de contratar os serviços.
+                utilizar as evidências coletadas.
               </p>
             </div>
-          </div>
 
-          {/* Achievements Grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
-            {achievements.map((achievement, index) => (
-              <Card key={index} className="card-professional text-center">
-                <CardContent className="pt-6">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-detective-gold/20 to-detective-navy/20 flex items-center justify-center">
-                    {achievement.icon}
-                  </div>
-                  <h4 className="font-semibold text-detective-navy mb-2">{achievement.title}</h4>
-                  <p className="text-sm text-professional-grey">{achievement.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+            {/* Differentials */}
+            <div className="mt-8 grid sm:grid-cols-2 gap-3">
+              {differentials.map((diff, index) => (
+                <div key={index} className="flex items-start gap-2.5">
+                  <CheckCircle className="w-4 h-4 text-detective-gold mt-1 flex-shrink-0" />
+                  <span className="text-sm text-professional-grey">{diff}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
 
-        {/* Differentials */}
-        <div className="bg-gradient-to-br from-muted/50 to-muted rounded-2xl p-8">
-          <h3 className="heading-card text-detective-navy text-center mb-8">
-            Diferenciais do Nosso Trabalho
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {differentials.map((differential, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-detective-gold mt-0.5 flex-shrink-0" />
-                <span className="text-professional-grey">{differential}</span>
-              </div>
-            ))}
-          </div>
+          {/* Right - Stats Grid */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div className="grid grid-cols-2 gap-4">
+              {achievements.map((achievement, index) => (
+                <Card key={index} className="border border-border/60 rounded-2xl hover:border-detective-gold/20 hover:shadow-[var(--shadow-lg)] transition-all duration-500">
+                  <CardContent className="pt-8 pb-8 text-center">
+                    <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-detective-gold/10 flex items-center justify-center">
+                      {achievement.icon}
+                    </div>
+                    <div className="text-3xl font-bold text-detective-navy font-display mb-1">{achievement.value}</div>
+                    <p className="text-sm text-professional-grey">{achievement.label}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* CTA Card */}
+            <Card className="mt-4 bg-detective-navy border-0 rounded-2xl overflow-hidden">
+              <CardContent className="p-8 text-center">
+                <h3 className="text-white font-display text-xl font-bold mb-3">Precisa investigar?</h3>
+                <p className="text-white/60 text-sm mb-5">Consulta inicial gratuita e 100% confidencial</p>
+                <a 
+                  href="https://wa.me/5561982844543?text=Olá! Gostaria de saber mais sobre os serviços de investigação."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 btn-accent text-sm"
+                >
+                  Falar com Especialista
+                </a>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </div>
     </section>
