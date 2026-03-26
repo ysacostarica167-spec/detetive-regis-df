@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const achievements = [
-    { icon: <Award className="w-6 h-6 text-detective-gold" />, value: "15+", label: "Anos de Experiência" },
-    { icon: <Users className="w-6 h-6 text-detective-gold" />, value: "500+", label: "Casos Resolvidos" },
-    { icon: <Shield className="w-6 h-6 text-detective-gold" />, value: "100%", label: "Sigilo Garantido" },
-    { icon: <MapPin className="w-6 h-6 text-detective-gold" />, value: "DF", label: "Cobertura Total" },
+    { icon: <Award className="w-6 h-6 text-detective-gold" />, value: "20+", label: "Anos de Experiência" },
+    { icon: <Users className="w-6 h-6 text-detective-gold" />, value: "2.500+", label: "Casos Resolvidos" },
+    { icon: <Shield className="w-6 h-6 text-detective-gold" />, value: "98%", label: "Taxa de Sucesso" },
+    { icon: <MapPin className="w-6 h-6 text-detective-gold" />, value: "33", label: "Regiões Atendidas" },
   ];
 
   const differentials = [
