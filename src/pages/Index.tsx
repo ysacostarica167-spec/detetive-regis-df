@@ -12,6 +12,7 @@ import GeographicCoverage from "@/components/GeographicCoverage";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import TrustBadges from "@/components/TrustBadges";
+import AuthoritySection from "@/components/AuthoritySection";
 import Testimonials from "@/components/Testimonials";
 import FloatingCTA from "@/components/FloatingCTA";
 import UrgencyBanner from "@/components/UrgencyBanner";
@@ -69,6 +70,9 @@ const Index = () => {
         <section id="sobre">
           <AboutSection />
         </section>
+        
+        {/* Authority Section - Credenciais e reconhecimento */}
+        <AuthoritySection />
         <section id="faq">
           <FAQSection />
         </section>

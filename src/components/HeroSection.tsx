@@ -70,8 +70,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-xl md:text-2xl text-white/70 mb-8 leading-relaxed max-w-2xl"
           >
-            Detetive Particular em Brasília DF com 15+ anos de experiência. 
-            Investigação profissional, sigilosa e com resultados comprovados.
+            Detetive Particular em Brasília DF com mais de 20 anos de experiência e 2.500+ casos resolvidos. 
+            Investigação profissional, sigilosa e com 98% de taxa de sucesso.
           </motion.p>
 
           {/* Key Features */}
@@ -134,10 +134,10 @@ const HeroSection = () => {
             className="flex flex-wrap gap-8 mt-14 pt-8 border-t border-white/10"
           >
             {[
-              { value: "500+", label: "Casos Resolvidos" },
+              { value: "2.500+", label: "Casos Resolvidos" },
               { value: "4.9★", label: "Avaliação Google" },
-              { value: "15+", label: "Anos de Experiência" },
-              { value: "24h", label: "Atendimento" },
+              { value: "20+", label: "Anos de Experiência" },
+              { value: "98%", label: "Taxa de Sucesso" },
             ].map((stat) => (
               <div key={stat.label} className="text-center sm:text-left">
                 <div className="text-2xl font-bold text-detective-gold font-display">{stat.value}</div>
