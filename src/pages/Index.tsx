@@ -12,6 +12,7 @@ import GeographicCoverage from "@/components/GeographicCoverage";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import TrustBadges from "@/components/TrustBadges";
+import AuthoritySection from "@/components/AuthoritySection";
 import Testimonials from "@/components/Testimonials";
 import FloatingCTA from "@/components/FloatingCTA";
 import UrgencyBanner from "@/components/UrgencyBanner";
