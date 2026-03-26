@@ -70,6 +70,9 @@ const Index = () => {
         <section id="sobre">
           <AboutSection />
         </section>
+        
+        {/* Authority Section - Credenciais e reconhecimento */}
+        <AuthoritySection />
         <section id="faq">
           <FAQSection />
         </section>
