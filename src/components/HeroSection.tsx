@@ -70,8 +70,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-xl md:text-2xl text-white/70 mb-8 leading-relaxed max-w-2xl"
           >
-            Detetive Particular em Brasília DF com 15+ anos de experiência. 
-            Investigação profissional, sigilosa e com resultados comprovados.
+            Detetive Particular em Brasília DF com mais de 20 anos de experiência e 2.500+ casos resolvidos. 
+            Investigação profissional, sigilosa e com 98% de taxa de sucesso.
           </motion.p>
 
           {/* Key Features */}

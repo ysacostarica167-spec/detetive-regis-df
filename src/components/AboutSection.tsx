@@ -36,7 +36,7 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-4 text-professional-grey leading-relaxed">
               <p>
-                Com formação acadêmica completa em investigação profissional e mais de 15 anos de experiência 
+                Com formação acadêmica completa em investigação profissional e mais de 20 anos de experiência 
                 no mercado, o <strong className="text-detective-navy">Detetive Regis</strong> especializou-se em oferecer soluções investigativas 
                 precisas e discretas para pessoas físicas e jurídicas em todo o Distrito Federal.
               </p>

@@ -35,7 +35,7 @@ const Testimonials = () => {
               ))}
             </div>
             <span className="text-white font-bold">4.9/5</span>
-            <span className="text-white/40 text-sm">• 500+ avaliações</span>
+            <span className="text-white/40 text-sm">• 2.500+ clientes atendidos</span>
           </div>
         </motion.div>
 

@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 const TrustBadges = () => {
   const badges = [
     { icon: <Shield className="w-5 h-5" />, title: "100% Sigiloso", subtitle: "Confidencialidade Total" },
-    { icon: <Award className="w-5 h-5" />, title: "15+ Anos", subtitle: "Experiência Comprovada" },
-    { icon: <Star className="w-5 h-5" />, title: "500+ Casos", subtitle: "Resolvidos com Sucesso" },
+    { icon: <Award className="w-5 h-5" />, title: "20+ Anos", subtitle: "Experiência Comprovada" },
+    { icon: <Star className="w-5 h-5" />, title: "2.500+ Casos", subtitle: "Resolvidos com Sucesso" },
     { icon: <Clock className="w-5 h-5" />, title: "24 Horas", subtitle: "Atendimento Imediato" },
     { icon: <Lock className="w-5 h-5" />, title: "Provas Legais", subtitle: "Validade Jurídica" },
     { icon: <CheckCircle className="w-5 h-5" />, title: "Consulta Grátis", subtitle: "Sem Compromisso" },
