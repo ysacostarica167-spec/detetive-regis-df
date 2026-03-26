@@ -134,10 +134,10 @@ const HeroSection = () => {
             className="flex flex-wrap gap-8 mt-14 pt-8 border-t border-white/10"
           >
             {[
-              { value: "500+", label: "Casos Resolvidos" },
+              { value: "2.500+", label: "Casos Resolvidos" },
               { value: "4.9★", label: "Avaliação Google" },
-              { value: "15+", label: "Anos de Experiência" },
-              { value: "24h", label: "Atendimento" },
+              { value: "20+", label: "Anos de Experiência" },
+              { value: "98%", label: "Taxa de Sucesso" },
             ].map((stat) => (
               <div key={stat.label} className="text-center sm:text-left">
                 <div className="text-2xl font-bold text-detective-gold font-display">{stat.value}</div>
