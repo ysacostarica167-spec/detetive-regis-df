@@ -16,6 +16,9 @@ import AuthoritySection from "@/components/AuthoritySection";
 import Testimonials from "@/components/Testimonials";
 import FloatingCTA from "@/components/FloatingCTA";
 import UrgencyBanner from "@/components/UrgencyBanner";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
+import SocialProofNotification from "@/components/SocialProofNotification";
+import QuickContactForm from "@/components/QuickContactForm";
 import { localBusinessSchema, websiteSchema, breadcrumbSchema } from "@/data/structuredData";
 import { usePageTracking } from "@/hooks/usePageTracking";
 
