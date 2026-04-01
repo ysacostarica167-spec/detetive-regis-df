@@ -16,6 +16,9 @@ import AuthoritySection from "@/components/AuthoritySection";
 import Testimonials from "@/components/Testimonials";
 import FloatingCTA from "@/components/FloatingCTA";
 import UrgencyBanner from "@/components/UrgencyBanner";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
+import SocialProofNotification from "@/components/SocialProofNotification";
+import QuickContactForm from "@/components/QuickContactForm";
 import { localBusinessSchema, websiteSchema, breadcrumbSchema } from "@/data/structuredData";
 import { usePageTracking } from "@/hooks/usePageTracking";
 
@@ -78,6 +81,9 @@ const Index = () => {
         </section>
         <LongTailKeywords />
         <GeographicCoverage />
+        {/* Quick Contact Form - High conversion */}
+        <QuickContactForm />
+        
         <section id="contato">
           <ContactSection />
         </section>
@@ -87,6 +93,12 @@ const Index = () => {
       
       {/* Floating CTA - Always visible for conversions */}
       <FloatingCTA />
+      
+      {/* Exit Intent Popup */}
+      <ExitIntentPopup />
+      
+      {/* Social Proof Notifications */}
+      <SocialProofNotification />
     </div>
   );
 };
