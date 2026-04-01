@@ -81,6 +81,9 @@ const Index = () => {
         </section>
         <LongTailKeywords />
         <GeographicCoverage />
+        {/* Quick Contact Form - High conversion */}
+        <QuickContactForm />
+        
         <section id="contato">
           <ContactSection />
         </section>
@@ -90,6 +93,12 @@ const Index = () => {
       
       {/* Floating CTA - Always visible for conversions */}
       <FloatingCTA />
+      
+      {/* Exit Intent Popup */}
+      <ExitIntentPopup />
+      
+      {/* Social Proof Notifications */}
+      <SocialProofNotification />
     </div>
   );
 };
