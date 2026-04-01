@@ -110,7 +110,7 @@ const HeroSection = () => {
           >
             <Button 
               onClick={handleWhatsAppClick}
-              className="bg-detective-gold hover:bg-detective-gold-dark text-detective-navy font-bold px-8 py-6 rounded-xl shadow-[var(--shadow-gold)] hover:shadow-[var(--shadow-xl)] hover:-translate-y-1 transition-all duration-300 text-base group"
+              className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-base group"
               size="lg"
             >
               <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
