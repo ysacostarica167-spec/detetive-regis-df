@@ -22,16 +22,17 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-detective-navy">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <LazyImage
+        <img
           src={heroImage} 
           alt="Detetive Particular Profissional - Investigação DF" 
-          className="w-full h-full object-cover scale-105"
+          className="w-full h-full object-cover"
+          loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,45%,8%)/0.95] via-[hsl(220,45%,10%)/0.85] to-[hsl(220,45%,12%)/0.65]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,45%,8%)/0.6] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,45%,8%)]/95 via-[hsl(220,45%,10%)]/80 to-[hsl(220,45%,12%)]/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,45%,8%)]/50 via-transparent to-transparent" />
       </div>
 
       {/* Content */}
