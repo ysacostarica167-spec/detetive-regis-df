@@ -47,7 +47,7 @@ const Header = () => {
   return (
     <header className={`fixed top-10 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
-        ? "!top-0 bg-white/95 backdrop-blur-xl shadow-[var(--shadow-md)] border-b border-border/50" 
+        ? "!top-0 bg-white/98 backdrop-blur-xl shadow-[var(--shadow-sm)] border-b border-border/30" 
         : "bg-transparent"
     }`}>
       <div className="container mx-auto px-4">
