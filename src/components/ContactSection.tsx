@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Phone, Clock, MapPin, Shield, Mail } from "lucide-react";
+import { MessageCircle, Phone, Shield, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const ContactSection = () => {
@@ -16,38 +16,39 @@ const ContactSection = () => {
 
   const handlePhoneClick = () => window.open("tel:+5561982844543", "_blank");
 
-  const contactItems = [
-    { icon: <MessageCircle className="w-5 h-5" />, label: "WhatsApp", value: "(61) 98284-4543", action: handleWhatsAppClick },
-    { icon: <Phone className="w-5 h-5" />, label: "Telefone", value: "(61) 98284-4543", action: handlePhoneClick },
-    { icon: <Mail className="w-5 h-5" />, label: "E-mail", value: "contato@regis.com.br", action: () => window.open("mailto:contato@regis.com.br") },
-    { icon: <Clock className="w-5 h-5" />, label: "Horário", value: "24 horas por dia" },
-    { icon: <MapPin className="w-5 h-5" />, label: "Escritório", value: "Asa Sul, Brasília - DF" },
-  ];
-
   return (
-    <section className="py-24 bg-detective-navy relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
+    <section className="py-24 md:py-32 bg-[hsl(var(--detective-navy))] relative overflow-hidden noise-overlay">
+      {/* Background accent */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[hsl(var(--detective-gold)/0.02)] blur-3xl" />
       
-      <div className="container mx-auto px-4 relative">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
+          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="gold-line mx-auto mb-6" />
-            <h2 className="heading-section text-white mb-4">
+            <span className="text-mono text-[hsl(var(--detective-gold))] mb-6 block">Contato</span>
+            <h2 className="heading-section text-white mb-6">
               Fale agora com um detetive
+              <br />
+              <span className="gradient-text-gold">e descubra a verdade.</span>
             </h2>
-            <p className="text-white/50 text-lg max-w-xl mx-auto">
-              Descubra a verdade hoje mesmo. Consulta inicial gratuita e 100% confidencial.
+            <p className="text-white/40 text-lg max-w-xl mx-auto">
+              Consulta inicial gratuita e 100% confidencial. Atendimento imediato em todo o DF.
             </p>
           </motion.div>
 
-          {/* Contact Items */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-            {contactItems.map((item, index) => (
+          {/* Contact Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
+            {[
+              { icon: <MessageCircle className="w-5 h-5" />, label: "WhatsApp", value: "(61) 98284-4543", action: handleWhatsAppClick },
+              { icon: <Phone className="w-5 h-5" />, label: "Telefone", value: "(61) 98284-4543", action: handlePhoneClick },
+              { icon: <Clock className="w-5 h-5" />, label: "Horário", value: "24h por dia" },
+              { icon: <MapPin className="w-5 h-5" />, label: "Escritório", value: "Asa Sul, Brasília" },
+            ].map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 15 }}
@@ -55,15 +56,13 @@ const ContactSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.06 }}
                 onClick={item.action}
-                className={`flex items-center gap-4 p-5 rounded-2xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-detective-gold/20 transition-all duration-500 ${item.action ? 'cursor-pointer' : ''}`}
+                className={`flex flex-col items-center text-center p-6 rounded-2xl bg-white/[0.03] border border-white/[0.05] hover:bg-white/[0.06] hover:border-[hsl(var(--detective-gold)/0.15)] transition-all duration-500 ${item.action ? 'cursor-pointer' : ''}`}
               >
-                <div className="w-11 h-11 rounded-xl bg-detective-gold/10 flex items-center justify-center text-detective-gold flex-shrink-0">
+                <div className="w-11 h-11 rounded-xl bg-[hsl(var(--detective-gold)/0.08)] flex items-center justify-center text-[hsl(var(--detective-gold))] mb-3">
                   {item.icon}
                 </div>
-                <div>
-                  <div className="text-white/40 text-xs uppercase tracking-wider">{item.label}</div>
-                  <div className="text-white font-semibold text-sm">{item.value}</div>
-                </div>
+                <div className="text-white/30 text-[10px] uppercase tracking-[0.2em] mb-1">{item.label}</div>
+                <div className="text-white font-semibold text-sm">{item.value}</div>
               </motion.div>
             ))}
           </div>
@@ -75,33 +74,23 @@ const ContactSection = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="bg-gradient-to-br from-detective-gold/10 to-detective-gold/5 border border-detective-gold/20 rounded-3xl p-10">
-              <Shield className="w-12 h-12 mx-auto mb-5 text-detective-gold" />
-              <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-3">
-                Fale agora com um detetive e descubra a verdade hoje mesmo.
-              </h3>
-              <p className="text-white/50 mb-8 max-w-lg mx-auto">
-                Atendimento imediato no DF. Todas as conversas são protegidas por sigilo profissional.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  onClick={handleWhatsAppClick}
-                  className="bg-detective-gold hover:bg-detective-gold-dark text-detective-navy font-bold px-8 py-6 rounded-xl shadow-[var(--shadow-gold)] hover:shadow-[var(--shadow-xl)] hover:-translate-y-1 transition-all duration-300 text-base"
-                  size="lg"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Consulta Gratuita no WhatsApp
-                </Button>
-                <Button 
-                  onClick={handlePhoneClick}
-                  className="bg-white/5 hover:bg-white/10 text-white border border-white/20 hover:border-white/40 font-semibold px-8 py-6 rounded-xl transition-all duration-300 text-base"
-                  size="lg"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Ligar Agora
-                </Button>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                onClick={handleWhatsAppClick}
+                className="bg-green-600 hover:bg-green-500 text-white font-bold px-10 py-7 rounded-2xl shadow-lg shadow-green-900/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-base group"
+                size="lg"
+              >
+                <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Consulta Gratuita no WhatsApp
+              </Button>
+              <Button 
+                onClick={handlePhoneClick}
+                className="bg-transparent hover:bg-white/5 text-white/60 hover:text-white border border-white/10 hover:border-white/20 font-medium px-10 py-7 rounded-2xl transition-all duration-300 text-base"
+                size="lg"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Ligar Agora
+              </Button>
             </div>
           </motion.div>
         </div>
