@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle, Shield, Clock, Camera } from "lucide-react";
+import { Phone, MessageCircle, Shield, Clock, Camera, ChevronDown } from "lucide-react";
 import heroImage from "@/assets/detective-hero-hq.jpg";
-import LazyImage from "@/components/LazyImage";
 import { trackWhatsAppClick, trackPhoneCall, trackCTAClick } from "@/utils/analytics";
 import { motion } from "framer-motion";
 
@@ -22,96 +21,71 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-detective-navy">
-      {/* Background Image */}
+    <section className="relative min-h-screen flex items-end overflow-hidden bg-[hsl(var(--detective-navy))]">
+      {/* Background Image with cinematic crop */}
       <div className="absolute inset-0">
         <img
           src={heroImage} 
           alt="Detetive Particular Profissional - Investigação DF" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top scale-105"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,45%,8%)]/95 via-[hsl(220,45%,10%)]/80 to-[hsl(220,45%,12%)]/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,45%,8%)]/50 via-transparent to-transparent" />
+        {/* Cinematic gradient - darker, more dramatic */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,50%,5%)]/98 via-[hsl(220,50%,5%)]/85 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,50%,5%)] via-[hsl(220,50%,5%)]/30 to-transparent" />
+        {/* Subtle vignette */}
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 70% 50%, transparent 40%, hsl(220 50% 5% / 0.6) 100%)' }} />
       </div>
 
+      {/* Left vertical accent line */}
+      <div className="absolute left-8 md:left-16 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-[hsl(var(--detective-gold)/0.2)] to-transparent hidden md:block" />
+
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-40 pb-20">
+      <div className="relative z-10 container mx-auto px-4 pt-32 pb-16 md:pb-24">
         <div className="max-w-3xl">
-          {/* Availability Badge */}
+          {/* Mono label */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-5 py-2 mb-8"
+            className="flex items-center gap-4 mb-10"
           >
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
-            </span>
-            <span className="text-white/80 text-sm font-medium">Disponível agora • Resposta imediata</span>
+            <div className="glow-dot" />
+            <span className="text-mono text-[hsl(var(--detective-gold))]">Investigação Profissional • Brasília DF</span>
           </motion.div>
 
-          {/* Main Heading */}
+          {/* Main Heading - More dramatic */}
           <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="heading-hero text-white mb-6"
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="heading-hero text-white mb-8"
           >
-            Descubra a Verdade
+            Descubra a
             <br />
-            <span className="gradient-text-gold">Com Provas Reais</span>
+            <span className="gradient-text-gold">Verdade.</span>
           </motion.h1>
 
-          {/* Subtitle */}
+          {/* Subtitle - shorter, punchier */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-xl md:text-2xl text-white/70 mb-8 leading-relaxed max-w-2xl"
+            className="text-xl md:text-2xl text-white/50 mb-12 leading-relaxed max-w-xl font-light"
           >
-            Detetive Particular em Brasília DF com mais de 20 anos de experiência e 2.500+ casos resolvidos. 
-            Investigação profissional, sigilosa e com 98% de taxa de sucesso.
+            Provas reais, sigilo absoluto e mais de <span className="text-white font-medium">2.500 casos resolvidos</span> em Brasília.
           </motion.p>
-
-          {/* Key Features */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-6 mb-10 text-white/80"
-          >
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-detective-gold/10 border border-detective-gold/20 flex items-center justify-center">
-                <Shield className="w-5 h-5 text-detective-gold" />
-              </div>
-              <span className="text-sm font-medium">100% sigiloso</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-detective-gold/10 border border-detective-gold/20 flex items-center justify-center">
-                <Clock className="w-5 h-5 text-detective-gold" />
-              </div>
-              <span className="text-sm font-medium">Atendimento 24h</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-detective-gold/10 border border-detective-gold/20 flex items-center justify-center">
-                <Camera className="w-5 h-5 text-detective-gold" />
-              </div>
-              <span className="text-sm font-medium">Fotos e vídeos</span>
-            </div>
-          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4"
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 mb-16"
           >
             <Button 
               onClick={handleWhatsAppClick}
-              className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-base group"
+              className="bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-7 rounded-2xl shadow-lg shadow-green-900/30 hover:shadow-xl hover:shadow-green-900/40 hover:-translate-y-1 transition-all duration-300 text-base group"
               size="lg"
             >
               <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
@@ -119,7 +93,7 @@ const HeroSection = () => {
             </Button>
             <Button 
               onClick={handlePhoneClick}
-              className="bg-white/5 hover:bg-white/10 text-white border border-white/20 hover:border-white/40 font-semibold px-8 py-6 rounded-xl backdrop-blur-sm transition-all duration-300 text-base"
+              className="bg-transparent hover:bg-white/5 text-white/70 hover:text-white border border-white/10 hover:border-white/20 font-medium px-8 py-7 rounded-2xl transition-all duration-300 text-base"
               size="lg"
             >
               <Phone className="w-5 h-5 mr-2" />
@@ -127,27 +101,39 @@ const HeroSection = () => {
             </Button>
           </motion.div>
 
-          {/* Stats Row */}
+          {/* Stats - horizontal with dividers, more editorial */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-wrap gap-8 mt-14 pt-8 border-t border-white/10"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-wrap items-center gap-0"
           >
             {[
-              { value: "2.500+", label: "Casos Resolvidos" },
-              { value: "4.9★", label: "Avaliação Google" },
-              { value: "20+", label: "Anos de Experiência" },
-              { value: "98%", label: "Taxa de Sucesso" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center sm:text-left">
-                <div className="text-2xl font-bold text-detective-gold font-display">{stat.value}</div>
-                <div className="text-xs text-white/50 uppercase tracking-wider mt-1">{stat.label}</div>
+              { value: "20+", label: "Anos" },
+              { value: "2.500+", label: "Casos" },
+              { value: "98%", label: "Sucesso" },
+              { value: "24h", label: "Atendimento" },
+            ].map((stat, i) => (
+              <div key={stat.label} className="flex items-center">
+                <div className="text-center px-5 md:px-8 py-3">
+                  <div className="text-2xl md:text-3xl font-display font-bold text-white">{stat.value}</div>
+                  <div className="text-[10px] text-white/30 uppercase tracking-[0.2em] mt-1">{stat.label}</div>
+                </div>
+                {i < 3 && <div className="w-px h-10 bg-white/10" />}
               </div>
             ))}
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div 
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
+        animate={{ y: [0, 8, 0] }}
+        transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+      >
+        <ChevronDown className="w-5 h-5 text-white/20" />
+      </motion.div>
     </section>
   );
 };
