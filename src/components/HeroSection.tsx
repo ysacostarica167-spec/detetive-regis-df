@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle, Shield, Clock, Camera, ChevronDown } from "lucide-react";
+import { Phone, MessageCircle, ChevronDown } from "lucide-react";
 import heroImage from "@/assets/detective-hero-hq.jpg";
 import { trackWhatsAppClick, trackPhoneCall, trackCTAClick } from "@/utils/analytics";
 import { motion } from "framer-motion";
@@ -21,74 +21,76 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-end overflow-hidden bg-[hsl(var(--detective-navy))]">
-      {/* Background Image with cinematic crop */}
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[hsl(var(--detective-navy))]">
+      {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={heroImage} 
           alt="Detetive Particular Profissional - Investigação DF" 
-          className="w-full h-full object-cover object-top scale-105"
+          className="w-full h-full object-cover object-top"
           loading="eager"
         />
-        {/* Cinematic gradient - darker, more dramatic */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,50%,5%)]/98 via-[hsl(220,50%,5%)]/85 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,50%,5%)] via-[hsl(220,50%,5%)]/30 to-transparent" />
-        {/* Subtle vignette */}
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 70% 50%, transparent 40%, hsl(220 50% 5% / 0.6) 100%)' }} />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,50%,5%)]/95 via-[hsl(220,50%,5%)]/80 to-[hsl(220,50%,5%)]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,50%,5%)] via-transparent to-[hsl(220,50%,5%)]/30" />
       </div>
 
-      {/* Left vertical accent line */}
-      <div className="absolute left-8 md:left-16 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-[hsl(var(--detective-gold)/0.2)] to-transparent hidden md:block" />
+      {/* Vertical accent */}
+      <div className="absolute left-8 md:left-16 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-[hsl(var(--detective-gold)/0.3)] to-transparent hidden md:block" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-32 pb-16 md:pb-24">
+      <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
         <div className="max-w-3xl">
-          {/* Mono label */}
+          {/* Label */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-4 mb-10"
+            className="flex items-center gap-4 mb-8"
           >
             <div className="glow-dot" />
-            <span className="text-mono text-[hsl(var(--detective-gold))]">Investigação Profissional • Brasília DF</span>
+            <span className="text-mono text-[hsl(var(--detective-gold))]">Detetive Particular • Brasília DF</span>
           </motion.div>
 
-          {/* Main Heading - More dramatic */}
+          {/* Heading */}
           <motion.h1 
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="heading-hero text-white mb-8"
+            className="heading-hero text-white mb-6"
           >
-            Descubra a
+            Descubra a verdade
             <br />
-            <span className="gradient-text-gold">Verdade.</span>
+            <span className="gradient-text-gold">com provas reais.</span>
           </motion.h1>
 
-          {/* Subtitle - shorter, punchier */}
-          <motion.p 
+          {/* Subtitle with USPs */}
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-xl md:text-2xl text-white/50 mb-12 leading-relaxed max-w-xl font-light"
+            className="mb-10 space-y-3"
           >
-            Provas reais, sigilo absoluto e mais de <span className="text-white font-medium">2.500 casos resolvidos</span> em Brasília.
-          </motion.p>
+            <p className="text-xl md:text-2xl text-white/50 leading-relaxed max-w-xl font-light">
+              Investigação <span className="text-white font-medium">100% sigilosa</span> com relatórios completos de fotos e vídeos.
+            </p>
+            <p className="text-lg text-white/35 max-w-lg">
+              Mais de <span className="text-[hsl(var(--detective-gold))] font-semibold">2.500 casos resolvidos</span> em Brasília e todo o DF. Atendimento imediato.
+            </p>
+          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 mb-16"
+            className="flex flex-col sm:flex-row gap-4 mb-20"
           >
             <Button 
               onClick={handleWhatsAppClick}
-              className="bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-7 rounded-2xl shadow-lg shadow-green-900/30 hover:shadow-xl hover:shadow-green-900/40 hover:-translate-y-1 transition-all duration-300 text-base group"
+              className="bg-green-600 hover:bg-green-500 text-white font-bold px-10 py-7 rounded-2xl shadow-lg shadow-green-900/30 hover:shadow-xl hover:shadow-green-900/40 hover:-translate-y-1 transition-all duration-300 text-lg group"
               size="lg"
             >
-              <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              <MessageCircle className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
               WhatsApp (61) 98284-4543
             </Button>
             <Button 
@@ -101,7 +103,7 @@ const HeroSection = () => {
             </Button>
           </motion.div>
 
-          {/* Stats - horizontal with dividers, more editorial */}
+          {/* Stats */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
