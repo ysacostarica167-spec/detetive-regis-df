@@ -67,6 +67,9 @@ const Index = () => {
         {/* Testimonials - Social proof for Quality Score */}
         <Testimonials />
         
+        {/* Process Section - Como funciona */}
+        <ProcessSection />
+        
         <section id="conteudo">
           <ContentSection />
           <BlogSection />
