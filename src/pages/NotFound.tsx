@@ -80,18 +80,6 @@ const NotFound = () => {
                 </div>
               </Link>
             </Button>
-            
-            <Button asChild variant="outline" className="h-auto p-6">
-              <Link to="/investigacao-juridica" className="flex flex-col items-center gap-3">
-                <div className="w-8 h-8 bg-detective-gold/20 rounded-full flex items-center justify-center">
-                  <span className="text-detective-gold font-bold">J</span>
-                </div>
-                <div>
-                  <div className="font-semibold">Investigação Jurídica</div>
-                  <div className="text-sm text-muted-foreground">Perícia legal</div>
-                </div>
-              </Link>
-            </Button>
           </div>
         </div>
       </section>
