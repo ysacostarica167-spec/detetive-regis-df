@@ -14,6 +14,7 @@ import SEO from "@/components/SEO";
 import TrustBadges from "@/components/TrustBadges";
 import AuthoritySection from "@/components/AuthoritySection";
 import Testimonials from "@/components/Testimonials";
+import ProcessSection from "@/components/ProcessSection";
 import FloatingCTA from "@/components/FloatingCTA";
 import UrgencyBanner from "@/components/UrgencyBanner";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
@@ -65,6 +66,9 @@ const Index = () => {
         
         {/* Testimonials - Social proof for Quality Score */}
         <Testimonials />
+        
+        {/* Process Section - Como funciona */}
+        <ProcessSection />
         
         <section id="conteudo">
           <ContentSection />
