@@ -1,78 +1,60 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { HelpCircle, CheckCircle, MessageCircle } from "lucide-react";
-import { faqSchema } from "@/data/structuredData";
-import { Helmet } from "react-helmet-async";
 
 const FAQSection = () => {
   const handleWhatsAppClick = () => {
     const message = "Olá! Tenho algumas dúvidas sobre investigação particular.";
     const phoneNumber = "5561982844543";
+    
+    // Use wa.me as primary method (more reliable)
     const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
-    // Track conversion
-    if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-      (window as any).gtag_report_conversion(waUrl);
-    } else {
-      try {
-        window.open(waUrl, '_blank');
-      } catch (error) {
-        window.open("tel:+5561982844543", "_blank");
-      }
+    try {
+      window.open(waUrl, '_blank');
+    } catch (error) {
+      // Fallback to direct phone call
+      window.open("tel:+5561982844543", "_blank");
     }
   };
 
   const faqs = [
     {
-      question: "Quanto custa investigação conjugal em Brasília?",
-      answer: "O preço de investigação conjugal em Brasília varia conforme complexidade. Detetive particular preço DF começa em R$ 1.500 para casos simples de investigação de suspeita de infidelidade. Oferecemos orçamento transparente e consulta gratuita. Entre em contato pelo WhatsApp (61) 98284-4543 para preço personalizado."
+      question: "Quanto custa um detetive particular em Brasília DF?",
+      answer: "O valor do detetive particular DF varia conforme o tipo de investigação. Oferecemos preços justos e competitivos no mercado de Brasília. Entre em contato para um orçamento personalizado e gratuito via WhatsApp."
     },
     {
-      question: "Como funciona investigação de traição no DF?",
-      answer: "A investigação de traição DF é realizada por detetive particular Brasília DF graduado. Processo inclui: análise inicial sigilosa, investigação conjugal Brasília com monitoramento discreto, coleta de evidências legais, relatório completo com provas. Tudo dentro da legalidade com sigilo absoluto garantido."
+      question: "Onde encontrar detetive particular barato no DF?",
+      answer: "Como detetive particular DF com preços acessíveis, oferecemos consultas gratuitas e orçamentos transparentes. Nossos valores são justos para investigações profissionais em todo o Distrito Federal."
     },
     {
-      question: "Qual o melhor detetive para casal em Brasília?",
-      answer: "O melhor detetive para casal Brasília tem: graduação profissional, 15+ anos de experiência em investigação conjugal Brasília, sigilo absoluto, preços justos, atendimento 24h. Somos especializados em investigação de suspeita de infidelidade Brasília com metodologia comprovada e relatórios detalhados."
+      question: "Como funciona a investigação de um detetive em Brasília DF?",
+      answer: "O detetive em Brasília DF segue metodologias profissionais: análise inicial do caso, planejamento estratégico, coleta de evidências, relatório detalhado. Tudo com sigilo absoluto e dentro da legalidade."
     },
     {
-      question: "Qual o preço de um detetive particular em Brasília DF?",
-      answer: "O valor do detetive particular Brasília DF varia conforme tipo de investigação. Detetive particular preço DF: investigação conjugal a partir de R$ 1.500, investigação empresarial desde R$ 2.500, localização de pessoas desde R$ 1.800. Consulta inicial gratuita. Preços transparentes sem taxas ocultas. WhatsApp (61) 98284-4543."
+      question: "Qual a área de atuação do detetive particular no DF?",
+      answer: "Atendemos como detetive particular no DF em todas as regiões administrativas: Plano Piloto, Taguatinga, Ceilândia, Sobradinho, Gama, Águas Claras, Samambaia, Santa Maria e demais cidades do Distrito Federal."
     },
     {
-      question: "Como descobrir infidelidade com detetive particular DF?",
-      answer: "Para descobrir infidelidade, o detetive particular Brasília DF realiza investigação conjugal Brasília profissional: análise comportamental, investigação de traição DF discreta, monitoramento legal, coleta de provas válidas juridicamente. Especialistas em investigação de suspeita de infidelidade Brasília com 15+ anos de experiência."
+      question: "O detetive particular Brasília oferece que tipos de investigação?",
+      answer: "Como detetive particular Brasília, oferecemos: investigação conjugal, investigação corporativa, localização de pessoas, verificação de antecedentes, vigilância e monitoramento, perícias particulares."
     },
     {
-      question: "Detetive para casal resolve problemas de traição?",
-      answer: "Sim, detetive para casal Brasília especializado em investigação conjugal Brasília pode confirmar ou descartar suspeitas de infidelidade. Realizamos investigação de traição DF com evidências concretas, relatório detalhado e orientação sobre próximos passos. Consulta gratuita para avaliar seu caso."
+      question: "É legal contratar detetive particular em Brasília DF?",
+      answer: "Sim, contratar detetive particular Brasília DF é totalmente legal. Somos profissionais regulamentados que atuam dentro da lei, com formação específica em investigação profissional."
     },
     {
-      question: "Investigação conjugal Brasília tem validade legal?",
-      answer: "Sim, investigação conjugal Brasília realizada por detetive particular Brasília DF graduado tem validade legal. As provas coletadas na investigação de traição DF podem ser usadas em processos de divórcio. Trabalhamos dentro dos limites legais com metodologia profissional aprovada."
+      question: "Como escolher o melhor detetive no DF?",
+      answer: "Escolha um detetive no DF com: formação profissional comprovada, experiência no mercado, sigilo garantido, preços transparentes, relatórios detalhados e atendimento personalizado 24h."
     },
     {
-      question: "Quanto tempo demora investigação de suspeita de infidelidade?",
-      answer: "A investigação de suspeita de infidelidade Brasília dura em média 15 a 30 dias. O detetive particular Brasília DF analisa cada caso individualmente. Investigação conjugal Brasília pode ser mais rápida em situações urgentes. Fornecemos estimativa realista na consulta inicial gratuita."
-    },
-    {
-      question: "Detetive particular preço DF é acessível?",
-      answer: "Sim, nosso detetive particular preço DF é justo e transparente. Investigação conjugal Brasília desde R$ 1.500, investigação de traição DF com parcelamento disponível. Como detetive para casal Brasília, oferecemos orçamento personalizado e consulta gratuita para avaliar custo-benefício do seu caso."
-    },
-    {
-      question: "Como contratar investigação de traição no DF?",
-      answer: "Para contratar investigação de traição DF: 1) Entre em contato via WhatsApp (61) 98284-4543, 2) Consulta sigilosa gratuita com detetive particular Brasília DF, 3) Avaliação do caso e orçamento, 4) Início da investigação conjugal Brasília. Processo 100% discreto e profissional."
+      question: "Quanto tempo leva uma investigação com detetive DF?",
+      answer: "O prazo varia conforme a complexidade do caso. Como detetive DF experiente, algumas investigações são resolvidas em dias, outras podem levar semanas. Fornecemos estimativas realistas na consulta inicial."
     }
   ];
 
   return (
     <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema(faqs))}
-        </script>
-      </Helmet>
-      
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -80,13 +62,12 @@ const FAQSection = () => {
             <HelpCircle className="w-5 h-5 text-detective-gold" />
             <span className="text-detective-gold font-medium">Perguntas Frequentes</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-detective-navy mb-6">
-            Perguntas Frequentes sobre Investigação Conjugal Brasília
+          <h2 className="heading-section text-detective-navy mb-6">
+            Dúvidas Sobre Detetive Particular DF
           </h2>
           <p className="text-professional max-w-3xl mx-auto">
-            Dúvidas sobre <strong>detetive particular Brasília DF</strong>, preços de investigação conjugal, 
-            investigação de traição DF e como funciona o trabalho de <strong>detetive para casal Brasília</strong>. 
-            Tire suas dúvidas sobre <strong>investigação de suspeita de infidelidade Brasília</strong>.
+            Respostas às principais dúvidas sobre serviços de detetive particular em Brasília DF, 
+            preços, valores e como funciona a investigação profissional.
           </p>
         </div>
 
@@ -126,7 +107,7 @@ const FAQSection = () => {
               </p>
               <button 
                 onClick={handleWhatsAppClick}
-                className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="btn-professional"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Tirar Dúvidas no WhatsApp

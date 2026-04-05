@@ -21,24 +21,6 @@ const Breadcrumbs = () => {
       case "/investigacao-juridica": 
         items.push({ name: "Investigação Jurídica", url: "/investigacao-juridica" });
         break;
-      case "/investigacao-conjugal":
-        items.push({ name: "Investigação Conjugal", url: "/investigacao-conjugal" });
-        break;
-      case "/investigacao-empresarial":
-        items.push({ name: "Investigação Empresarial", url: "/investigacao-empresarial" });
-        break;
-      case "/localizacao-pessoas":
-        items.push({ name: "Localização de Pessoas", url: "/localizacao-pessoas" });
-        break;
-      case "/investigacao-familiar":
-        items.push({ name: "Investigação Familiar", url: "/investigacao-familiar" });
-        break;
-      case "/investigacao-veicular":
-        items.push({ name: "Investigação Veicular", url: "/investigacao-veicular" });
-        break;
-      case "/blog":
-        items.push({ name: "Blog", url: "/blog" });
-        break;
       default:
         break;
     }

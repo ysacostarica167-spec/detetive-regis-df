@@ -1,7 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Video, Download, Award, Clock, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
 import LazyImage from "@/components/LazyImage";
 import articleHero from "@/assets/article-hero.jpg";
 import digitalInvestigation from "@/assets/digital-investigation.jpg";
@@ -82,14 +81,11 @@ const ContentSection = () => {
             <span className="text-detective-gold font-medium">Conteúdo Especializado</span>
           </div>
           <h2 className="heading-section text-detective-navy mb-6">
-            Conhecimento Especializado em Investigação
+            Conhecimento e Autoridade
           </h2>
           <p className="text-professional max-w-3xl mx-auto">
-            Compartilhamos <strong>conhecimento especializado sobre investigação particular</strong>, 
-            técnicas de investigação conjugal, corporativa e digital. Conteúdo baseado em 15+ anos de 
-            experiência prática em <Link to="/investigacao-conjugal" className="text-detective-gold hover:underline">investigação conjugal</Link>, 
-            <Link to="/investigacao-empresarial" className="text-detective-gold hover:underline"> investigação empresarial</Link> e 
-            <Link to="/localizacao-pessoas" className="text-detective-gold hover:underline"> localização de pessoas</Link>.
+            Compartilhamos conhecimento especializado e insights do mercado de investigação particular, 
+            baseados em anos de experiência e casos reais.
           </p>
         </div>
 
@@ -122,23 +118,9 @@ const ContentSection = () => {
                       ))}
                     </div>
                   </div>
-                  <Button 
-                    onClick={() => {
-                      const message = "Olá! Gostaria de ler o artigo sobre sinais de infidelidade.";
-                      const phoneNumber = "5561982844543";
-                      const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                      
-                      // Track conversion
-                      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                        (window as any).gtag_report_conversion(waUrl);
-                      } else {
-                        window.open(waUrl, '_blank');
-                      }
-                    }}
-                    className="btn-professional"
-                  >
+                  <Button className="btn-professional">
                     <BookOpen className="w-4 h-4 mr-2" />
-                    Solicitar Artigo Completo
+                    Ler Artigo Completo
                   </Button>
                 </div>
                 <div className="relative">
@@ -195,24 +177,9 @@ const ContentSection = () => {
                       </span>
                     ))}
                   </div>
-                  <Button 
-                    onClick={() => {
-                      const message = `Olá! Gostaria de ler o artigo: ${article.title}`;
-                      const phoneNumber = "5561982844543";
-                      const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                      
-                      // Track conversion
-                      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                        (window as any).gtag_report_conversion(waUrl);
-                      } else {
-                        window.open(waUrl, '_blank');
-                      }
-                    }}
-                    variant="outline" 
-                    className="w-full group-hover:bg-detective-gold group-hover:text-white transition-colors duration-300"
-                  >
+                  <Button variant="outline" className="w-full group-hover:bg-detective-gold group-hover:text-white transition-colors duration-300">
                     <BookOpen className="w-4 h-4 mr-2" />
-                    Solicitar Artigo
+                    Continuar Lendo
                   </Button>
                 </CardContent>
               </Card>
@@ -243,26 +210,11 @@ const ContentSection = () => {
                   <div className="text-sm text-detective-gold font-medium mb-4">
                     {resource.duration || resource.pages}
                   </div>
-                  <Button 
-                    onClick={() => {
-                      const message = `Olá! Gostaria de acessar: ${resource.title}`;
-                      const phoneNumber = "5561982844543";
-                      const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                      
-                      // Track conversion
-                      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                        (window as any).gtag_report_conversion(waUrl);
-                      } else {
-                        window.open(waUrl, '_blank');
-                      }
-                    }}
-                    variant="outline" 
-                    className="w-full"
-                  >
+                  <Button variant="outline" className="w-full">
                     {resource.type === 'video' && <Video className="w-4 h-4 mr-2" />}
                     {resource.type === 'download' && <Download className="w-4 h-4 mr-2" />}
                     {resource.type === 'guide' && <BookOpen className="w-4 h-4 mr-2" />}
-                    Solicitar {resource.type === 'video' ? 'Vídeo' : resource.type === 'download' ? 'Download' : 'Guia'}
+                    Acessar {resource.type === 'video' ? 'Vídeo' : resource.type === 'download' ? 'Download' : 'Guia'}
                   </Button>
                 </CardContent>
               </Card>
@@ -283,24 +235,7 @@ const ContentSection = () => {
                 placeholder="Seu melhor e-mail"
                 className="flex-1 px-4 py-3 rounded-lg text-detective-navy placeholder:text-detective-navy/60 focus:outline-none focus:ring-2 focus:ring-detective-gold"
               />
-              <Button 
-                onClick={() => {
-                  const email = (document.querySelector('input[type="email"]') as HTMLInputElement)?.value;
-                  const message = email ? 
-                    `Olá! Gostaria de me inscrever na newsletter com o email: ${email}` :
-                    "Olá! Gostaria de me inscrever na newsletter.";
-                  const phoneNumber = "5561982844543";
-                  const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                  
-                  // Track conversion
-                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                    (window as any).gtag_report_conversion(waUrl);
-                  } else {
-                    window.open(waUrl, '_blank');
-                  }
-                }}
-                className="btn-accent"
-              >
+              <Button className="btn-accent">
                 <BookOpen className="w-4 h-4 mr-2" />
                 Inscrever-se
               </Button>

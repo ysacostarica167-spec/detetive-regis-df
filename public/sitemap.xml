@@ -1,176 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://detetive-regis-df.lovable.app/</loc>
-    <lastmod>2025-03-16</lastmod>
+    <loc>https://detetive-regis.lovable.app/</loc>
+    <lastmod>2025-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://detetive-regis-df.lovable.app/detetive-particular-brasilia</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/investigacao-conjugal</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/localizacao-pessoas</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/investigacao-empresarial</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/investigacao-veicular</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/servicos-ciberneticos</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/investigacao-juridica</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/investigacao-familiar</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <!-- Páginas de Bairros - Local SEO -->
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/detetive-aguas-claras-df</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/detetive-taguatinga-df</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/detetive-asa-norte</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/detetive-asa-sul</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/detetive-lago-sul</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/detetive-lago-norte</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/detetive-sudoeste</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/detetive-cruzeiro</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <!-- Blog -->
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/blog</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/blog/quanto-custa-detetive-particular-brasilia</loc>
-    <lastmod>2025-03-10</lastmod>
+    <loc>https://detetive-regis.lovable.app/servicos-ciberneticos</loc>
+    <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://detetive-regis-df.lovable.app/blog/como-descobrir-traicao-sem-levantar-suspeita</loc>
-    <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/blog/como-localizar-pessoa-pelo-nome</loc>
-    <lastmod>2025-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/blog/quando-contratar-detetive-particular</loc>
-    <lastmod>2025-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/blog/como-funciona-investigacao-conjugal</loc>
-    <lastmod>2025-02-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/blog/detetive-particular-legal-brasil</loc>
-    <lastmod>2025-02-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/blog/como-descobrir-dono-veiculo</loc>
-    <lastmod>2025-02-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/blog/como-reunir-provas-infidelidade</loc>
-    <lastmod>2025-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/blog/como-investigar-uma-pessoa</loc>
-    <lastmod>2025-02-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://detetive-regis-df.lovable.app/blog/quanto-tempo-leva-investigacao</loc>
-    <lastmod>2025-01-30</lastmod>
+    <loc>https://detetive-regis.lovable.app/investigacao-juridica</loc>
+    <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
