@@ -167,13 +167,6 @@ const Header = () => {
               >
                 Serviços Cibernéticos
               </Link>
-              <Link 
-                to="/investigacao-juridica"
-                className="text-left text-professional-grey hover:text-detective-navy hover:bg-detective-gold/10 rounded-lg px-3 py-2 transition-all duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Investigação Jurídica
-              </Link>
               <button 
                 onClick={() => scrollToSection('sobre')}
                 className="text-left text-professional-grey hover:text-detective-navy hover:bg-detective-gold/10 rounded-lg px-3 py-2 transition-all duration-300"
