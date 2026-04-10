@@ -15,9 +15,6 @@ const Breadcrumbs = () => {
     ];
     
     switch (location.pathname) {
-      case "/servicos-ciberneticos":
-        items.push({ name: "Serviços Cibernéticos", url: "/servicos-ciberneticos" });
-        break;
       default:
         break;
     }
