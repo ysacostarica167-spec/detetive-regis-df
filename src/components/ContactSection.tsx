@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Phone, Shield, ArrowRight } from "lucide-react";
+import { MessageCircle, Phone, Shield, ArrowRight, Clock, MapPin } from "lucide-react";
 
 const ContactSection = () => {
   const handleWhatsAppClick = () => {
@@ -19,35 +19,39 @@ const ContactSection = () => {
 
   return (
     <section className="relative py-32 overflow-hidden">
-      {/* Dark background with noise */}
+      {/* Dark background */}
       <div className="absolute inset-0 bg-detective-navy noise-overlay"></div>
       
-      {/* Decorative glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-detective-gold/[0.05] rounded-full blur-3xl"></div>
+      {/* Decorative elements */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-detective-gold/[0.04] rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-detective-gold/10 to-transparent"></div>
+      <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-detective-gold/5 to-transparent"></div>
 
       <div className="relative z-10 container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto">
           {/* Label */}
           <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="w-12 h-px bg-detective-gold/30"></div>
             <div className="glow-dot animate-pulse-glow"></div>
             <span className="heading-editorial text-detective-gold">Fale Conosco</span>
             <div className="glow-dot animate-pulse-glow"></div>
+            <div className="w-12 h-px bg-detective-gold/30"></div>
           </div>
 
           {/* Headline */}
-          <h2 className="font-playfair text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          <h2 className="font-playfair text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center">
             Fale agora com um detetive e{" "}
             <span className="text-gold-gradient italic">descubra a verdade</span>{" "}
             hoje mesmo.
           </h2>
 
-          <p className="text-lg text-white/60 mb-12 max-w-xl mx-auto">
+          <p className="text-lg text-white/50 mb-12 max-w-xl mx-auto text-center">
             Consulta inicial gratuita e totalmente confidencial. 
             Estamos prontos para resolver sua situação.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
             <Button
               onClick={handleWhatsAppClick}
               className="btn-accent text-base group"
@@ -61,17 +65,27 @@ const ContactSection = () => {
               onClick={handlePhoneClick}
               variant="outline"
               size="lg"
-              className="border-white/20 text-white hover:bg-white/10 hover:text-white"
+              className="border-white/20 text-white hover:bg-white/10 hover:text-white backdrop-blur-sm"
             >
               <Phone className="w-5 h-5 mr-2" />
               Ligar Agora
             </Button>
           </div>
 
-          {/* Trust line */}
-          <div className="flex items-center justify-center gap-2 text-white/40 text-sm">
-            <Shield className="w-4 h-4" />
-            <span>Conversas protegidas por sigilo profissional</span>
+          {/* Info strip */}
+          <div className="flex flex-wrap items-center justify-center gap-8 text-white/30 text-sm">
+            <div className="flex items-center gap-2">
+              <Shield className="w-4 h-4 text-detective-gold/50" />
+              <span>Sigilo profissional</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4 text-detective-gold/50" />
+              <span>Atendimento 24h</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-detective-gold/50" />
+              <span>Todo o Distrito Federal</span>
+            </div>
           </div>
         </div>
       </div>
