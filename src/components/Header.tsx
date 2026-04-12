@@ -84,15 +84,6 @@ const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-detective-gold transition-all duration-300 group-hover:w-full"></span>
               </span>
             </button>
-            <Link 
-              to="/investigacao-juridica"
-              className="text-professional-grey hover:text-detective-navy transition-all duration-300 relative group"
-            >
-              <span className="relative">
-                Investigação Jurídica
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-detective-gold transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </Link>
             <button 
               onClick={() => scrollToSection('sobre')}
               className="text-professional-grey hover:text-detective-navy transition-all duration-300 relative group"
