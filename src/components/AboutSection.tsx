@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Shield, Clock, Users, MapPin, CheckCircle } from "lucide-react";
+import LazyImage from "@/components/LazyImage";
+import detetiveFoto from "@/assets/detetive-regis-foto.jpg";
 
 const AboutSection = () => {
   const achievements = [
@@ -49,6 +51,30 @@ const AboutSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Photo + Bio */}
+          <div className="flex flex-col items-center lg:items-start gap-8">
+            {/* Professional Photo */}
+            <div className="relative group">
+              <div className="w-72 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-shadow duration-500 border-4 border-detective-gold/20">
+                <LazyImage
+                  src={detetiveFoto}
+                  alt="Detetive Particular Regis - Investigador Profissional em Brasília DF"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              {/* Decorative accent */}
+              <div className="absolute -bottom-3 -right-3 w-24 h-24 bg-detective-gold/10 rounded-2xl -z-10"></div>
+              <div className="absolute -top-3 -left-3 w-16 h-16 bg-detective-navy/10 rounded-2xl -z-10"></div>
+            </div>
+
+            {/* Name & Title */}
+            <div className="text-center lg:text-left">
+              <h3 className="text-2xl font-bold text-detective-navy">Regis</h3>
+              <p className="text-detective-gold font-medium">Detetive Particular • Investigador Profissional</p>
+              <p className="text-sm text-professional-grey mt-1">Brasília - Distrito Federal</p>
+            </div>
+          </div>
+
           {/* Professional Story */}
           <div>
             <h3 className="heading-card text-detective-navy mb-6">
@@ -71,21 +97,21 @@ const AboutSection = () => {
                 legalmente quando necessário.
               </p>
             </div>
-          </div>
 
-          {/* Achievements Grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
-            {achievements.map((achievement, index) => (
-              <Card key={index} className="card-professional text-center">
-                <CardContent className="pt-6">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-detective-gold/20 to-detective-navy/20 flex items-center justify-center">
+            {/* Mini achievements inline */}
+            <div className="grid grid-cols-2 gap-4 mt-8">
+              {achievements.map((achievement, index) => (
+                <div key={index} className="flex items-center gap-3 p-3 rounded-xl bg-muted/50 hover:bg-muted transition-colors duration-300">
+                  <div className="w-10 h-10 rounded-full bg-detective-gold/15 flex items-center justify-center flex-shrink-0">
                     {achievement.icon}
                   </div>
-                  <h4 className="font-semibold text-detective-navy mb-2">{achievement.title}</h4>
-                  <p className="text-sm text-professional-grey">{achievement.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+                  <div>
+                    <p className="font-semibold text-detective-navy text-sm">{achievement.title}</p>
+                    <p className="text-xs text-professional-grey">{achievement.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
