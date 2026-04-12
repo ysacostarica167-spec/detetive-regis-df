@@ -19,6 +19,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <WhatsAppButton />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/servicos-ciberneticos" element={<CyberServices />} />
