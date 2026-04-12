@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import CyberServices from "./pages/CyberServices";
 import LegalInvestigation from "./pages/LegalInvestigation";
 import NotFound from "./pages/NotFound";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
 
