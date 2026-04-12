@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Premium Detective Website — Noir Editorial Design System */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+/* Professional Detective Website Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
+    /* Core Colors - Professional Detective Theme */
+    --background: 0 0% 98%;
     --foreground: 210 40% 12%;
     
     /* Detective Brand Colors */
@@ -15,72 +16,92 @@
     --detective-navy-light: 210 35% 25%;
     --detective-gold: 43 74% 49%;
     --detective-gold-light: 43 84% 65%;
-    --detective-crimson: 0 72% 51%;
     
     /* Professional Greys */
     --professional-grey: 210 15% 35%;
     --professional-grey-light: 210 10% 55%;
+
     
     /* Main UI Colors */
     --card: 0 0% 100%;
     --card-foreground: 210 40% 12%;
+
     --popover: 0 0% 100%;
     --popover-foreground: 210 40% 12%;
+
     --primary: var(--detective-navy);
     --primary-foreground: 0 0% 98%;
-    --secondary: 220 15% 95%;
+
+    --secondary: 0 0% 96%;
     --secondary-foreground: var(--detective-navy);
-    --muted: 220 14% 96%;
+
+    --muted: 210 10% 96%;
     --muted-foreground: var(--professional-grey);
+
     --accent: var(--detective-gold);
     --accent-foreground: 0 0% 12%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 15% 90%;
-    --input: 220 15% 90%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 90%;
     --ring: var(--detective-gold);
+
     --radius: 0.75rem;
     
-    /* Premium Gradients */
+    /* Professional Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--detective-navy)), hsl(var(--detective-navy-light)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--detective-gold)), hsl(var(--detective-gold-light)));
-    --gradient-subtle: linear-gradient(180deg, hsl(220 20% 97%), hsl(220 15% 94%));
-    --gradient-gold-text: linear-gradient(135deg, hsl(43 74% 49%), hsl(43 90% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 98%), hsl(210 15% 95%));
     
-    /* Premium Shadows */
-    --shadow-professional: 0 4px 20px -2px hsl(var(--detective-navy) / 0.12);
-    --shadow-card: 0 1px 3px hsl(var(--detective-navy) / 0.04), 0 4px 12px hsl(var(--detective-navy) / 0.06);
-    --shadow-card-hover: 0 8px 30px hsl(var(--detective-navy) / 0.12), 0 2px 8px hsl(var(--detective-gold) / 0.08);
-    --shadow-accent: 0 4px 20px -4px hsl(var(--detective-gold) / 0.35);
-    --shadow-glow-gold: 0 0 40px hsl(var(--detective-gold) / 0.15);
+    /* Professional Shadows */
+    --shadow-professional: 0 4px 20px -2px hsl(var(--detective-navy) / 0.1);
+    --shadow-card: 0 2px 10px -2px hsl(var(--detective-navy) / 0.08);
+    --shadow-accent: 0 4px 20px -4px hsl(var(--detective-gold) / 0.3);
 
     --sidebar-background: 0 0% 98%;
+
     --sidebar-foreground: 240 5.3% 26.1%;
+
     --sidebar-primary: 240 5.9% 10%;
+
     --sidebar-primary-foreground: 0 0% 98%;
+
     --sidebar-accent: 240 4.8% 95.9%;
+
     --sidebar-accent-foreground: 240 5.9% 10%;
+
     --sidebar-border: 220 13% 91%;
+
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
+
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
+
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
+
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
+
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
+
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
+
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
+
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -101,106 +122,38 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter antialiased;
+    @apply bg-background text-foreground font-inter;
   }
 }
 
 @layer components {
-  /* Premium Typography */
+  /* Professional Typography */
   .heading-hero {
-    @apply text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight font-playfair leading-[0.9];
+    @apply text-4xl md:text-6xl font-bold tracking-tight;
   }
   
   .heading-section {
-    @apply text-3xl md:text-5xl font-bold tracking-tight font-playfair leading-tight;
+    @apply text-3xl md:text-4xl font-semibold tracking-tight;
   }
   
   .heading-card {
-    @apply text-xl font-semibold font-playfair;
-  }
-
-  .heading-editorial {
-    @apply text-sm font-mono uppercase tracking-[0.2em] text-muted-foreground;
+    @apply text-xl font-semibold;
   }
   
   .text-professional {
     @apply text-lg leading-relaxed text-muted-foreground;
   }
   
-  /* Premium Components */
+  /* Professional Components */
   .card-professional {
-    @apply bg-card border border-border rounded-xl p-6 shadow-[var(--shadow-card)] transition-all duration-500;
-  }
-
-  .card-professional:hover {
-    box-shadow: var(--shadow-card-hover);
+    @apply bg-card border border-border rounded-lg p-6 shadow-[var(--shadow-card)];
   }
   
   .btn-professional {
-    @apply bg-gradient-to-r from-[hsl(var(--detective-navy))] to-[hsl(var(--detective-navy-light))] text-primary-foreground px-8 py-3 rounded-lg font-medium shadow-[var(--shadow-professional)] hover:shadow-[var(--shadow-accent)] transition-all duration-300 inline-flex items-center;
+    @apply bg-gradient-to-r from-[hsl(var(--detective-navy))] to-[hsl(var(--detective-navy-light))] text-primary-foreground px-8 py-3 rounded-lg font-medium shadow-[var(--shadow-professional)] hover:shadow-[var(--shadow-accent)] transition-all duration-300;
   }
   
   .btn-accent {
-    @apply bg-gradient-to-r from-[hsl(var(--detective-gold))] to-[hsl(var(--detective-gold-light))] text-accent-foreground px-8 py-3 rounded-lg font-semibold shadow-[var(--shadow-accent)] hover:scale-105 transition-all duration-300 inline-flex items-center;
+    @apply bg-gradient-to-r from-[hsl(var(--detective-gold))] to-[hsl(var(--detective-gold-light))] text-accent-foreground px-8 py-3 rounded-lg font-medium shadow-[var(--shadow-accent)] hover:scale-105 transition-all duration-300;
   }
-
-  /* Noise texture overlay */
-  .noise-overlay::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  /* Gold gradient text */
-  .text-gold-gradient {
-    background: linear-gradient(135deg, hsl(43 74% 49%), hsl(43 90% 70%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Glow dot */
-  .glow-dot {
-    @apply w-2 h-2 rounded-full;
-    background: hsl(var(--detective-gold));
-    box-shadow: 0 0 8px hsl(var(--detective-gold) / 0.6), 0 0 20px hsl(var(--detective-gold) / 0.3);
-  }
-
-  /* Section divider */
-  .section-divider {
-    @apply w-16 h-1 rounded-full;
-    background: linear-gradient(90deg, hsl(var(--detective-gold)), hsl(var(--detective-gold-light)));
-  }
-
-  /* Stat number styling */
-  .stat-number {
-    @apply font-playfair font-bold text-5xl md:text-6xl;
-    background: linear-gradient(135deg, hsl(43 74% 49%), hsl(43 90% 65%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: hsl(var(--muted));
-}
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--detective-navy) / 0.3);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--detective-navy) / 0.5);
 }

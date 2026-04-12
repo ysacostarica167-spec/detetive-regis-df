@@ -1,14 +1,17 @@
-import { MessageCircle, MapPin, Shield, Clock, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { MessageCircle, Phone, MapPin, Shield, Clock, Mail } from "lucide-react";
 
 const Footer = () => {
   const handleWhatsAppClick = () => {
     const message = "Olá! Gostaria de falar com o Detetive Regis.";
     const phoneNumber = "5561982844543";
+    
+    // Use wa.me as primary method (more reliable)
     const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    
     try {
       window.open(waUrl, '_blank');
-    } catch {
+    } catch (error) {
+      // Fallback to direct phone call
       window.open("tel:+5561982844543", "_blank");
     }
   };
@@ -16,85 +19,81 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[hsl(210,45%,8%)] text-white relative noise-overlay overflow-hidden">
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-12 gap-12">
-          {/* Brand */}
-          <div className="md:col-span-4">
-            <Link to="/" className="flex items-center gap-3 mb-6 group">
-              <Shield className="w-8 h-8 text-detective-gold group-hover:rotate-12 transition-transform duration-300" />
+    <footer className="bg-detective-navy text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Company Info */}
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <Shield className="w-8 h-8 text-detective-gold" />
               <div>
-                <div className="font-playfair font-bold text-xl">Detetive Regis</div>
-                <div className="text-xs text-white/40 font-mono uppercase tracking-wider">Investigação Profissional</div>
+                <div className="font-bold text-xl">Detetive Regis</div>
+                <div className="text-sm text-white/80">Investigação Profissional</div>
               </div>
-            </Link>
-            <p className="text-white/50 text-sm leading-relaxed mb-6">
-              Graduado em investigação profissional, oferecendo serviços com total discrição 
-              e eficiência em todo o Distrito Federal.
+            </div>
+            <p className="text-white/80 mb-4">
+              Graduado em investigação profissional, oferecendo serviços de investigação 
+              particular com total discrição e eficiência em todo o Distrito Federal.
             </p>
-            <div className="flex items-center gap-2 text-detective-gold/70 text-xs font-mono uppercase tracking-wider">
-              <div className="glow-dot !w-1.5 !h-1.5"></div>
-              <span>100% Confidencial</span>
+            <div className="flex items-center gap-2 text-detective-gold">
+              <Shield className="w-4 h-4" />
+              <span className="text-sm">100% Confidencial e Profissional</span>
             </div>
           </div>
 
-          {/* Contact */}
-          <div className="md:col-span-4">
-            <h3 className="heading-editorial text-detective-gold mb-6">Contato</h3>
-            <div className="space-y-4">
-              <button
+          {/* Contact Info */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Contato</h3>
+            <div className="space-y-3">
+              <button 
                 onClick={handleWhatsAppClick}
-                className="flex items-center gap-3 text-white/60 hover:text-detective-gold transition-colors text-sm"
+                className="flex items-center gap-3 text-white/80 hover:text-detective-gold transition-colors"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-5 h-5" />
                 <span>(61) 98284-4543</span>
               </button>
-              <a
-                href="mailto:contato@regis.com.br"
-                className="flex items-center gap-3 text-white/60 hover:text-detective-gold transition-colors text-sm"
+              <a 
+                href="mailto:contatoregis.com.br"
+                className="flex items-center gap-3 text-white/80 hover:text-detective-gold transition-colors"
               >
-                <Mail className="w-4 h-4" />
-                <span>contato@regis.com.br</span>
+                <Mail className="w-5 h-5" />
+                <span>contatoregis.com.br</span>
               </a>
-              <div className="flex items-center gap-3 text-white/60 text-sm">
-                <MapPin className="w-4 h-4" />
+              <div className="flex items-center gap-3 text-white/80">
+                <MapPin className="w-5 h-5" />
                 <span>Escritório: Asa Sul, Brasília DF</span>
               </div>
-              <div className="flex items-center gap-3 text-white/60 text-sm">
-                <Clock className="w-4 h-4" />
+              <div className="flex items-center gap-3 text-white/80">
+                <Clock className="w-5 h-5" />
                 <span>Atendimento 24 horas</span>
               </div>
             </div>
           </div>
 
           {/* Services */}
-          <div className="md:col-span-4">
-            <h3 className="heading-editorial text-detective-gold mb-6">Serviços</h3>
-            <ul className="space-y-3">
-              {[
-                "Investigação Conjugal",
-                "Vigilância e Monitoramento",
-                "Investigação de Antecedentes",
-                "Investigação Corporativa",
-                "Localização de Pessoas",
-                "Perícia e Consultoria"
-              ].map((service) => (
-                <li key={service} className="text-white/50 text-sm hover:text-white/80 transition-colors cursor-default">
-                  {service}
-                </li>
-              ))}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Principais Serviços</h3>
+            <ul className="space-y-2 text-white/80">
+              <li>• Investigação Conjugal</li>
+              <li>• Vigilância e Monitoramento</li>
+              <li>• Investigação de Antecedentes</li>
+              <li>• Investigação Corporativa</li>
+              <li>• Localização de Pessoas</li>
+              <li>• Perícia e Consultoria</li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <span className="text-white/30 text-xs">
-            © {currentYear} Detetive Particular Regis. Todos os direitos reservados.
-          </span>
-          <div className="flex items-center gap-2 text-white/30 text-xs">
-            <Shield className="w-3 h-3" />
-            <span>Sigilo profissional garantido por lei</span>
+        {/* Bottom Section */}
+        <div className="border-t border-white/20 mt-8 pt-6 text-center">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-white/60 text-sm">
+              © {currentYear} Detetive Particular Regis. Todos os direitos reservados.
+            </div>
+            <div className="flex items-center gap-2 text-white/60 text-sm">
+              <Shield className="w-4 h-4" />
+              <span>Sigilo profissional garantido por lei</span>
+            </div>
           </div>
         </div>
       </div>

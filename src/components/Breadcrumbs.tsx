@@ -15,6 +15,12 @@ const Breadcrumbs = () => {
     ];
     
     switch (location.pathname) {
+      case "/servicos-ciberneticos":
+        items.push({ name: "Serviços Cibernéticos", url: "/servicos-ciberneticos" });
+        break;
+      case "/investigacao-juridica": 
+        items.push({ name: "Investigação Jurídica", url: "/investigacao-juridica" });
+        break;
       default:
         break;
     }
