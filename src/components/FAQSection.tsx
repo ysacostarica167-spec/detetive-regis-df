@@ -37,7 +37,7 @@ const FAQSection = () => {
     },
     {
       question: "O detetive particular Brasília oferece que tipos de investigação?",
-      answer: "Como detetive particular Brasília, oferecemos: investigação conjugal, investigação corporativa, localização de pessoas, verificação de antecedentes, vigilância e monitoramento, perícias particulares."
+      answer: "Como detetive particular Brasília, oferecemos: investigação conjugal, investigação corporativa, localização de pessoas, verificação de antecedentes, acompanhamento investigativo lícito e perícias particulares."
     },
     {
       question: "É legal contratar detetive particular em Brasília DF?",
