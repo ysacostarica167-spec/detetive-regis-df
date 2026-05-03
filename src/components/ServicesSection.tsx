@@ -9,29 +9,29 @@ const ServicesSection = () => {
     {
       icon: <Search className="w-8 h-8 text-detective-gold" />,
       title: "Investigação Conjugal",
-      description: "Investigação discreta de infidelidade e comportamento conjugal com relatórios detalhados e evidências.",
+      description: "Esclareça dúvidas no relacionamento com discrição e relatório completo com evidências legais.",
       image: investigationIcon,
     },
     {
       icon: <Camera className="w-8 h-8 text-detective-gold" />,
-      title: "Vigilância e Monitoramento",
-      description: "Serviços de vigilância profissional para pessoas físicas e jurídicas com equipamentos modernos.",
+      title: "Acompanhamento Profissional",
+      description: "Acompanhamento investigativo lícito para pessoas físicas e jurídicas, com equipamentos modernos.",
       image: surveillanceIcon,
     },
     {
       icon: <UserCheck className="w-8 h-8 text-detective-gold" />,
-      title: "Investigação de Antecedentes",
-      description: "Verificação completa de histórico pessoal, profissional e financeiro de pessoas e empresas.",
+      title: "Verificação de Antecedentes",
+      description: "Checagem profissional de histórico pessoal e empresarial em fontes públicas e legais.",
     },
     {
       icon: <Building2 className="w-8 h-8 text-detective-gold" />,
       title: "Investigação Corporativa",
-      description: "Investigações empresariais, fraudes internas, concorrência desleal e due diligence.",
+      description: "Apuração de fraudes internas, concorrência desleal e due diligence empresarial.",
     },
     {
       icon: <Heart className="w-8 h-8 text-detective-gold" />,
       title: "Localização de Pessoas",
-      description: "Busca e localização de pessoas desaparecidas, parentes distantes e devedores.",
+      description: "Localização de parentes, herdeiros, devedores e pessoas com paradeiro desconhecido.",
     },
     {
       icon: <Scale className="w-8 h-8 text-detective-gold" />,

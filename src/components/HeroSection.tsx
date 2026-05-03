@@ -46,33 +46,33 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <h1 className="heading-hero mb-6">
-            <span className="block text-white">Detetive Particular</span>
-            <span className="block text-detective-gold">Regis</span>
+            <span className="block text-white">Detetive Particular em Brasília</span>
+            <span className="block text-detective-gold">Provas em Fotos e Vídeos em até 48h</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto leading-relaxed">
-            Detetive Particular DF • Investigação Profissional com Discrição e Eficiência
+            Investigador profissional graduado • Relatórios com evidências legais • Atendimento 100% sigiloso no DF
           </p>
           
           <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-            Detetive em Brasília DF com mais de 15 anos de experiência. Atendimento em todo o Distrito Federal 
-            com preços justos e consulta gratuita.
+            Mais de 2.500 casos resolvidos e 15 anos de experiência em Brasília DF. Consulta gratuita,
+            orçamento transparente e início imediato da investigação.
           </p>
 
           {/* Service Highlights */}
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             <div className="flex items-center gap-2 text-white/90">
               <Shield className="w-5 h-5 text-detective-gold" />
-              <span>100% Confidencial</span>
+              <span>2.500+ Casos Resolvidos</span>
             </div>
             <div className="flex items-center gap-2 text-white/90">
               <Award className="w-5 h-5 text-detective-gold" />
-              <span>Profissional Certificado</span>
+              <span>Detetive Graduado</span>
             </div>
             <div className="flex items-center gap-2 text-white/90">
               <MessageCircle className="w-5 h-5 text-detective-gold" />
-              <span>Atendimento 24h</span>
+              <span>Resposta em Minutos</span>
             </div>
           </div>
 
@@ -84,7 +84,7 @@ const HeroSection = () => {
               size="lg"
             >
               <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              WhatsApp (61) 98284-4543
+              Falar Agora no WhatsApp
             </Button>
             <Button 
               onClick={handlePhoneClick}
@@ -92,7 +92,7 @@ const HeroSection = () => {
               size="lg"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Consulta Gratuita
+              Ligar (61) 98284-4543
             </Button>
           </div>
         </div>
