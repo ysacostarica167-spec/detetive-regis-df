@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 
 import NotFound from "./pages/NotFound";
 import WhatsAppButton from "./components/WhatsAppButton";
+import DetetiveConjugalDF from "./pages/DetetiveConjugalDF";
 
 const queryClient = new QueryClient();
 
@@ -22,7 +23,7 @@ const App = () => (
           <WhatsAppButton />
           <Routes>
             <Route path="/" element={<Index />} />
-            
+            <Route path="/detetive-conjugal-df" element={<DetetiveConjugalDF />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
