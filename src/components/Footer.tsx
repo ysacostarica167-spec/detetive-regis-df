@@ -1,20 +1,8 @@
 import { MessageCircle, Phone, MapPin, Shield, Clock, Mail } from "lucide-react";
+import { trackWhatsAppClick } from "@/lib/whatsapp";
 
 const Footer = () => {
-  const handleWhatsAppClick = () => {
-    const message = "Olá! Gostaria de falar com o Detetive Regis.";
-    const phoneNumber = "5561982844543";
-    
-    // Use wa.me as primary method (more reliable)
-    const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
-    try {
-      window.open(waUrl, '_blank');
-    } catch (error) {
-      // Fallback to direct phone call
-      window.open("tel:+5561982844543", "_blank");
-    }
-  };
+  const handleWhatsAppClick = () => trackWhatsAppClick({ location: "footer" });
 
   const currentYear = new Date().getFullYear();
 
