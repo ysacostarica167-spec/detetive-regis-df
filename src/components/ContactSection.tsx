@@ -1,22 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MessageCircle, Phone, Clock, MapPin, Shield, Mail } from "lucide-react";
+import { trackWhatsAppClick } from "@/lib/whatsapp";
 
 const ContactSection = () => {
-  const handleWhatsAppClick = () => {
-    const message = "Olá! Gostaria de saber mais sobre os serviços de investigação.";
-    const phoneNumber = "5561982844543";
-    
-    // Use wa.me as primary method (more reliable)
-    const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
-    try {
-      window.open(waUrl, '_blank');
-    } catch (error) {
-      // Fallback to direct phone call
-      window.open("tel:+5561982844543", "_blank");
-    }
-  };
+  const handleWhatsAppClick = () =>
+    trackWhatsAppClick({
+      location: "contact_section",
+      message: "Olá! Gostaria de saber mais sobre os serviços de investigação.",
+    });
 
   const handlePhoneClick = () => {
     window.open("tel:+5561982844543", "_blank");
