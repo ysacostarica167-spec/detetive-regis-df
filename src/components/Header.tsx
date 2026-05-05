@@ -2,25 +2,17 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Menu, X, Shield } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import { trackWhatsAppClick } from "@/lib/whatsapp";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  const handleWhatsAppClick = () => {
-    const message = "Olá! Gostaria de mais informações sobre investigação particular.";
-    const phoneNumber = "5561982844543";
-    
-    // Use wa.me as primary method (more reliable)
-    const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
-    try {
-      window.open(waUrl, '_blank');
-    } catch (error) {
-      // Fallback to direct phone call
-      window.open("tel:+5561982844543", "_blank");
-    }
-  };
+  const handleWhatsAppClick = () =>
+    trackWhatsAppClick({
+      location: "header",
+      message: "Olá! Gostaria de mais informações sobre investigação particular.",
+    });
 
   const scrollToSection = (sectionId: string) => {
     // Check if we're on the home page
