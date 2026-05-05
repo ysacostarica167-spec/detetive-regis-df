@@ -2,22 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, Shield, Award } from "lucide-react";
 import heroImage from "@/assets/detective-hero-hq.jpg";
 import LazyImage from "@/components/LazyImage";
+import { trackWhatsAppClick } from "@/lib/whatsapp";
 
 const HeroSection = () => {
-  const handleWhatsAppClick = () => {
-    const message = "Olá! Tenho interesse nos serviços de investigação particular.";
-    const phoneNumber = "5561982844543";
-    
-    // Use wa.me as primary method (more reliable)
-    const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
-    try {
-      window.open(waUrl, '_blank');
-    } catch (error) {
-      // Fallback to direct phone call
-      window.open("tel:+5561982844543", "_blank");
-    }
-  };
+  const handleWhatsAppClick = () =>
+    trackWhatsAppClick({
+      location: "hero",
+      message: "Olá! Tenho interesse nos serviços de investigação particular.",
+    });
 
   const handlePhoneClick = () => {
     window.open("tel:+5561982844543", "_blank");
