@@ -3,6 +3,7 @@ import { Search, Building2, MapPin, Car, Phone } from "lucide-react";
 import investigationIcon from "@/assets/investigation-icon-hq.jpg";
 import surveillanceIcon from "@/assets/surveillance-icon-hq.jpg";
 import LazyImage from "@/components/LazyImage";
+import { trackWhatsAppClick } from "@/lib/whatsapp";
 
 const ServicesSection = () => {
   const services = [
@@ -30,20 +31,11 @@ const ServicesSection = () => {
     },
   ];
 
-  const handleWhatsAppClick = () => {
-    const message = "Olá! Gostaria de saber mais sobre os serviços de investigação.";
-    const phoneNumber = "5561982844543";
-    
-    // Use wa.me as primary method (more reliable)
-    const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
-    try {
-      window.open(waUrl, '_blank');
-    } catch (error) {
-      // Fallback to direct phone call
-      window.open("tel:+5561982844543", "_blank");
-    }
-  };
+  const handleWhatsAppClick = () =>
+    trackWhatsAppClick({
+      location: "services_cta",
+      message: "Olá! Gostaria de saber mais sobre os serviços de investigação.",
+    });
 
   return (
     <section className="py-20 bg-gradient-to-b from-background to-muted/30">

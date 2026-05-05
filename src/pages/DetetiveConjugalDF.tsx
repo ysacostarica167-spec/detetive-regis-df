@@ -6,17 +6,18 @@ import SEO from "@/components/SEO";
 import LazyImage from "@/components/LazyImage";
 import heroImage from "@/assets/detective-hero-hq.jpg";
 import { serviceSchema } from "@/data/structuredData";
+import { trackWhatsAppClick } from "@/lib/whatsapp";
 
 const PHONE = "5561982844543";
 const PHONE_DISPLAY = "(61) 98284-4543";
 
-const openWhatsApp = (msg: string) => {
-  window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`, "_blank");
-};
-
 const DetetiveConjugalDF = () => {
   const handleWhats = () =>
-    openWhatsApp("Olá! Quero uma investigação conjugal discreta em Brasília. Pode me ajudar?");
+    trackWhatsAppClick({
+      location: "lp_conjugal",
+      campaign: "lp_conjugal_df",
+      message: "Olá! Quero uma investigação conjugal discreta em Brasília. Pode me ajudar?",
+    });
   const handleCall = () => window.open(`tel:+${PHONE}`, "_blank");
 
   const benefits = [

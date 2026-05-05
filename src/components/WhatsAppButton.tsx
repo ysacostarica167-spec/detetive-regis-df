@@ -1,11 +1,9 @@
 import { MessageCircle } from "lucide-react";
+import { trackWhatsAppClick } from "@/lib/whatsapp";
 
 const WhatsAppButton = () => {
-  const handleClick = () => {
-    const message = "Olá! Gostaria de falar com o Detetive Regis.";
-    const url = `https://wa.me/5561982844543?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-  };
+  const handleClick = () =>
+    trackWhatsAppClick({ location: "floating_button" });
 
   return (
     <button
