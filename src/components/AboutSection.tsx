@@ -17,8 +17,8 @@ const AboutSection = () => {
     },
     {
       icon: <Users className="w-6 h-6 text-detective-gold" />,
-      title: "500+ Casos Resolvidos",
-      description: "Centenas de investigações concluídas com sucesso"
+      title: "2.500+ Casos Resolvidos",
+      description: "Histórico comprovado em investigações no DF"
     },
     {
       icon: <MapPin className="w-6 h-6 text-detective-gold" />,
