@@ -46,18 +46,18 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <h1 className="heading-hero mb-6">
-            <span className="block text-white">Detetive Particular em Brasília</span>
+            <span className="block text-white">Detetive Regis — Brasília DF</span>
             <span className="block text-detective-gold">Provas em Fotos e Vídeos em até 48h</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto leading-relaxed">
-            Investigador profissional graduado • Relatórios com evidências legais • Atendimento 100% sigiloso no DF
+            15 anos investigando em Brasília • Atende Asa Sul, Asa Norte, Águas Claras, Taguatinga, Ceilândia, Guará e todo o DF
           </p>
           
           <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-            Mais de 2.500 casos resolvidos e 15 anos de experiência em Brasília DF. Consulta gratuita,
-            orçamento transparente e início imediato da investigação.
+            2.500+ casos resolvidos. Resposta em até 5 minutos no WhatsApp. Consulta gratuita,
+            orçamento fechado antes do início e relatório com validade legal.
           </p>
 
           {/* Service Highlights */}
@@ -84,7 +84,7 @@ const HeroSection = () => {
               size="lg"
             >
               <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Falar Agora no WhatsApp
+              WhatsApp Agora — Resposta em 5min
             </Button>
             <Button 
               onClick={handlePhoneClick}

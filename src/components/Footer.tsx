@@ -53,11 +53,11 @@ const Footer = () => {
                 <span>(61) 98284-4543</span>
               </button>
               <a 
-                href="mailto:contatoregis.com.br"
+                href="mailto:contato@detetiveregis.com.br"
                 className="flex items-center gap-3 text-white/80 hover:text-detective-gold transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>contatoregis.com.br</span>
+                <span>contato@detetiveregis.com.br</span>
               </a>
               <div className="flex items-center gap-3 text-white/80">
                 <MapPin className="w-5 h-5" />
@@ -75,11 +75,9 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Principais Serviços</h3>
             <ul className="space-y-2 text-white/80">
               <li>• Investigação Conjugal</li>
-              <li>• Vigilância e Monitoramento</li>
-              <li>• Investigação de Antecedentes</li>
-              <li>• Investigação Corporativa</li>
+              <li>• Investigação Empresarial</li>
               <li>• Localização de Pessoas</li>
-              <li>• Perícia e Consultoria</li>
+              <li>• Investigação Veicular</li>
             </ul>
           </div>
         </div>

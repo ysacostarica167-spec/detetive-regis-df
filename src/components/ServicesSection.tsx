@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Search, Camera, UserCheck, Building2, Heart, Scale, Phone } from "lucide-react";
+import { Search, Building2, MapPin, Car, Phone } from "lucide-react";
 import investigationIcon from "@/assets/investigation-icon-hq.jpg";
 import surveillanceIcon from "@/assets/surveillance-icon-hq.jpg";
 import LazyImage from "@/components/LazyImage";
@@ -8,35 +8,25 @@ const ServicesSection = () => {
   const services = [
     {
       icon: <Search className="w-8 h-8 text-detective-gold" />,
-      title: "Investigação Conjugal",
-      description: "Esclareça dúvidas no relacionamento com discrição e relatório completo com evidências legais.",
+      title: "Investigação Conjugal (Traição)",
+      description: "Provas em fotos e vídeos com data e hora em até 48h. Relatório com validade jurídica para divórcio. Sigilo absoluto.",
       image: investigationIcon,
     },
     {
-      icon: <Camera className="w-8 h-8 text-detective-gold" />,
-      title: "Acompanhamento Profissional",
-      description: "Acompanhamento investigativo lícito para pessoas físicas e jurídicas, com equipamentos modernos.",
+      icon: <Building2 className="w-8 h-8 text-detective-gold" />,
+      title: "Investigação Empresarial",
+      description: "Apuração de fraudes internas, desvios, concorrência desleal e due diligence. Mais de 400 empresas no DF atendidas.",
       image: surveillanceIcon,
     },
     {
-      icon: <UserCheck className="w-8 h-8 text-detective-gold" />,
-      title: "Verificação de Antecedentes",
-      description: "Checagem profissional de histórico pessoal e empresarial em fontes públicas e legais.",
-    },
-    {
-      icon: <Building2 className="w-8 h-8 text-detective-gold" />,
-      title: "Investigação Corporativa",
-      description: "Apuração de fraudes internas, concorrência desleal e due diligence empresarial.",
-    },
-    {
-      icon: <Heart className="w-8 h-8 text-detective-gold" />,
+      icon: <MapPin className="w-8 h-8 text-detective-gold" />,
       title: "Localização de Pessoas",
-      description: "Localização de parentes, herdeiros, devedores e pessoas com paradeiro desconhecido.",
+      description: "Localização de devedores, herdeiros, parentes e desaparecidos no DF e entorno. Resultado médio em 7 dias úteis.",
     },
     {
-      icon: <Scale className="w-8 h-8 text-detective-gold" />,
-      title: "Perícia e Consultoria",
-      description: "Laudos técnicos, perícias particulares e consultoria especializada em investigação.",
+      icon: <Car className="w-8 h-8 text-detective-gold" />,
+      title: "Investigação Veicular",
+      description: "Rastreamento e recuperação de veículos, verificação de uso indevido por terceiros e acompanhamento de rotas.",
     },
   ];
 
@@ -70,7 +60,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <Card key={index} className="card-professional hover:shadow-[var(--shadow-accent)] hover:-translate-y-2 transition-all duration-300 group animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
               <CardHeader className="text-center">
